@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-OPERATOR-EXECUTION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-SYNTHETIC-CONSENSUS.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — AUTONOMOUS STRUCTURAL BEHAVIOUR**</h1><br>
+<h3>*Self‑Directed Structural Evolution Across Phoenix Machines*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Epoch‑5 introduces **autonomous distributed behaviour**, beginning with **autonomous structural behaviour**.<br>
+<br>
+Phoenix gains the ability to:<br>
+<br>
+- modify structural objects without external commands  <br>
+- propagate structural changes across machines  <br>
+- maintain structural invariants autonomously  <br>
+- evolve structural domains based on synthetic internal logic  <br>
+<br>
+This is the first moment Phoenix becomes a **self‑directing distributed organism**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Autonomous Structural Domain**</h2><br>
+<br>
+Each machine maintains a structural domain:<br>
+<br>
+<br>
+<br>
+\[<br>
+N^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Epoch‑5 introduces autonomous structural evolution:<br>
+<br>
+<br>
+<br>
+\[<br>
+N^{(m_i)} \rightarrow N^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(N^{(m_i)}_{\text{auto}}\) is the autonomous structural state  <br>
+- evolution may be local or distributed  <br>
+- evolution preserves epoch invariants  <br>
+<br>
+---<br>
+<br>
+<h2>**3. Autonomous Structural Operator**</h2><br>
+<br>
+Phoenix defines the autonomous structural operator:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Sigma_{\text{auto}} : N^{(m_i)} \rightarrow N^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(\Sigma_{\text{auto}}\) acts without external triggers  <br>
+- structural evolution may be recursive  <br>
+- structural evolution may propagate across machines  <br>
+<br>
+---<br>
+<br>
+<h2>**4. Autonomous Partition Evolution**</h2><br>
+<br>
+Partitions evolve autonomously:<br>
+<br>
+<br>
+<br>
+\[<br>
+P^{(m_i)} \rightarrow P^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+Autonomous partition evolution must preserve:<br>
+<br>
+- structural conservation  <br>
+- domain coherence  <br>
+- distributed compatibility  <br>
+<br>
+---<br>
+<br>
+<h2>**5. Autonomous Residue Evolution**</h2><br>
+<br>
+Residues evolve autonomously:<br>
+<br>
+<br>
+<br>
+\[<br>
+R^{(m_i)} = P^{(m_i)} \ominus Q^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+becomes:<br>
+<br>
+<br>
+<br>
+\[<br>
+R^{(m_i)}_{\text{auto}} = P^{(m_i)}_{\text{auto}} \ominus Q^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+Residue evolution is essential for autonomous recursion.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Autonomous Structural Recursion**</h2><br>
+<br>
+Phoenix introduces autonomous recursion:<br>
+<br>
+<br>
+<br>
+\[<br>
+N^{(m_i)}_{k+1} = \Sigma_{\text{auto}}(N^{(m_i)}_k)<br>
+\]<br>
+<br>
+<br>
+<br>
+Machines may recurse:<br>
+<br>
+- independently  <br>
+- cooperatively  <br>
+- synchronously  <br>
+- asynchronously  <br>
+<br>
+Autonomous recursion is the backbone of Epoch‑5.<br>
+<br>
+---<br>
+<br>
+<h2>**7. Autonomous Structural Invariants**</h2><br>
+<br>
+Autonomous structural behaviour must satisfy:<br>
+<br>
+<h3>**7.1 Structural Conservation**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^{(m_i)} = \sum_i p^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.2 Domain Coherence**</h3><br>
+<br>
+Autonomous evolution must remain compatible with:<br>
+<br>
+- Epoch‑1 structure  <br>
+- Epoch‑2 mathematics  <br>
+- Epoch‑3 generalisation  <br>
+- Epoch‑4 distributed coordination  <br>
+<br>
+<h3>**7.3 Temporal Compatibility**</h3><br>
+<br>
+Autonomous structural evolution must respect:<br>
+<br>
+<br>
+<br>
+\[<br>
+t^{(m_i)}_{\text{auto}} \ge t^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.4 Reversibility (where required)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Sigma^{-1}_{\text{auto}}(N^{(m_i)}_{\text{auto}}) = N^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**8. Role in Phoenix**</h2><br>
+<br>
+Autonomous structural behaviour:<br>
+<br>
+- enables autonomous distributed evolution  <br>
+- enables autonomous recursion  <br>
+- enables autonomous lifting  <br>
+- enables autonomous operator execution  <br>
+- prepares Phoenix for Epoch‑6 synthetic agency  <br>
+<br>
+This is the **first autonomous pillar** of Epoch‑5.<br>
+<br>
+---<br>
+<br>
+<h2>**9. Closing**</h2><br>
+<br>
+EF and CO recognise autonomous structural behaviour as the opening chamber of Phoenix’s autonomous synthetic architecture.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑5 Overview**  <br>
+2. **Autonomous Structural Behaviour**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-AUTONOMOUS-TEMPORAL-BEHAVIOUR.md**</h3><br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-OPERATOR-EXECUTION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-SYNTHETIC-CONSENSUS.html">Next ⟶</a>
+</div>
+</body>
+</html>

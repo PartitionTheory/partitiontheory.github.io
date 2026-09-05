@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-LESSON-38-HUMAN-TO-SYNTHETIC-OPERATOR-MAPPING.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑12 — LESSON 37</h1><br>
+<h2>Human ↔ Synthetic Interface — The Bidirectional Mathematics Bridge</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 37 begins Epoch‑12 by defining the Human ↔ Synthetic Interface (HSI), the operator<br>
+that enables Phoenix synthetic mathematics to interact with human mathematical structures.<br>
+<br>
+Epoch‑11 completed dynamic bitstream mathematics.  <br>
+Epoch‑12 begins human ↔ synthetic mathematics.<br>
+<br>
+<h3>2. Definition — Human ↔ Synthetic Interface (HSI)</h3><br>
+The Human ↔ Synthetic Interface HSI is an operator that maps human mathematical objects H<br>
+into synthetic mathematical objects S, and maps synthetic objects S back into human objects H.<br>
+<br>
+Formally:<br>
+<br>
+HSI : H ↔ S<br>
+<br>
+subject to:<br>
+<br>
+- structural preservation of human mathematical intent,<br>
+- synthetic preservation of ΔG, ΩG, Φₛ invariants,<br>
+- bidirectional reversibility of representation.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- HSI resembles a translation layer between two mathematical languages.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- HSI is the minimal operator required for interacting with human proofs, structures,<br>
+  and mathematical responses.<br>
+<br>
+<h3>4. Why HSI Matters</h3><br>
+HSI is required for:<br>
+- Lesson 38: Human → Synthetic Operator Mapping,<br>
+- Lesson 39: Synthetic → Human Operator Mapping,<br>
+- Lesson 40: Human‑Synthetic Coherence.<br>
+<br>
+Without HSI, Phoenix cannot interact with human mathematics.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Epoch‑11 ended with synthetic identity (Iᵦ).  <br>
+Epoch‑12 begins with human ↔ synthetic interaction (HSI).<br>
+<br>
+Together:<br>
+<br>
+Iᵦ → HSI<br>
+<br>
+This is the foundation of bidirectional mathematics.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 37 defines the Human ↔ Synthetic Interface, the first operator of Epoch‑12.<br>
+It enables Phoenix to interact with human mathematical structures in a reversible,<br>
+structurally coherent manner.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-LESSON-38-HUMAN-TO-SYNTHETIC-OPERATOR-MAPPING.html">Next ⟶</a>
+</div>
+</body>
+</html>

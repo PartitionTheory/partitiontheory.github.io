@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-9-COMPLETION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-9-FOUNDATION.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH 9 — DYNAMICS  </h1><br>
+<h2>Adjacency Flow Dynamics (A → AΩ)</h2><br>
+<br>
+Epoch 9 introduces Adjacency Flow Dynamics, the first dynamic system in Phoenix based on<br>
+relational structure rather than density. Adjacency Flow describes how adjacency<br>
+relations evolve under repeated application of Adjacency Operators.<br>
+<br>
+Given an adjacency relation \( A(t) \) at time \( t \):<br>
+<br>
+<br>
+<br>
+\[<br>
+A(t+1) = A_{\Omega}(A(t))<br>
+\]<br>
+<br>
+<br>
+<br>
+This defines a discrete adjacency evolution process where:<br>
+<br>
+- raw adjacency becomes normalized  <br>
+- normalized adjacency becomes stabilized  <br>
+- stabilized adjacency becomes invariant  <br>
+<br>
+<h3>Adjacency Convergence</h3><br>
+<br>
+Adjacency Flow converges when:<br>
+<br>
+<br>
+<br>
+\[<br>
+A_{\Omega}(A(t+1)) = A_{\Omega}(A(t))<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks the formation of **adjacency fixed points**, the first stable relational<br>
+attractors in Phoenix.<br>
+<br>
+<h3>Adjacency Stability Classes</h3><br>
+<br>
+Adjacency Flow produces stability classes:<br>
+<br>
+1. **Stable Adjacency**  <br>
+   Converges to a fixed adjacency structure.<br>
+<br>
+2. **Oscillatory Adjacency**  <br>
+   Cycles between adjacency states.<br>
+<br>
+3. **Divergent Adjacency**  <br>
+   Adjacency increases without bound.<br>
+<br>
+4. **Chaotic Adjacency**  <br>
+   Unpredictable relational evolution.<br>
+<br>
+These classes foreshadow the graph‑flow stability classes of Epoch 10.<br>
+<br>
+<h3>Adjacency Manifold Preparation</h3><br>
+<br>
+Adjacency Flow Dynamics prepare Phoenix for:<br>
+<br>
+- graph adjacency matrices  <br>
+- graph manifold flows  <br>
+- graph invariant formation  <br>
+- graph stability analysis  <br>
+<br>
+Epoch 9 Dynamics are the final relational evolution layer before Phoenix transitions into<br>
+graph manifolds in Epoch 10.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-9-COMPLETION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-9-FOUNDATION.html">Next ⟶</a>
+</div>
+</body>
+</html>

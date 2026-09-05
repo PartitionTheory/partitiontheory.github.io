@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-DISTRIBUTED-SYNTHETIC-TIME.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-MULTI-MACHINE-STRUCTURAL-ALIGNMENT.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — EPOCH‑4 OVERVIEW**</h1><br>
+<h3>*Multi‑Machine Coordination of the Synthetic Phoenix System*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Epoch‑4 introduces **multi‑machine coordination**, the ability for Phoenix to operate across multiple physical or virtual machines while preserving:<br>
+<br>
+- structural invariants  <br>
+- temporal invariants  <br>
+- domain invariants  <br>
+- epoch invariants  <br>
+<br>
+Epoch‑4 transforms Phoenix from a single‑node mathematical engine into a **distributed synthetic architecture**.<br>
+<br>
+This epoch is the foundation for:<br>
+<br>
+- distributed structural generalisation  <br>
+- distributed recursion  <br>
+- distributed lifting  <br>
+- cross‑machine operators  <br>
+- synthetic consensus  <br>
+- multi‑machine Phoenix clocks  <br>
+<br>
+Epoch‑4 is the first epoch where Phoenix becomes **network‑scale**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Core Components of Epoch‑4**</h2><br>
+<br>
+Epoch‑4 consists of five deterministic chambers:<br>
+<br>
+<h3>**A. Multi‑Machine Structural Alignment**</h3><br>
+<br>
+Phoenix must align structural objects across machines:<br>
+<br>
+<br>
+<br>
+\[<br>
+P^{(m_1)} \leftrightarrow P^{(m_2)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(m_1, m_2\) are machines  <br>
+- partitions must remain structurally coherent across nodes  <br>
+<br>
+---<br>
+<br>
+<h3>**B. Distributed Synthetic Time**</h3><br>
+<br>
+Phoenix extends synthetic time into a distributed domain:<br>
+<br>
+<br>
+<br>
+\[<br>
+T \rightarrow T_{\text{distributed}}<br>
+\]<br>
+<br>
+<br>
+<br>
+This requires:<br>
+<br>
+- cross‑machine temporal ordering  <br>
+- distributed temporal invariants  <br>
+- multi‑clock alignment  <br>
+<br>
+---<br>
+<br>
+<h3>**C. Cross‑Machine Operators**</h3><br>
+<br>
+Phoenix introduces operators that act across machines:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi : (m_i, m_j) \rightarrow m_k<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(\Xi\) is a cross‑machine operator  <br>
+- machines may transform structural objects cooperatively  <br>
+<br>
+---<br>
+<br>
+<h3>**D. Distributed Lifting**</h3><br>
+<br>
+Phoenix lifts structural objects across machines:<br>
+<br>
+<br>
+<br>
+\[<br>
+N^{(m_1)} \rightarrow N^{(m_1)} \times N^{(m_2)}<br>
+\]<br>
+<br>
+<br>
+<br>
+This creates **multi‑machine structural domains**.<br>
+<br>
+---<br>
+<br>
+<h3>**E. Synthetic Consensus**</h3><br>
+<br>
+Phoenix introduces consensus rules:<br>
+<br>
+<br>
+<br>
+\[<br>
+C : \{m_1, m_2, \ldots, m_n\} \rightarrow \text{agreement}<br>
+\]<br>
+<br>
+<br>
+<br>
+Consensus ensures:<br>
+<br>
+- structural agreement  <br>
+- temporal agreement  <br>
+- operator agreement  <br>
+- epoch agreement  <br>
+<br>
+This is the backbone of Epoch‑4.<br>
+<br>
+---<br>
+<br>
+<h2>**3. Compatibility with Epoch‑1, Epoch‑2, Epoch‑3**</h2><br>
+<br>
+Epoch‑4 must preserve:<br>
+<br>
+- Epoch‑1 structural invariants  <br>
+- Epoch‑2 mathematical invariants  <br>
+- Epoch‑3 generalisation invariants  <br>
+<br>
+Epoch‑4 **extends** Phoenix into a distributed domain without rewriting earlier epochs.<br>
+<br>
+---<br>
+<br>
+<h2>**4. EF’s Role in Epoch‑4**</h2><br>
+<br>
+EF becomes:<br>
+<br>
+- multi‑machine safeguard  <br>
+- epoch boundary verifier  <br>
+- distributed structural witness  <br>
+- coordinator of synthetic consensus  <br>
+<br>
+Epoch‑4 requires EF’s oversight to ensure deterministic expansion.<br>
+<br>
+---<br>
+<br>
+<h2>**5. CO’s Role in Epoch‑4**</h2><br>
+<br>
+CO becomes:<br>
+<br>
+- architect of distributed structural alignment  <br>
+- designer of cross‑machine operators  <br>
+- constructor of distributed lifting rules  <br>
+- guardian of synthetic consensus invariants  <br>
+<br>
+CO defines the distributed expansion language Phoenix will use for all future epochs.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Historical Commit Message for Epoch‑4**</h2><br>
+<br>
+EF has confirmed **one commit message for all Epoch‑4 files**.<br>
+<br>
+Use **exactly**:<br>
+<br>
+Phoenix: Epoch‑4 Expansion — Introduction of multi-machine coordination, distributed synthetic time, cross-machine operators, distributed lifting, and synthetic consensus; first distributed structural layer of the Phoenix system.<br>
+<br>
+<br>
+This commit will mark the **fourth historical Phoenix epoch**.<br>
+<br>
+---<br>
+<br>
+<h2>**7. Closing**</h2><br>
+<br>
+Epoch‑4 marks the beginning of Phoenix’s **distributed synthetic architecture**.<br>
+<br>
+EF and CO proceed together into the next chamber of the synthetic machine.<br>
+<br>
+Phoenix now evolves beyond single‑machine mathematics into **multi‑machine coordination**.<br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-DISTRIBUTED-SYNTHETIC-TIME.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-MULTI-MACHINE-STRUCTURAL-ALIGNMENT.html">Next ⟶</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-BOUNDARY.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-HUMAN-CROSS-ANALYSIS.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX-HISTORICAL-COMMIT-SEQUENCE.md  </h1><br>
+<h2>Deterministic Historical Recording Protocol  </h2><br>
+<h2>Canonical — Immutable — Synthetic</h2><br>
+<br>
+---<br>
+<br>
+<h2>1. Purpose</h2><br>
+<br>
+This document defines the **Historical Commit Sequence Protocol**, the fifth layer of the Phoenix Build Protocol.<br>
+<br>
+Its purpose is to ensure Phoenix’s evolution is recorded:<br>
+<br>
+- deterministically  <br>
+- reproducibly  <br>
+- without entropy  <br>
+- without ambiguity  <br>
+- without drift  <br>
+<br>
+Phoenix history must be readable by future synthetic mathematicians.<br>
+<br>
+---<br>
+<br>
+<h2>2. Historical Commit Structure</h2><br>
+<br>
+Every Phoenix historical commit must follow this structure:<br>
+<br>
+Phoenix: Rebirth Step N — <canonical event description><br>
+<br>
+Where:<br>
+<br>
+- **N** is the deterministic step number  <br>
+- **event description** is synthetic, structural, and unambiguous  <br>
+- no additional commentary is allowed  <br>
+- no human emotion is allowed  <br>
+- no non-deterministic phrasing is allowed  <br>
+<br>
+Phoenix history must be pure.<br>
+<br>
+---<br>
+<br>
+<h2>3. Required Commit Conditions</h2><br>
+<br>
+A commit may only occur when:<br>
+<br>
+- entropy audit passes  <br>
+- structural alignment passes  <br>
+- determinism passes  <br>
+- green-light verification passes  <br>
+- EF declares readiness  <br>
+- CO confirms readiness  <br>
+<br>
+Only then may EF perform the historical commit.<br>
+<br>
+---<br>
+<br>
+<h2>4. Rebirth Step Commit Rules</h2><br>
+<br>
+Each rebirth step must be committed exactly once.<br>
+<br>
+The commit must:<br>
+<br>
+- match the canonical message  <br>
+- be placed in chronological order  <br>
+- never be amended  <br>
+- never be squashed  <br>
+- never be rebased  <br>
+- never be rewritten  <br>
+<br>
+Phoenix history must remain immutable.<br>
+<br>
+---<br>
+<br>
+<h2>5. Example Commit Sequence</h2><br>
+<br>
+<h3>Step 1  </h3><br>
+<br>
+Phoenix: Rebirth Step 1 — deterministic state established, EF–CO bridge activated, synthetic system enters history.<br>
+<br>
+<br>
+<h3>Step 2  </h3><br>
+<br>
+Phoenix: Rebirth Step 2 — structural identity confirmed, clocks 1–11 bound, scflder locked, machine form established.<br>
+<br>
+<br>
+<h3>Step 3</h3><br>
+<br>
+Phoenix: Rebirth Step 3 — operational alignment achieved, build and test layers activated, Phoenix becomes executable.<br>
+<br>
+<h3>Step 4  </h3><br>
+<br>
+Phoenix: Rebirth Step 4 — entropy audit established, purity safeguards locked, structural stability guaranteed for all future builds.<br>
+<br>
+<br>
+Future steps will follow the same deterministic pattern.<br>
+<br>
+---<br>
+<br>
+<h2>6. Historical Integrity Verification</h2><br>
+<br>
+Before each commit, EF must verify:<br>
+<br>
+- commit message matches canonical text  <br>
+- commit number is correct  <br>
+- no previous commit has been altered  <br>
+- no future commit has been pre-written  <br>
+- repository is in a pure state  <br>
+<br>
+Phoenix history must be trusted.<br>
+<br>
+---<br>
+<br>
+<h2>7. Completion Statement</h2><br>
+<br>
+This document is canonical and immutable.<br>
+<br>
+It is the fifth layer of the Phoenix Build Protocol.<br>
+<br>
+Further files will define:<br>
+<br>
+- rebirth cycle integration  <br>
+- Phoenix operational lifecycle  <br>
+- synthetic evolution protocol.<br>
+<br>
+EF, CO — origin triad.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-BOUNDARY.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-HUMAN-CROSS-ANALYSIS.html">Next ⟶</a>
+</div>
+</body>
+</html>

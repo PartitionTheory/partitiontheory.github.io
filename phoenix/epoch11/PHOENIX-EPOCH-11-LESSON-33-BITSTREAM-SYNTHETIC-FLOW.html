@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-32-BITSTREAM-ADJACENCY-MOTION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-34-BITSTREAM-STABILITY-CLASSES.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑11 — LESSON 33</h1><br>
+<h2>Bitstream Synthetic Flow — Temporal Evolution of Embedded Bitstreams</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 33 introduces Bitstream Synthetic Flow, the operator that evolves an embedded<br>
+bitstream Mₛ(B) through time using repeated applications of bitstream adjacency motion Aᵦ.<br>
+<br>
+Lesson 31 embedded the bitstream.  <br>
+Lesson 32 moved it.  <br>
+Lesson 33 evolves it.<br>
+<br>
+This is the moment the bitstream becomes a **temporal synthetic object**.<br>
+<br>
+<h3>2. Definition — Bitstream Synthetic Flow (Fᵦ)</h3><br>
+Bitstream Synthetic Flow Fᵦ is a temporal operator acting on an embedded bitstream<br>
+manifold Mₛ(B) such that:<br>
+<br>
+- Fᵦ applies bitstream adjacency motion Aᵦ repeatedly,<br>
+- Fᵦ preserves ΔG‑density derived from bit‑frequency,<br>
+- Fᵦ preserves ΩG‑successor continuity derived from bit‑ordering,<br>
+- Fᵦ preserves Φₛ‑stability across all flow steps.<br>
+<br>
+Formally:<br>
+<br>
+Fᵦ(t+1) = Aᵦ(Fᵦ(t))<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(Fᵦ(t)) = ΔG(Fᵦ(t+1))<br>
+- ΩG‑chains remain continuous for all t<br>
+- Φₛ(Fᵦ(t)) = Φₛ(Fᵦ(t+1))<br>
+<br>
+This defines synthetic flow on bit‑level structures.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- Fᵦ resembles evolving a discrete sequence through time,<br>
+- but without metrics, coordinates, or classical dynamical systems.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- Fᵦ is the minimal temporal extension of Aᵦ,<br>
+- enabling recursion‑stable dynamics to act on bitstreams.<br>
+<br>
+<h3>4. Why Bitstream Synthetic Flow Matters</h3><br>
+Fᵦ is required for:<br>
+- Lesson 34: Bitstream Stability Classes,<br>
+- Lesson 35: Bitstream Invariant Dynamics.<br>
+<br>
+Without Fᵦ, the bitstream cannot exhibit temporal synthetic behavior.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Lesson 31 provided Eₛ: B → Mₛ(B).  <br>
+Lesson 32 provided Aᵦ: motion on Mₛ(B).  <br>
+Lesson 33 provides Fᵦ: flow on Mₛ(B).<br>
+<br>
+Together:<br>
+<br>
+B → Mₛ(B) → Aᵦ(Mₛ(B)) → Fᵦ(Mₛ(B))<br>
+<br>
+This is the foundation of dynamic bitstream evolution.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 33 defines Bitstream Synthetic Flow, the third operator of Epoch‑11.<br>
+It evolves embedded bitstreams through time while preserving ΔG, ΩG, and Φₛ stability.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-32-BITSTREAM-ADJACENCY-MOTION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-34-BITSTREAM-STABILITY-CLASSES.html">Next ⟶</a>
+</div>
+</body>
+</html>
