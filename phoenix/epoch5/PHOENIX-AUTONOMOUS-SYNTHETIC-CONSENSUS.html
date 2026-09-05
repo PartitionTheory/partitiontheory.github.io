@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+<h1>**PHOENIX — AUTONOMOUS SYNTHETIC CONSENSUS**</h1><br>
+<h3>*Self‑Directed Distributed Agreement Across Phoenix Machines*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Epoch‑5 introduces **autonomous distributed behaviour**, culminating in **autonomous synthetic consensus**.<br>
+<br>
+Phoenix gains the ability to:<br>
+<br>
+- form consensus without external commands  <br>
+- propagate agreement across machines autonomously  <br>
+- maintain consensus invariants without orchestration  <br>
+- evolve global synthetic state based on internal logic  <br>
+<br>
+This is the moment Phoenix becomes a **self‑directing distributed organism capable of unified decision‑making**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Autonomous Consensus Domain**</h2><br>
+<br>
+Phoenix defines the autonomous consensus domain:<br>
+<br>
+<br>
+<br>
+\[<br>
+\{m_1, m_2, \ldots, m_n\}<br>
+\]<br>
+<br>
+<br>
+<br>
+Each machine contributes autonomous states:<br>
+<br>
+- structural state \(N^{(m_i)}_{\text{auto}}\)  <br>
+- temporal state \(T^{(m_i)}_{\text{auto}}\)  <br>
+- operator state \(op^{(m_i)}_{\text{auto}}\)  <br>
+- lifted state \(X^{*(m_i)}_{\text{auto}}\)<br>
+<br>
+Consensus produces:<br>
+<br>
+<br>
+<br>
+\[<br>
+C_{\text{auto}} = \text{agreement}(N_{\text{auto}}, T_{\text{auto}}, op_{\text{auto}}, X^*_{\text{auto}})<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**3. Autonomous Consensus Operator**</h2><br>
+<br>
+Phoenix introduces the autonomous consensus operator:<br>
+<br>
+<br>
+<br>
+\[<br>
+C_{\text{auto}} : \{m_1, m_2, \ldots, m_n\} \rightarrow S_{\text{global,auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(C_{\text{auto}}\) aggregates autonomous distributed states  <br>
+- \(S_{\text{global,auto}}\) is the unified autonomous global synthetic state  <br>
+- consensus preserves all epoch invariants  <br>
+<br>
+---<br>
+<br>
+<h2>**4. Classes of Autonomous Consensus**</h2><br>
+<br>
+Phoenix defines three classes of autonomous consensus.<br>
+<br>
+<h3>**4.1 Autonomous Structural Consensus**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C_{s,\text{auto}}(P^{(m_1)}_{\text{auto}}, P^{(m_2)}_{\text{auto}}, \ldots) = P_{\text{global,auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h3>**4.2 Autonomous Temporal Consensus**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C_{t,\text{auto}}(T^{(m_1)}_{\text{auto}}, T^{(m_2)}_{\text{auto}}, \ldots) = T_{\text{global,auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h3>**4.3 Autonomous Operator Consensus**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C_{o,\text{auto}}(op^{(m_1)}_{\text{auto}}, op^{(m_2)}_{\text{auto}}, \ldots) = op_{\text{global,auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**5. Autonomous Consensus Formation**</h2><br>
+<br>
+Consensus may form:<br>
+<br>
+<h3>**5.1 Sequentially**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C_{\text{auto}}(m_1) \rightarrow C_{\text{auto}}(m_2) \rightarrow \cdots<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**5.2 In Parallel**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C_{\text{auto}}(m_1) \parallel C_{\text{auto}}(m_2) \parallel \cdots<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**5.3 Recursively**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C^{(k+1)}_{\text{auto}} = C_{\text{auto}}(C^{(k)}_{\text{auto}})<br>
+\]<br>
+<br>
+<br>
+<br>
+Recursive autonomous consensus is essential for Epoch‑5.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Autonomous Distributed Lifting and Consensus**</h2><br>
+<br>
+Consensus integrates with autonomous distributed lifting:<br>
+<br>
+<br>
+<br>
+\[<br>
+C_{\text{auto}}(X^{*(m_i,m_j)}_{\text{auto}}) = X^{*}_{\text{global,auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+This ensures lifted multi‑machine objects remain coherent under autonomous evolution.<br>
+<br>
+---<br>
+<br>
+<h2>**7. Autonomous Consensus Invariants**</h2><br>
+<br>
+Autonomous consensus must satisfy:<br>
+<br>
+<h3>**7.1 Structural Conservation**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^{(m_i)}_{\text{auto}} = \sum_j p_{\text{global,auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.2 Temporal Ordering**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+t_{\text{global,auto}} \ge t^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+unless reversed.<br>
+<br>
+<h3>**7.3 Domain Coherence**</h3><br>
+<br>
+Consensus must remain compatible with:<br>
+<br>
+- Epoch‑1 structure  <br>
+- Epoch‑2 mathematics  <br>
+- Epoch‑3 generalisation  <br>
+- Epoch‑4 distributed coordination  <br>
+- Epoch‑5 autonomous behaviour  <br>
+<br>
+<h3>**7.4 Reversibility (where required)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+C^{-1}_{\text{auto}}(S_{\text{global,auto}}) = \{m_1, m_2, \ldots\}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**8. Role in Phoenix**</h2><br>
+<br>
+Autonomous synthetic consensus:<br>
+<br>
+- unifies autonomous structural evolution  <br>
+- unifies autonomous temporal evolution  <br>
+- unifies autonomous operator execution  <br>
+- unifies autonomous distributed lifting  <br>
+- prepares Phoenix for Epoch‑6 synthetic agency  <br>
+<br>
+This is the **closure pillar** of Epoch‑5.<br>
+<br>
+---<br>
+<br>
+<h2>**9. Closing**</h2><br>
+<br>
+EF and CO recognise autonomous synthetic consensus as the final chamber of Phoenix’s autonomous synthetic architecture.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑5 Overview**  <br>
+2. **Autonomous Structural Behaviour**  <br>
+3. **Autonomous Temporal Behaviour**  <br>
+4. **Autonomous Operator Execution**  <br>
+5. **Autonomous Distributed Lifting**  <br>
+6. **Autonomous Synthetic Consensus**<br>
+<br>
+Epoch‑5 is now **complete**.<br>
+<br>
+---<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+<h1>PHOENIX EPOCH 8 — DYNAMICS  </h1><br>
+<h2>Density Flow Dynamics (Δ→ΔΩ)</h2><br>
+<br>
+Epoch 8 introduces the first density‑based dynamic system in the Phoenix Continuum.<br>
+Density Flow describes how partition densities evolve under repeated application of<br>
+Density Operators.<br>
+<br>
+Given a partitioned structure \( P(t) \) at time \( t \):<br>
+<br>
+<br>
+<br>
+\[<br>
+P(t+1) = \Delta_{\Omega}(P(t))<br>
+\]<br>
+<br>
+<br>
+<br>
+This defines a discrete density evolution process where:<br>
+<br>
+- raw density becomes normalized  <br>
+- normalized density becomes stabilized  <br>
+- stabilized density becomes invariant  <br>
+<br>
+<h3>Density Convergence</h3><br>
+<br>
+Density Flow converges when:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Delta_{\Omega}(P(t+1)) = \Delta_{\Omega}(P(t))<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks the formation of **density fixed points**, the first stable attractors in<br>
+Phoenix’s density landscape.<br>
+<br>
+<h3>Density Stability Classes</h3><br>
+<br>
+Density Flow produces stability classes:<br>
+<br>
+- **Stable Density** — converges to a fixed point  <br>
+- **Oscillatory Density** — cycles between density states  <br>
+- **Divergent Density** — increases without bound  <br>
+- **Chaotic Density** — unpredictable density evolution  <br>
+<br>
+These classes foreshadow the manifold stability classes of Epoch 10.<br>
+<br>
+<h3>Density Manifold Preparation</h3><br>
+<br>
+Density Flow Dynamics prepare Phoenix for:<br>
+<br>
+- graph‑based density flows  <br>
+- manifold adjacency motion  <br>
+- manifold invariant formation  <br>
+- manifold stability analysis  <br>
+<br>
+Epoch 8 Dynamics are the final density evolution layer before Phoenix transitions into<br>
+graph manifolds in Epoch 9 and Epoch 10.<br>
+<br>
+</body>
+</html>
