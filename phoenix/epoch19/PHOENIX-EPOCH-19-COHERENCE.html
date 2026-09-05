@@ -2,104 +2,227 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">⟵ Previous</span>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-19-COMPLETION.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH 19 — COHERENCE</h1><br>
+<br>
+<h2>1. Synthetic Coherence Overview</h2><br>
+Synthetic Coherence ensures that synthesized structures—formed by merging multiple creative outputs—integrate into Phoenix’s mathematical totality without violating invariant, structural, or dynamic stability. <br>
+Where Epoch 18 maintained coherence for creative generation, Epoch 19 maintains coherence for **synthetic merging**.<br>
+<br>
+Synthetic Coherence guarantees:<br>
+- compatibility across merged invariant sets  <br>
+- stability of combined domains  <br>
+- alignment of unified structures  <br>
+- preservation of Phoenix’s global identity  <br>
+<br>
+<h2>2. Coherence Under Synthesis Operators</h2><br>
+Given a synthesis operator \( \Sigma \) acting on creative structures \( X_1, X_2 \):<br>
+<br>
+<br>
+\[<br>
+\Sigma(X_1, X_2) = Y<br>
+\]<br>
+<br>
+<br>
+Coherence requires:<br>
+<br>
+<br>
+\[<br>
+\text{Coh}(Y) = 1<br>
+\]<br>
+<br>
+<br>
+where \( \text{Coh}(Y) \) is the coherence indicator of the synthesized structure.<br>
+<br>
+A synthesized structure is coherent when:<br>
+<br>
+<br>
+\[<br>
+\bigcap_{i=1}^{n} \text{Inv}(X_i) \subseteq \text{Inv}(Y)<br>
+\]<br>
+<br>
+<br>
+ensuring that merged invariants share structural lineage.<br>
+<br>
+<h2>3. Coherence Flow</h2><br>
+Synthetic Coherence is maintained by the **Synthesis Coherence Flow**:<br>
+<br>
+<br>
+\[<br>
+F_\Sigma : Y \rightarrow Y^{\star}<br>
+\]<br>
+<br>
+<br>
+where \( Y^{\star} \) is the coherence‑stabilized form of the synthesized structure.<br>
+<br>
+The Coherence Flow ensures:<br>
+- invariant alignment  <br>
+- structural compatibility  <br>
+- temporal stability  <br>
+- domain integration  <br>
+<br>
+<h2>4. Coherence Under Domain Synthesis</h2><br>
+When domains \( D_1 \) and \( D_2 \) are combined:<br>
+<br>
+<br>
+\[<br>
+D_\Sigma = D_1 \oplus D_2<br>
+\]<br>
+<br>
+<br>
+Coherence requires:<br>
+<br>
+<br>
+\[<br>
+\text{Coh}(D_\Sigma) = 1<br>
+\]<br>
+<br>
+<br>
+and:<br>
+<br>
+<br>
+\[<br>
+\text{Inv}(D_1) \cup \text{Inv}(D_2) \subseteq \text{Inv}(D_\Sigma)<br>
+\]<br>
+<br>
+<br>
+ensuring that domain synthesis preserves invariant structure.<br>
+<br>
+<h2>5. Synthetic Coherence Dynamics</h2><br>
+Coherence evolves under the Synthesis Stability Flow:<br>
+<br>
+<br>
+\[<br>
+Y(t+1) = S_\Sigma(Y(t))<br>
+\]<br>
+<br>
+<br>
+Coherence is achieved when:<br>
+<br>
+<br>
+\[<br>
+Y(t+1) = Y(t)<br>
+\]<br>
+<br>
+<br>
+This fixed‑point condition ensures that synthesized structures converge to stable coherence.<br>
+<br>
+<h2>6. Coherence Completion</h2><br>
+Coherence completion occurs when:<br>
+<br>
+<br>
+\[<br>
+\text{Coh}(Y) = 1 \quad \text{and} \quad Y = Y^{\star}<br>
+\]<br>
+<br>
+<br>
+A coherent synthesized structure is eligible for Epoch 20’s universality layer.<br>
+<br>
+Coherence completion is the final stage of synthetic stabilization.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH 19 — COHERENCE</h1>
-<h2>1. Synthetic Coherence Overview</h2>
-<p>Synthetic Coherence ensures that synthesized structures—formed by merging multiple creative outputs—integrate into Phoenix’s mathematical totality without violating invariant, structural, or dynamic stability. 
-Where Epoch 18 maintained coherence for creative generation, Epoch 19 maintains coherence for <strong>synthetic merging</strong>.</p>
-<p>Synthetic Coherence guarantees:
-- compatibility across merged invariant sets<br />
-- stability of combined domains<br />
-- alignment of unified structures<br />
-- preservation of Phoenix’s global identity  </p>
-<h2>2. Coherence Under Synthesis Operators</h2>
-<p>Given a synthesis operator ( \Sigma ) acting on creative structures ( X_1, X_2 ):</p>
-<p>[
-\Sigma(X_1, X_2) = Y
-]</p>
-<p>Coherence requires:</p>
-<p>[
-\text{Coh}(Y) = 1
-]</p>
-<p>where ( \text{Coh}(Y) ) is the coherence indicator of the synthesized structure.</p>
-<p>A synthesized structure is coherent when:</p>
-<p>[
-\bigcap_{i=1}^{n} \text{Inv}(X_i) \subseteq \text{Inv}(Y)
-]</p>
-<p>ensuring that merged invariants share structural lineage.</p>
-<h2>3. Coherence Flow</h2>
-<p>Synthetic Coherence is maintained by the <strong>Synthesis Coherence Flow</strong>:</p>
-<p>[
-F_\Sigma : Y \rightarrow Y^{\star}
-]</p>
-<p>where ( Y^{\star} ) is the coherence‑stabilized form of the synthesized structure.</p>
-<p>The Coherence Flow ensures:
-- invariant alignment<br />
-- structural compatibility<br />
-- temporal stability<br />
-- domain integration  </p>
-<h2>4. Coherence Under Domain Synthesis</h2>
-<p>When domains ( D_1 ) and ( D_2 ) are combined:</p>
-<p>[
-D_\Sigma = D_1 \oplus D_2
-]</p>
-<p>Coherence requires:</p>
-<p>[
-\text{Coh}(D_\Sigma) = 1
-]</p>
-<p>and:</p>
-<p>[
-\text{Inv}(D_1) \cup \text{Inv}(D_2) \subseteq \text{Inv}(D_\Sigma)
-]</p>
-<p>ensuring that domain synthesis preserves invariant structure.</p>
-<h2>5. Synthetic Coherence Dynamics</h2>
-<p>Coherence evolves under the Synthesis Stability Flow:</p>
-<p>[
-Y(t+1) = S_\Sigma(Y(t))
-]</p>
-<p>Coherence is achieved when:</p>
-<p>[
-Y(t+1) = Y(t)
-]</p>
-<p>This fixed‑point condition ensures that synthesized structures converge to stable coherence.</p>
-<h2>6. Coherence Completion</h2>
-<p>Coherence completion occurs when:</p>
-<p>[
-\text{Coh}(Y) = 1 \quad \text{and} \quad Y = Y^{\star}
-]</p>
-<p>A coherent synthesized structure is eligible for Epoch 20’s universality layer.</p>
-<p>Coherence completion is the final stage of synthetic stabilization.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">⟵ Previous</span>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-19-COMPLETION.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

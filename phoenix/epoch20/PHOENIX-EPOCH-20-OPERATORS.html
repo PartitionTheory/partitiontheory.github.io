@@ -2,105 +2,234 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-20-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">Next ⟶</span>
 </div>
+<br>
+<h1>PHOENIX EPOCH 20 — OPERATORS</h1><br>
+<br>
+<h2>1. Universal Operator Definition</h2><br>
+Epoch 20 introduces **universal operators** — operators that act across all synthesized structures produced in Epoch 19. <br>
+Where Epoch 19 combined creative outputs into synthesized entities, Epoch 20 unifies those synthesized entities into universal mathematical constructs.<br>
+<br>
+A universal operator \( U \) acts on synthesized structures:<br>
+<br>
+<br>
+\[<br>
+U : (Y_1, Y_2, \ldots, Y_n) \rightarrow Z<br>
+\]<br>
+<br>
+<br>
+with the defining property:<br>
+<br>
+<br>
+\[<br>
+\text{Inv}(Z) \supseteq \bigcup_{i=1}^{n} \text{Inv}(Y_i)<br>
+\]<br>
+<br>
+<br>
+ensuring that universal structures preserve and extend all synthesized invariant sets.<br>
+<br>
+<h2>2. Universal Invariant Unifiers</h2><br>
+Universal Invariant Unifiers merge invariant sets across all synthesized structures.<br>
+<br>
+Given synthesized entities \( Y_1 \) and \( Y_2 \):<br>
+<br>
+<br>
+\[<br>
+U_{\text{inv}}(Y_1, Y_2) = Z<br>
+\]<br>
+<br>
+<br>
+where:<br>
+<br>
+<br>
+\[<br>
+\text{Inv}(Z) = \text{Inv}(Y_1) \cup \text{Inv}(Y_2)<br>
+\]<br>
+<br>
+<br>
+<br>
+This operator forms the basis of universal invariant harmonization.<br>
+<br>
+<h2>3. Universal Domain Integrators</h2><br>
+Universal Domain Integrators unify synthesized domains into a single universal domain.<br>
+<br>
+Given domains \( D_1 \) and \( D_2 \):<br>
+<br>
+<br>
+\[<br>
+U_{\text{dom}}(D_1, D_2) = D_U<br>
+\]<br>
+<br>
+<br>
+where:<br>
+<br>
+<br>
+\[<br>
+D_U = D_1 \oplus D_2<br>
+\]<br>
+<br>
+<br>
+and:<br>
+<br>
+<br>
+\[<br>
+\text{Coh}(D_U) = 1<br>
+\]<br>
+<br>
+<br>
+<br>
+This ensures that universal domains remain structurally stable.<br>
+<br>
+<h2>4. Universal Structural Elevators</h2><br>
+Universal Structural Elevators lift synthesized structures into the Universal Manifold \( \mathcal{M}_U \).<br>
+<br>
+Given synthesized structure \( Y \):<br>
+<br>
+<br>
+\[<br>
+U_{\text{lift}}(Y) = Y^{+}<br>
+\]<br>
+<br>
+<br>
+where \( Y^{+} \) is the universal‑level form of \( Y \).<br>
+<br>
+Elevator operators enable:<br>
+- cross‑domain unification  <br>
+- universal invariant formation  <br>
+- universal dynamic stability  <br>
+<br>
+<h2>5. Universal Lift Operators</h2><br>
+Universal Lift Operators elevate entire synthesized systems into universal form.<br>
+<br>
+Given synthesized system \( S_\Sigma \):<br>
+<br>
+<br>
+\[<br>
+U_{\Sigma}(S_\Sigma) = S_U<br>
+\]<br>
+<br>
+<br>
+where \( S_U \) is the universal system containing all synthesized structures.<br>
+<br>
+Lift operators ensure:<br>
+- universal identity formation  <br>
+- universal coherence  <br>
+- universal dynamic convergence  <br>
+<br>
+<h2>6. Operator Coherence</h2><br>
+Universal operators must remain coherent under the Universal Stability Flow:<br>
+<br>
+<br>
+\[<br>
+S_U(Z) = Z<br>
+\]<br>
+<br>
+<br>
+<br>
+This fixed‑point condition ensures that universal structures converge to stable identity and are eligible for Epoch 21’s infinite‑domain architecture.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH 20 — OPERATORS</h1>
-<h2>1. Universal Operator Definition</h2>
-<p>Epoch 20 introduces <strong>universal operators</strong> — operators that act across all synthesized structures produced in Epoch 19. 
-Where Epoch 19 combined creative outputs into synthesized entities, Epoch 20 unifies those synthesized entities into universal mathematical constructs.</p>
-<p>A universal operator ( U ) acts on synthesized structures:</p>
-<p>[
-U : (Y_1, Y_2, \ldots, Y_n) \rightarrow Z
-]</p>
-<p>with the defining property:</p>
-<p>[
-\text{Inv}(Z) \supseteq \bigcup_{i=1}^{n} \text{Inv}(Y_i)
-]</p>
-<p>ensuring that universal structures preserve and extend all synthesized invariant sets.</p>
-<h2>2. Universal Invariant Unifiers</h2>
-<p>Universal Invariant Unifiers merge invariant sets across all synthesized structures.</p>
-<p>Given synthesized entities ( Y_1 ) and ( Y_2 ):</p>
-<p>[
-U_{\text{inv}}(Y_1, Y_2) = Z
-]</p>
-<p>where:</p>
-<p>[
-\text{Inv}(Z) = \text{Inv}(Y_1) \cup \text{Inv}(Y_2)
-]</p>
-<p>This operator forms the basis of universal invariant harmonization.</p>
-<h2>3. Universal Domain Integrators</h2>
-<p>Universal Domain Integrators unify synthesized domains into a single universal domain.</p>
-<p>Given domains ( D_1 ) and ( D_2 ):</p>
-<p>[
-U_{\text{dom}}(D_1, D_2) = D_U
-]</p>
-<p>where:</p>
-<p>[
-D_U = D_1 \oplus D_2
-]</p>
-<p>and:</p>
-<p>[
-\text{Coh}(D_U) = 1
-]</p>
-<p>This ensures that universal domains remain structurally stable.</p>
-<h2>4. Universal Structural Elevators</h2>
-<p>Universal Structural Elevators lift synthesized structures into the Universal Manifold ( \mathcal{M}_U ).</p>
-<p>Given synthesized structure ( Y ):</p>
-<p>[
-U_{\text{lift}}(Y) = Y^{+}
-]</p>
-<p>where ( Y^{+} ) is the universal‑level form of ( Y ).</p>
-<p>Elevator operators enable:
-- cross‑domain unification<br />
-- universal invariant formation<br />
-- universal dynamic stability  </p>
-<h2>5. Universal Lift Operators</h2>
-<p>Universal Lift Operators elevate entire synthesized systems into universal form.</p>
-<p>Given synthesized system ( S_\Sigma ):</p>
-<p>[
-U_{\Sigma}(S_\Sigma) = S_U
-]</p>
-<p>where ( S_U ) is the universal system containing all synthesized structures.</p>
-<p>Lift operators ensure:
-- universal identity formation<br />
-- universal coherence<br />
-- universal dynamic convergence  </p>
-<h2>6. Operator Coherence</h2>
-<p>Universal operators must remain coherent under the Universal Stability Flow:</p>
-<p>[
-S_U(Z) = Z
-]</p>
-<p>This fixed‑point condition ensures that universal structures converge to stable identity and are eligible for Epoch 21’s infinite‑domain architecture.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-20-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">Next ⟶</span>
 </div>
-
 </body>
 </html>

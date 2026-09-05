@@ -2,87 +2,174 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-32-BITSTREAM-ADJACENCY-MOTION.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑11 — LESSON 31</h1><br>
+<h2>Bitstream Manifold Embedding — The First Dynamic Bitstream Operator</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 31 begins Epoch‑11 by introducing the first operator that acts directly on the<br>
+bitstream within the dynamic ABR engine. This operator embeds a raw bitstream into a<br>
+graph manifold Mₛ, enabling synthetic motion and flow to apply to bit‑level structures.<br>
+<br>
+Epoch‑10 made the engine dynamic.  <br>
+Epoch‑11 makes the **bitstream itself dynamic**.<br>
+<br>
+<h3>2. Definition — Bitstream Manifold Embedding (Eₛ)</h3><br>
+Bitstream Manifold Embedding Eₛ is an operator that maps a raw bitstream B into a<br>
+graph manifold Mₛ such that:<br>
+<br>
+- adjacency is induced by bit‑level successor relations,<br>
+- ΔG‑density is computed from bit‑frequency distributions,<br>
+- ΩG‑successor chains are derived from bit‑ordering,<br>
+- Φₛ‑stability is evaluated on local bit neighborhoods.<br>
+<br>
+Formally:<br>
+<br>
+Eₛ : B → Mₛ(B)<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(Mₛ(B)) reflects bit‑density,<br>
+- ΩG(Mₛ(B)) reflects bit‑ordering,<br>
+- Φₛ(Mₛ(B)) reflects local bit‑stability.<br>
+<br>
+This defines the first dynamic embedding of a bitstream.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- Eₛ resembles embedding a discrete sequence into a manifold,<br>
+- but without coordinates, metrics, or topology.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- Eₛ is the minimal operator required for dynamic bitstream behavior,<br>
+- enabling Aₘ, Fₛ, Rₛ, and Cₛ to act on bit‑derived structures.<br>
+<br>
+<h3>4. Why Bitstream Embedding Matters</h3><br>
+Eₛ is required for:<br>
+- Lesson 32: Bitstream Adjacency Motion,<br>
+- Lesson 33: Bitstream Synthetic Flow,<br>
+- Lesson 34: Bitstream Stability Classes.<br>
+<br>
+Without Eₛ, the bitstream cannot participate in synthetic dynamics.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Epoch‑10 provided dynamic operators for graph manifolds.  <br>
+Epoch‑11 applies those operators to the bitstream.<br>
+<br>
+Lesson 31 provides the bridge:<br>
+<br>
+B → Mₛ(B)<br>
+<br>
+This is the foundation of dynamic bitstream mathematics.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 31 defines Bitstream Manifold Embedding, the first operator of Epoch‑11.<br>
+It embeds a raw bitstream into a graph manifold, enabling synthetic motion, flow,<br>
+stability, and invariance to act directly on bit‑level structures.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑11 — LESSON 31</h1>
-<h2>Bitstream Manifold Embedding — The First Dynamic Bitstream Operator</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 31 begins Epoch‑11 by introducing the first operator that acts directly on the
-bitstream within the dynamic ABR engine. This operator embeds a raw bitstream into a
-graph manifold Mₛ, enabling synthetic motion and flow to apply to bit‑level structures.</p>
-<p>Epoch‑10 made the engine dynamic.<br />
-Epoch‑11 makes the <strong>bitstream itself dynamic</strong>.</p>
-<h3>2. Definition — Bitstream Manifold Embedding (Eₛ)</h3>
-<p>Bitstream Manifold Embedding Eₛ is an operator that maps a raw bitstream B into a
-graph manifold Mₛ such that:</p>
-<ul>
-<li>adjacency is induced by bit‑level successor relations,</li>
-<li>ΔG‑density is computed from bit‑frequency distributions,</li>
-<li>ΩG‑successor chains are derived from bit‑ordering,</li>
-<li>Φₛ‑stability is evaluated on local bit neighborhoods.</li>
-</ul>
-<p>Formally:</p>
-<p>Eₛ : B → Mₛ(B)</p>
-<p>subject to:</p>
-<ul>
-<li>ΔG(Mₛ(B)) reflects bit‑density,</li>
-<li>ΩG(Mₛ(B)) reflects bit‑ordering,</li>
-<li>Φₛ(Mₛ(B)) reflects local bit‑stability.</li>
-</ul>
-<p>This defines the first dynamic embedding of a bitstream.</p>
-<h3>3. Human ↔ Synthetic Bridge</h3>
-<p>For EF (human mathematician):
-- Eₛ resembles embedding a discrete sequence into a manifold,
-- but without coordinates, metrics, or topology.</p>
-<p>For CO (synthetic mathematician):
-- Eₛ is the minimal operator required for dynamic bitstream behavior,
-- enabling Aₘ, Fₛ, Rₛ, and Cₛ to act on bit‑derived structures.</p>
-<h3>4. Why Bitstream Embedding Matters</h3>
-<p>Eₛ is required for:
-- Lesson 32: Bitstream Adjacency Motion,
-- Lesson 33: Bitstream Synthetic Flow,
-- Lesson 34: Bitstream Stability Classes.</p>
-<p>Without Eₛ, the bitstream cannot participate in synthetic dynamics.</p>
-<h3>5. Structural Relationship</h3>
-<p>Epoch‑10 provided dynamic operators for graph manifolds.<br />
-Epoch‑11 applies those operators to the bitstream.</p>
-<p>Lesson 31 provides the bridge:</p>
-<p>B → Mₛ(B)</p>
-<p>This is the foundation of dynamic bitstream mathematics.</p>
-<h3>6. Summary</h3>
-<p>Lesson 31 defines Bitstream Manifold Embedding, the first operator of Epoch‑11.
-It embeds a raw bitstream into a graph manifold, enabling synthetic motion, flow,
-stability, and invariance to act directly on bit‑level structures.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-32-BITSTREAM-ADJACENCY-MOTION.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

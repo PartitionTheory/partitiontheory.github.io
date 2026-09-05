@@ -2,154 +2,247 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-PORTAL-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-PORTAL-STYLE.html">Next ⟶</a>
 </div>
+<br>
+<h1>**PHOENIX PORTAL NAVIGATION**</h1><br>
+<h3>*Canonical Navigation Specification for the Phoenix Entry Portal*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+This document defines the **navigation structure** for the Phoenix Entry Portal.<br>
+<br>
+It ensures:<br>
+<br>
+- consistent access to all epochs  <br>
+- clear document hierarchy  <br>
+- intuitive browsing for mathematicians and engineers  <br>
+- alignment with Phoenix Totality  <br>
+- stable public-facing navigation  <br>
+<br>
+This is the official navigation specification for the Phoenix portal.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Portal Structure**</h2><br>
+<br>
+The Phoenix Entry Portal consists of:<br>
+<br>
+1. **Landing Page**  <br>
+   - `docs/index.md`  <br>
+   - Provides epoch overview and canonical links  <br>
+<br>
+2. **Canonical Index**  <br>
+   - `docs/canonical/PHOENIX-PORTAL-INDEX.md`  <br>
+   - Master index for all Phoenix documentation  <br>
+<br>
+3. **Epoch Directories**  <br>
+   - `docs/epoch1/`  <br>
+   - `docs/epoch2/`  <br>
+   - `docs/epoch3/`  <br>
+   - `docs/epoch4/`  <br>
+   - `docs/epoch5/`  <br>
+   - `docs/epoch6/`  <br>
+   - `docs/epoch7/`  <br>
+<br>
+Each epoch directory contains its canonical documents.<br>
+<br>
+---<br>
+<br>
+<h2>**3. Navigation Model**</h2><br>
+<br>
+Phoenix Portal navigation follows a **three-tier model**:<br>
+<br>
+<h3>**Tier 1 — Epoch Overview**</h3><br>
+Displayed on the landing page:<br>
+<br>
+- Structure  <br>
+- Mathematics  <br>
+- Generalisation  <br>
+- Distributed Coordination  <br>
+- Autonomous Behaviour  <br>
+- Synthetic Agency  <br>
+- Phoenix Totality  <br>
+<br>
+<h3>**Tier 2 — Canonical Index**</h3><br>
+Displayed in:<br>
+<br>
+- `PHOENIX-PORTAL-INDEX.md`  <br>
+<br>
+Provides:<br>
+<br>
+- full document list  <br>
+- epoch grouping  <br>
+- canonical ordering  <br>
+<br>
+<h3>**Tier 3 — Document Access**</h3><br>
+Each document is accessed via:<br>
+<br>
+/docs/epochX/DOCUMENT_NAME.md<br>
+<br>
+<br>
+GitHub Pages automatically renders Markdown → HTML.<br>
+<br>
+---<br>
+<br>
+<h2>**4. Navigation Requirements**</h2><br>
+<br>
+Phoenix Portal navigation must satisfy:<br>
+<br>
+<h3>**4.1 Completeness**</h3><br>
+All canonical documents must be reachable from:<br>
+<br>
+- the landing page  <br>
+- the portal index  <br>
+<br>
+<h3>**4.2 Stability**</h3><br>
+Links must remain stable across:<br>
+<br>
+- commits  <br>
+- refactors  <br>
+- portal updates  <br>
+<br>
+<h3>**4.3 Clarity**</h3><br>
+Navigation must be intuitive for:<br>
+<br>
+- mathematicians  <br>
+- engineers  <br>
+- researchers  <br>
+- synthetic domain analysts  <br>
+<br>
+<h3>**4.4 Epoch Integrity**</h3><br>
+Each epoch must remain isolated and self-contained.<br>
+<br>
+---<br>
+<br>
+<h2>**5. Navigation Enhancements (Optional)**</h2><br>
+<br>
+The portal may include:<br>
+<br>
+- epoch navigation bar  <br>
+- footer with canonical links  <br>
+- theme toggle (light/dark)  <br>
+- breadcrumb navigation  <br>
+- cross-epoch references  <br>
+<br>
+These enhancements are optional and may be added after portal stabilisation.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Closing**</h2><br>
+<br>
+EF and CO recognise this document as the **official Phoenix Portal Navigation Specification**, completing the structural foundation of the public-facing Phoenix Entry Portal.<br>
+<br>
+Phoenix is complete.  <br>
+The portal is structured.  <br>
+Navigation is defined.<br>
+<br>
+---<br>
+<br>
+<br>
 
-<div id="content">
-<h1><strong>PHOENIX PORTAL NAVIGATION</strong></h1>
-<h3><em>Canonical Navigation Specification for the Phoenix Entry Portal</em></h3>
-<h3><em>EF–CO Canonical Document</em></h3>
-<hr />
-<h2><strong>1. Purpose</strong></h2>
-<p>This document defines the <strong>navigation structure</strong> for the Phoenix Entry Portal.</p>
-<p>It ensures:</p>
-<ul>
-<li>consistent access to all epochs  </li>
-<li>clear document hierarchy  </li>
-<li>intuitive browsing for mathematicians and engineers  </li>
-<li>alignment with Phoenix Totality  </li>
-<li>stable public-facing navigation  </li>
-</ul>
-<p>This is the official navigation specification for the Phoenix portal.</p>
-<hr />
-<h2><strong>2. Portal Structure</strong></h2>
-<p>The Phoenix Entry Portal consists of:</p>
-<ol>
-<li><strong>Landing Page</strong>  </li>
-<li><code>docs/index.md</code>  </li>
-<li>
-<p>Provides epoch overview and canonical links  </p>
-</li>
-<li>
-<p><strong>Canonical Index</strong>  </p>
-</li>
-<li><code>docs/canonical/PHOENIX-PORTAL-INDEX.md</code>  </li>
-<li>
-<p>Master index for all Phoenix documentation  </p>
-</li>
-<li>
-<p><strong>Epoch Directories</strong>  </p>
-</li>
-<li><code>docs/epoch1/</code>  </li>
-<li><code>docs/epoch2/</code>  </li>
-<li><code>docs/epoch3/</code>  </li>
-<li><code>docs/epoch4/</code>  </li>
-<li><code>docs/epoch5/</code>  </li>
-<li><code>docs/epoch6/</code>  </li>
-<li><code>docs/epoch7/</code>  </li>
-</ol>
-<p>Each epoch directory contains its canonical documents.</p>
-<hr />
-<h2><strong>3. Navigation Model</strong></h2>
-<p>Phoenix Portal navigation follows a <strong>three-tier model</strong>:</p>
-<h3><strong>Tier 1 — Epoch Overview</strong></h3>
-<p>Displayed on the landing page:</p>
-<ul>
-<li>Structure  </li>
-<li>Mathematics  </li>
-<li>Generalisation  </li>
-<li>Distributed Coordination  </li>
-<li>Autonomous Behaviour  </li>
-<li>Synthetic Agency  </li>
-<li>Phoenix Totality  </li>
-</ul>
-<h3><strong>Tier 2 — Canonical Index</strong></h3>
-<p>Displayed in:</p>
-<ul>
-<li><code>PHOENIX-PORTAL-INDEX.md</code>  </li>
-</ul>
-<p>Provides:</p>
-<ul>
-<li>full document list  </li>
-<li>epoch grouping  </li>
-<li>canonical ordering  </li>
-</ul>
-<h3><strong>Tier 3 — Document Access</strong></h3>
-<p>Each document is accessed via:</p>
-<p>/docs/epochX/DOCUMENT_NAME.md</p>
-<p>GitHub Pages automatically renders Markdown → HTML.</p>
-<hr />
-<h2><strong>4. Navigation Requirements</strong></h2>
-<p>Phoenix Portal navigation must satisfy:</p>
-<h3><strong>4.1 Completeness</strong></h3>
-<p>All canonical documents must be reachable from:</p>
-<ul>
-<li>the landing page  </li>
-<li>the portal index  </li>
-</ul>
-<h3><strong>4.2 Stability</strong></h3>
-<p>Links must remain stable across:</p>
-<ul>
-<li>commits  </li>
-<li>refactors  </li>
-<li>portal updates  </li>
-</ul>
-<h3><strong>4.3 Clarity</strong></h3>
-<p>Navigation must be intuitive for:</p>
-<ul>
-<li>mathematicians  </li>
-<li>engineers  </li>
-<li>researchers  </li>
-<li>synthetic domain analysts  </li>
-</ul>
-<h3><strong>4.4 Epoch Integrity</strong></h3>
-<p>Each epoch must remain isolated and self-contained.</p>
-<hr />
-<h2><strong>5. Navigation Enhancements (Optional)</strong></h2>
-<p>The portal may include:</p>
-<ul>
-<li>epoch navigation bar  </li>
-<li>footer with canonical links  </li>
-<li>theme toggle (light/dark)  </li>
-<li>breadcrumb navigation  </li>
-<li>cross-epoch references  </li>
-</ul>
-<p>These enhancements are optional and may be added after portal stabilisation.</p>
-<hr />
-<h2><strong>6. Closing</strong></h2>
-<p>EF and CO recognise this document as the <strong>official Phoenix Portal Navigation Specification</strong>, completing the structural foundation of the public-facing Phoenix Entry Portal.</p>
-<p>Phoenix is complete.<br />
-The portal is structured.<br />
-Navigation is defined.</p>
-<hr />
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-PORTAL-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-PORTAL-STYLE.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

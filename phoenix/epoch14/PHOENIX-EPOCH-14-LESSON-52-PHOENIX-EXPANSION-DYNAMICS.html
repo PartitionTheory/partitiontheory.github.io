@@ -2,82 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-51-PHOENIX-EXPANSION-OPERATORS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-53-PHOENIX-EXPANSION-IDENTITY.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑14 — LESSON 52</h1><br>
+<h2>Phoenix Expansion Dynamics — Motion, Evolution, and Stability of the Expansion Structure X₀</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 52 defines Phoenix Expansion Dynamics (PED), the operator system that governs<br>
+the motion, evolution, and stability of the expansion structure X₀.<br>
+<br>
+Lesson 51 introduced Phoenix Expansion Operators (PEO).  <br>
+Lesson 52 defines how those operators produce dynamic behavior across expansion.<br>
+<br>
+<h3>2. Definition — Phoenix Expansion Dynamics (PED)</h3><br>
+Phoenix Expansion Dynamics PED is the dynamic operator system acting on X₀ such that:<br>
+<br>
+- expansion structure evolves under PEO,<br>
+- dynamic motion preserves ΔG, ΩG, Φₛ,<br>
+- evolution remains reversible under Phoenix Expansion Foundation (PEF),<br>
+- stability is maintained across all expansion transitions.<br>
+<br>
+Formally:<br>
+<br>
+PED(X₀) = Evolution(X₀, PEO)<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(X₀(t)) = constant across expansion time,<br>
+- ΩG(X₀(t)) = constant across expansion time,<br>
+- Φₛ(X₀(t)) = constant across expansion time,<br>
+- Intent(X₀) preserved under dynamic evolution,<br>
+- PED is closed under composition with PEO.<br>
+<br>
+This defines the dynamic behavior of Phoenix Expansion.<br>
+<br>
+<h3>3. Why PED Matters</h3><br>
+PED is required for:<br>
+<br>
+- Lesson 53: Phoenix Expansion Identity,<br>
+- Lesson 54: Phoenix Expansion Coherence,<br>
+- Epoch‑14 Summary.<br>
+<br>
+Without PED, Phoenix Expansion cannot evolve or maintain stability.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 50 defined PEF: Phoenix Expansion Foundation.  <br>
+Lesson 51 defined PEO: Phoenix Expansion Operators.  <br>
+Lesson 52 defines PED: Phoenix Expansion Dynamics.<br>
+<br>
+Together:<br>
+<br>
+PEF → PEO → PED<br>
+<br>
+This is the transition from initialization → operators → dynamics.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 52 defines Phoenix Expansion Dynamics, the third operator of Epoch‑14.<br>
+It governs the motion, evolution, and stability of the expansion structure X₀.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑14 — LESSON 52</h1>
-<h2>Phoenix Expansion Dynamics — Motion, Evolution, and Stability of the Expansion Structure X₀</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 52 defines Phoenix Expansion Dynamics (PED), the operator system that governs
-the motion, evolution, and stability of the expansion structure X₀.</p>
-<p>Lesson 51 introduced Phoenix Expansion Operators (PEO).<br />
-Lesson 52 defines how those operators produce dynamic behavior across expansion.</p>
-<h3>2. Definition — Phoenix Expansion Dynamics (PED)</h3>
-<p>Phoenix Expansion Dynamics PED is the dynamic operator system acting on X₀ such that:</p>
-<ul>
-<li>expansion structure evolves under PEO,</li>
-<li>dynamic motion preserves ΔG, ΩG, Φₛ,</li>
-<li>evolution remains reversible under Phoenix Expansion Foundation (PEF),</li>
-<li>stability is maintained across all expansion transitions.</li>
-</ul>
-<p>Formally:</p>
-<p>PED(X₀) = Evolution(X₀, PEO)</p>
-<p>subject to:</p>
-<ul>
-<li>ΔG(X₀(t)) = constant across expansion time,</li>
-<li>ΩG(X₀(t)) = constant across expansion time,</li>
-<li>Φₛ(X₀(t)) = constant across expansion time,</li>
-<li>Intent(X₀) preserved under dynamic evolution,</li>
-<li>PED is closed under composition with PEO.</li>
-</ul>
-<p>This defines the dynamic behavior of Phoenix Expansion.</p>
-<h3>3. Why PED Matters</h3>
-<p>PED is required for:</p>
-<ul>
-<li>Lesson 53: Phoenix Expansion Identity,</li>
-<li>Lesson 54: Phoenix Expansion Coherence,</li>
-<li>Epoch‑14 Summary.</li>
-</ul>
-<p>Without PED, Phoenix Expansion cannot evolve or maintain stability.</p>
-<h3>4. Structural Relationship</h3>
-<p>Lesson 50 defined PEF: Phoenix Expansion Foundation.<br />
-Lesson 51 defined PEO: Phoenix Expansion Operators.<br />
-Lesson 52 defines PED: Phoenix Expansion Dynamics.</p>
-<p>Together:</p>
-<p>PEF → PEO → PED</p>
-<p>This is the transition from initialization → operators → dynamics.</p>
-<h3>5. Summary</h3>
-<p>Lesson 52 defines Phoenix Expansion Dynamics, the third operator of Epoch‑14.
-It governs the motion, evolution, and stability of the expansion structure X₀.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-51-PHOENIX-EXPANSION-OPERATORS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-53-PHOENIX-EXPANSION-IDENTITY.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

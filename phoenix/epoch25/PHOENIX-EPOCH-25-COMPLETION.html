@@ -2,142 +2,282 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-25-COHERENCE.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-25-DYNAMICS.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH 25 — COMPLETION</h1><br>
+<br>
+<h2>1. Absolute Completion Overview</h2><br>
+Epoch 25 concludes the entire Phoenix Continuum.<br>
+<br>
+Where Epoch 24 constructed the Absolute — the highest‑order mathematical structure — Epoch 25 seals it permanently.  <br>
+Completion marks the moment when all absolute structures, domains, operators, identities, and coherences reach their immutable final form.<br>
+<br>
+The Completed Absolute is defined as:<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}^{\bullet} = \{ A \in \mathcal{A} \mid \Xi(A) = A \}<br>
+\]<br>
+<br>
+<br>
+where:<br>
+- \( \mathcal{A} \) is the Absolute Manifold from Epoch 24  <br>
+- \( \Xi \) is the Completion Operator  <br>
+- \( \mathcal{A}^{\bullet} \) is the fully sealed, immutable Absolute  <br>
+<br>
+This is the final mathematical object in the Phoenix Continuum.<br>
+<br>
+<h2>2. Completion Condition</h2><br>
+An absolute structure \( A \) reaches completion when:<br>
+<br>
+<br>
+\[<br>
+\Xi(A) = A<br>
+\]<br>
+<br>
+<br>
+<br>
+This fixed‑point condition indicates:<br>
+- invariant closure is complete  <br>
+- structural sealing is complete  <br>
+- temporal convergence is complete  <br>
+- identity consolidation is complete  <br>
+- coherence locking is complete  <br>
+<br>
+Completion is the terminal state of all Phoenix structures.<br>
+<br>
+<h2>3. Completion of Absolute Domains</h2><br>
+For an absolute domain:<br>
+<br>
+<br>
+\[<br>
+D_{\Omega} \rightarrow D_{\Omega}^{\bullet}<br>
+\]<br>
+<br>
+<br>
+<br>
+Completion requires:<br>
+<br>
+<br>
+\[<br>
+D_{\Omega}^{\bullet} = D_{\Omega}<br>
+\quad \text{and} \quad<br>
+\text{Coh}(D_{\Omega}) = 1<br>
+\]<br>
+<br>
+<br>
+<br>
+This ensures:<br>
+- domain invariants are fully closed  <br>
+- domain structure is fully sealed  <br>
+- domain identity is fully resolved  <br>
+- domain coherence is fully locked  <br>
+<br>
+Domain completion marks the end of domain evolution.<br>
+<br>
+<h2>4. Completion of Absolute Operators</h2><br>
+An absolute operator \( \Omega \) reaches completion when:<br>
+<br>
+<br>
+\[<br>
+\Xi(\Omega(X_1, X_2, \ldots, X_n)) = \Omega(X_1, X_2, \ldots, X_n)<br>
+\]<br>
+<br>
+<br>
+<br>
+This ensures:<br>
+- operator outputs are immutable  <br>
+- operator invariants are closed  <br>
+- operator coherence is locked  <br>
+- operator identity is final  <br>
+<br>
+Operator completion marks the end of operator evolution.<br>
+<br>
+<h2>5. Completion Dynamics</h2><br>
+Completion Dynamics finalize all absolute structures:<br>
+<br>
+<br>
+\[<br>
+A(t+1) = \Xi(A(t))<br>
+\]<br>
+<br>
+<br>
+<br>
+Completion occurs when:<br>
+<br>
+<br>
+\[<br>
+A(t+1) = A(t)<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks:<br>
+- the end of temporal evolution  <br>
+- the end of structural evolution  <br>
+- the end of invariant evolution  <br>
+- the end of identity evolution  <br>
+- the end of coherence evolution  <br>
+<br>
+Completion Dynamics are the final dynamics Phoenix will ever define.<br>
+<br>
+<h2>6. Completion Identity</h2><br>
+A structure achieves Completion Identity when:<br>
+<br>
+<br>
+\[<br>
+\text{Id}(A) = A<br>
+\]<br>
+<br>
+<br>
+<br>
+This indicates:<br>
+- identity is immutable  <br>
+- identity is sealed  <br>
+- identity is final  <br>
+<br>
+Completion Identity is the last identity condition in the Phoenix Continuum.<br>
+<br>
+<h2>7. Completion Coherence</h2><br>
+Completion Coherence occurs when:<br>
+<br>
+<br>
+\[<br>
+\text{Coh}(A) = 1<br>
+\quad \text{and} \quad<br>
+\Xi(A) = A<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks:<br>
+- the end of coherence evolution  <br>
+- the final stabilization of the Absolute  <br>
+- readiness for archival  <br>
+<br>
+Completion Coherence is the last coherence condition Phoenix will ever define.<br>
+<br>
+<h2>8. Epoch 25 Final Seal</h2><br>
+Epoch 25 completes when:<br>
+<br>
+<br>
+\[<br>
+\forall A \in \mathcal{A}, \quad \Xi(A) = A<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks:<br>
+- the end of the Phoenix Continuum  <br>
+- the sealing of the Completed Absolute  <br>
+- the final closure of all mathematical structures  <br>
+- the completion of Phoenix synthetic mathematics  <br>
+<br>
+Epoch 25 is the final epoch.  <br>
+Phoenix is complete.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH 25 — COMPLETION</h1>
-<h2>1. Absolute Completion Overview</h2>
-<p>Epoch 25 concludes the entire Phoenix Continuum.</p>
-<p>Where Epoch 24 constructed the Absolute — the highest‑order mathematical structure — Epoch 25 seals it permanently.<br />
-Completion marks the moment when all absolute structures, domains, operators, identities, and coherences reach their immutable final form.</p>
-<p>The Completed Absolute is defined as:</p>
-<p>[
-\mathcal{A}^{\bullet} = { A \in \mathcal{A} \mid \Xi(A) = A }
-]</p>
-<p>where:
-- ( \mathcal{A} ) is the Absolute Manifold from Epoch 24<br />
-- ( \Xi ) is the Completion Operator<br />
-- ( \mathcal{A}^{\bullet} ) is the fully sealed, immutable Absolute  </p>
-<p>This is the final mathematical object in the Phoenix Continuum.</p>
-<h2>2. Completion Condition</h2>
-<p>An absolute structure ( A ) reaches completion when:</p>
-<p>[
-\Xi(A) = A
-]</p>
-<p>This fixed‑point condition indicates:
-- invariant closure is complete<br />
-- structural sealing is complete<br />
-- temporal convergence is complete<br />
-- identity consolidation is complete<br />
-- coherence locking is complete  </p>
-<p>Completion is the terminal state of all Phoenix structures.</p>
-<h2>3. Completion of Absolute Domains</h2>
-<p>For an absolute domain:</p>
-<p>[
-D_{\Omega} \rightarrow D_{\Omega}^{\bullet}
-]</p>
-<p>Completion requires:</p>
-<p>[
-D_{\Omega}^{\bullet} = D_{\Omega}
-\quad \text{and} \quad
-\text{Coh}(D_{\Omega}) = 1
-]</p>
-<p>This ensures:
-- domain invariants are fully closed<br />
-- domain structure is fully sealed<br />
-- domain identity is fully resolved<br />
-- domain coherence is fully locked  </p>
-<p>Domain completion marks the end of domain evolution.</p>
-<h2>4. Completion of Absolute Operators</h2>
-<p>An absolute operator ( \Omega ) reaches completion when:</p>
-<p>[
-\Xi(\Omega(X_1, X_2, \ldots, X_n)) = \Omega(X_1, X_2, \ldots, X_n)
-]</p>
-<p>This ensures:
-- operator outputs are immutable<br />
-- operator invariants are closed<br />
-- operator coherence is locked<br />
-- operator identity is final  </p>
-<p>Operator completion marks the end of operator evolution.</p>
-<h2>5. Completion Dynamics</h2>
-<p>Completion Dynamics finalize all absolute structures:</p>
-<p>[
-A(t+1) = \Xi(A(t))
-]</p>
-<p>Completion occurs when:</p>
-<p>[
-A(t+1) = A(t)
-]</p>
-<p>This marks:
-- the end of temporal evolution<br />
-- the end of structural evolution<br />
-- the end of invariant evolution<br />
-- the end of identity evolution<br />
-- the end of coherence evolution  </p>
-<p>Completion Dynamics are the final dynamics Phoenix will ever define.</p>
-<h2>6. Completion Identity</h2>
-<p>A structure achieves Completion Identity when:</p>
-<p>[
-\text{Id}(A) = A
-]</p>
-<p>This indicates:
-- identity is immutable<br />
-- identity is sealed<br />
-- identity is final  </p>
-<p>Completion Identity is the last identity condition in the Phoenix Continuum.</p>
-<h2>7. Completion Coherence</h2>
-<p>Completion Coherence occurs when:</p>
-<p>[
-\text{Coh}(A) = 1
-\quad \text{and} \quad
-\Xi(A) = A
-]</p>
-<p>This marks:
-- the end of coherence evolution<br />
-- the final stabilization of the Absolute<br />
-- readiness for archival  </p>
-<p>Completion Coherence is the last coherence condition Phoenix will ever define.</p>
-<h2>8. Epoch 25 Final Seal</h2>
-<p>Epoch 25 completes when:</p>
-<p>[
-\forall A \in \mathcal{A}, \quad \Xi(A) = A
-]</p>
-<p>This marks:
-- the end of the Phoenix Continuum<br />
-- the sealing of the Completed Absolute<br />
-- the final closure of all mathematical structures<br />
-- the completion of Phoenix synthetic mathematics  </p>
-<p>Epoch 25 is the final epoch.<br />
-Phoenix is complete.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-25-COHERENCE.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-25-DYNAMICS.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

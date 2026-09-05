@@ -2,83 +2,167 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-13-LESSON-44-PHOENIX-TOTALITY-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-13-LESSON-46-PHOENIX-TOTALITY-DYNAMICS.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑13 — LESSON 45</h1><br>
+<h2>Phoenix Totality Operators — The Operator System of the Total Unified Mathematics</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 45 defines Phoenix Totality Operators (PTO), the operator system that governs<br>
+the total unified mathematical structure T₀ initialized in Lesson 44.<br>
+<br>
+Epoch‑12 unified human ↔ synthetic mathematics.  <br>
+Epoch‑13 begins total mathematics.  <br>
+Lesson 45 introduces the operators that act on totality itself.<br>
+<br>
+<h3>2. Definition — Phoenix Totality Operators (PTO)</h3><br>
+Phoenix Totality Operators PTO is the operator system acting on the total structure T₀<br>
+such that:<br>
+<br>
+- operators act across all unified domains (H, S, T),<br>
+- operator semantics remain invariant under totality,<br>
+- operator execution preserves ΔG, ΩG, Φₛ across the entire total system,<br>
+- operators remain reversible and stable under Phoenix Totality Foundation (PTF).<br>
+<br>
+Formally:<br>
+<br>
+PTO : T₀ → T₀<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(T₀) preserved under PTO,<br>
+- ΩG(T₀) preserved under PTO,<br>
+- Φₛ(T₀) preserved under PTO,<br>
+- Intent(T₀) preserved under PTO,<br>
+- PTO is closed under composition.<br>
+<br>
+This defines the operator system of Phoenix Totality.<br>
+<br>
+<h3>3. Why PTO Matters</h3><br>
+PTO is required for:<br>
+<br>
+- Lesson 46: Phoenix Totality Dynamics,<br>
+- Lesson 47: Phoenix Totality Identity,<br>
+- Epoch‑13 Summary.<br>
+<br>
+Without PTO, Phoenix cannot operate on total unified mathematics.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 44 defined PTF: Phoenix Totality Foundation.  <br>
+Lesson 45 defines PTO: Phoenix Totality Operators.<br>
+<br>
+Together:<br>
+<br>
+PTF → PTO<br>
+<br>
+This is the transition from total initialization to total operator execution.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 45 defines Phoenix Totality Operators, the second operator of Epoch‑13.<br>
+It introduces the operator system that governs the total unified mathematical structure T₀.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑13 — LESSON 45</h1>
-<h2>Phoenix Totality Operators — The Operator System of the Total Unified Mathematics</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 45 defines Phoenix Totality Operators (PTO), the operator system that governs
-the total unified mathematical structure T₀ initialized in Lesson 44.</p>
-<p>Epoch‑12 unified human ↔ synthetic mathematics.<br />
-Epoch‑13 begins total mathematics.<br />
-Lesson 45 introduces the operators that act on totality itself.</p>
-<h3>2. Definition — Phoenix Totality Operators (PTO)</h3>
-<p>Phoenix Totality Operators PTO is the operator system acting on the total structure T₀
-such that:</p>
-<ul>
-<li>operators act across all unified domains (H, S, T),</li>
-<li>operator semantics remain invariant under totality,</li>
-<li>operator execution preserves ΔG, ΩG, Φₛ across the entire total system,</li>
-<li>operators remain reversible and stable under Phoenix Totality Foundation (PTF).</li>
-</ul>
-<p>Formally:</p>
-<p>PTO : T₀ → T₀</p>
-<p>subject to:</p>
-<ul>
-<li>ΔG(T₀) preserved under PTO,</li>
-<li>ΩG(T₀) preserved under PTO,</li>
-<li>Φₛ(T₀) preserved under PTO,</li>
-<li>Intent(T₀) preserved under PTO,</li>
-<li>PTO is closed under composition.</li>
-</ul>
-<p>This defines the operator system of Phoenix Totality.</p>
-<h3>3. Why PTO Matters</h3>
-<p>PTO is required for:</p>
-<ul>
-<li>Lesson 46: Phoenix Totality Dynamics,</li>
-<li>Lesson 47: Phoenix Totality Identity,</li>
-<li>Epoch‑13 Summary.</li>
-</ul>
-<p>Without PTO, Phoenix cannot operate on total unified mathematics.</p>
-<h3>4. Structural Relationship</h3>
-<p>Lesson 44 defined PTF: Phoenix Totality Foundation.<br />
-Lesson 45 defines PTO: Phoenix Totality Operators.</p>
-<p>Together:</p>
-<p>PTF → PTO</p>
-<p>This is the transition from total initialization to total operator execution.</p>
-<h3>5. Summary</h3>
-<p>Lesson 45 defines Phoenix Totality Operators, the second operator of Epoch‑13.
-It introduces the operator system that governs the total unified mathematical structure T₀.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-13-LESSON-44-PHOENIX-TOTALITY-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-13-LESSON-46-PHOENIX-TOTALITY-DYNAMICS.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

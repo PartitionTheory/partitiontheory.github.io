@@ -2,82 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">⟵ Previous</span>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-51-PHOENIX-EXPANSION-OPERATORS.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑14 — LESSON 50</h1><br>
+<h2>Phoenix Expansion Foundation — Initialization of the Post‑Totality Expansion Layer</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 50 begins Epoch‑14 by defining the Phoenix Expansion Foundation (PEF), the operator<br>
+that initializes the expansion layer emerging from Phoenix Totality.<br>
+<br>
+Epoch‑13 completed Phoenix Totality (T₀).  <br>
+Epoch‑14 begins Phoenix Expansion.<br>
+<br>
+<h3>2. Definition — Phoenix Expansion Foundation (PEF)</h3><br>
+Phoenix Expansion Foundation PEF is the operator that establishes the initial expansion<br>
+structure X₀ from:<br>
+<br>
+- the total unified mathematical system T₀,<br>
+- the residual expansion vectors detected in Epoch‑13,<br>
+- the unallocated operator space beyond totality,<br>
+- the emergent structural domains produced by closure (PTCₓ).<br>
+<br>
+Formally:<br>
+<br>
+PEF = ExpansionInit(T₀)<br>
+<br>
+subject to:<br>
+<br>
+- X₀ contains all expansion vectors from PTCₓ,<br>
+- X₀ preserves ΔG, ΩG, Φₛ under expansion,<br>
+- X₀ is stable under all Phoenix Totality operators,<br>
+- X₀ is reversible into T₀ without loss.<br>
+<br>
+PEF defines the initial expansion state of Phoenix.<br>
+<br>
+<h3>3. Why PEF Matters</h3><br>
+PEF is required for:<br>
+<br>
+- Lesson 51: Phoenix Expansion Operators,<br>
+- Lesson 52: Phoenix Expansion Dynamics,<br>
+- Lesson 53: Phoenix Expansion Identity,<br>
+- Epoch‑14 Summary.<br>
+<br>
+Without PEF, Phoenix cannot begin post‑totality expansion.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Epoch‑13 ended with PTCₓ: Phoenix Totality Completion.  <br>
+Epoch‑14 begins with PEF: Phoenix Expansion Foundation.<br>
+<br>
+Together:<br>
+<br>
+PTCₓ → PEF<br>
+<br>
+This is the transition from totality → expansion.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 50 defines the Phoenix Expansion Foundation, the first operator of Epoch‑14.<br>
+It initializes the expansion structure X₀, preparing Phoenix for post‑totality growth.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑14 — LESSON 50</h1>
-<h2>Phoenix Expansion Foundation — Initialization of the Post‑Totality Expansion Layer</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 50 begins Epoch‑14 by defining the Phoenix Expansion Foundation (PEF), the operator
-that initializes the expansion layer emerging from Phoenix Totality.</p>
-<p>Epoch‑13 completed Phoenix Totality (T₀).<br />
-Epoch‑14 begins Phoenix Expansion.</p>
-<h3>2. Definition — Phoenix Expansion Foundation (PEF)</h3>
-<p>Phoenix Expansion Foundation PEF is the operator that establishes the initial expansion
-structure X₀ from:</p>
-<ul>
-<li>the total unified mathematical system T₀,</li>
-<li>the residual expansion vectors detected in Epoch‑13,</li>
-<li>the unallocated operator space beyond totality,</li>
-<li>the emergent structural domains produced by closure (PTCₓ).</li>
-</ul>
-<p>Formally:</p>
-<p>PEF = ExpansionInit(T₀)</p>
-<p>subject to:</p>
-<ul>
-<li>X₀ contains all expansion vectors from PTCₓ,</li>
-<li>X₀ preserves ΔG, ΩG, Φₛ under expansion,</li>
-<li>X₀ is stable under all Phoenix Totality operators,</li>
-<li>X₀ is reversible into T₀ without loss.</li>
-</ul>
-<p>PEF defines the initial expansion state of Phoenix.</p>
-<h3>3. Why PEF Matters</h3>
-<p>PEF is required for:</p>
-<ul>
-<li>Lesson 51: Phoenix Expansion Operators,</li>
-<li>Lesson 52: Phoenix Expansion Dynamics,</li>
-<li>Lesson 53: Phoenix Expansion Identity,</li>
-<li>Epoch‑14 Summary.</li>
-</ul>
-<p>Without PEF, Phoenix cannot begin post‑totality expansion.</p>
-<h3>4. Structural Relationship</h3>
-<p>Epoch‑13 ended with PTCₓ: Phoenix Totality Completion.<br />
-Epoch‑14 begins with PEF: Phoenix Expansion Foundation.</p>
-<p>Together:</p>
-<p>PTCₓ → PEF</p>
-<p>This is the transition from totality → expansion.</p>
-<h3>5. Summary</h3>
-<p>Lesson 50 defines the Phoenix Expansion Foundation, the first operator of Epoch‑14.
-It initializes the expansion structure X₀, preparing Phoenix for post‑totality growth.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">⟵ Previous</span>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-51-PHOENIX-EXPANSION-OPERATORS.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

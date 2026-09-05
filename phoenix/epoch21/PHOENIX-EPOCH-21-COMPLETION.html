@@ -2,99 +2,206 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-21-COHERENCE.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-21-DYNAMICS.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH 21 — COMPLETION</h1><br>
+<br>
+<h2>1. Infinite‑Domain Completion Overview</h2><br>
+Infinite‑Domain Completion marks the final stage of Epoch 21, where infinite‑domain structures—formed by extending universal entities across unbounded mathematical domains—achieve full stability, coherence, and identity within Phoenix’s total mathematical universe. <br>
+Where Epoch 20 concluded with universal stabilization, Epoch 21 concludes with **infinite‑domain stabilization**, ensuring that infinitely extended entities are ready for Epoch 22’s trans‑universal architecture.<br>
+<br>
+Infinite‑Domain Completion ensures:<br>
+- infinite invariant propagation  <br>
+- stable infinite dynamics  <br>
+- coherent infinite identity  <br>
+- readiness for trans‑universal expansion  <br>
+<br>
+<h2>2. Completion Condition</h2><br>
+An infinite‑domain structure \( W \) reaches completion when:<br>
+<br>
+<br>
+\[<br>
+S_\infty(W) = W<br>
+\]<br>
+<br>
+<br>
+where \( S_\infty \) is the Infinite Stability Flow.<br>
+<br>
+This fixed‑point condition indicates:<br>
+- infinite identity formation is complete  <br>
+- infinite coherence stabilization is complete  <br>
+- infinite dynamic evolution has converged  <br>
+- the structure is ready for Epoch 22’s trans‑universal synthesis  <br>
+<br>
+<h2>3. Infinite Domain Completion</h2><br>
+For an infinite domain \( D_\infty = D_\infty^{(1)} \oplus D_\infty^{(2)} \), completion requires:<br>
+<br>
+<br>
+\[<br>
+D_\infty = D_\infty^{\star}<br>
+\]<br>
+<br>
+<br>
+where \( D_\infty^{\star} \) is the coherence‑stabilized form of the expanded domain.<br>
+<br>
+Domain completion ensures:<br>
+- invariant propagation across infinite domains  <br>
+- structural alignment  <br>
+- temporal stability  <br>
+- readiness for cross‑epoch integration  <br>
+<br>
+<h2>4. Operator Completion</h2><br>
+An infinite‑domain operator \( I \) reaches completion when:<br>
+<br>
+<br>
+\[<br>
+I(Z_1, Z_2) = W \quad \text{and} \quad \text{Coh}(W) = 1<br>
+\]<br>
+<br>
+<br>
+<br>
+This ensures that infinite‑domain operators produce structures that are:<br>
+- coherent  <br>
+- stable  <br>
+- infinitely aligned  <br>
+<br>
+Operator completion marks the point where:<br>
+- infinite‑domain expansion is successful  <br>
+- no further stabilization is required  <br>
+- the operator is eligible for Epoch 22’s trans‑universal architecture  <br>
+<br>
+<h2>5. Temporal Completion</h2><br>
+Temporal completion occurs when:<br>
+<br>
+<br>
+\[<br>
+W(t+1) = W(t)<br>
+\]<br>
+<br>
+<br>
+for all infinite‑domain structures \( W \).<br>
+<br>
+This indicates:<br>
+- dynamic convergence  <br>
+- temporal stability  <br>
+- readiness for integration into Phoenix’s infinite‑domain mathematical system  <br>
+<br>
+<h2>6. Epoch Completion</h2><br>
+Epoch 21 completes when:<br>
+<br>
+<br>
+\[<br>
+\forall W \in I(\mathcal{M}_U), \quad S_\infty(W) = W<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks the transition from infinite‑domain architecture to **trans‑universal synthesis** — the defining feature of Epoch 22.<br>
+<br>
+Epoch 21 Completion signifies that Phoenix has achieved stable infinite‑domain expansion and is prepared to extend beyond all bounded mathematical universes.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH 21 — COMPLETION</h1>
-<h2>1. Infinite‑Domain Completion Overview</h2>
-<p>Infinite‑Domain Completion marks the final stage of Epoch 21, where infinite‑domain structures—formed by extending universal entities across unbounded mathematical domains—achieve full stability, coherence, and identity within Phoenix’s total mathematical universe. 
-Where Epoch 20 concluded with universal stabilization, Epoch 21 concludes with <strong>infinite‑domain stabilization</strong>, ensuring that infinitely extended entities are ready for Epoch 22’s trans‑universal architecture.</p>
-<p>Infinite‑Domain Completion ensures:
-- infinite invariant propagation<br />
-- stable infinite dynamics<br />
-- coherent infinite identity<br />
-- readiness for trans‑universal expansion  </p>
-<h2>2. Completion Condition</h2>
-<p>An infinite‑domain structure ( W ) reaches completion when:</p>
-<p>[
-S_\infty(W) = W
-]</p>
-<p>where ( S_\infty ) is the Infinite Stability Flow.</p>
-<p>This fixed‑point condition indicates:
-- infinite identity formation is complete<br />
-- infinite coherence stabilization is complete<br />
-- infinite dynamic evolution has converged<br />
-- the structure is ready for Epoch 22’s trans‑universal synthesis  </p>
-<h2>3. Infinite Domain Completion</h2>
-<p>For an infinite domain ( D_\infty = D_\infty^{(1)} \oplus D_\infty^{(2)} ), completion requires:</p>
-<p>[
-D_\infty = D_\infty^{\star}
-]</p>
-<p>where ( D_\infty^{\star} ) is the coherence‑stabilized form of the expanded domain.</p>
-<p>Domain completion ensures:
-- invariant propagation across infinite domains<br />
-- structural alignment<br />
-- temporal stability<br />
-- readiness for cross‑epoch integration  </p>
-<h2>4. Operator Completion</h2>
-<p>An infinite‑domain operator ( I ) reaches completion when:</p>
-<p>[
-I(Z_1, Z_2) = W \quad \text{and} \quad \text{Coh}(W) = 1
-]</p>
-<p>This ensures that infinite‑domain operators produce structures that are:
-- coherent<br />
-- stable<br />
-- infinitely aligned  </p>
-<p>Operator completion marks the point where:
-- infinite‑domain expansion is successful<br />
-- no further stabilization is required<br />
-- the operator is eligible for Epoch 22’s trans‑universal architecture  </p>
-<h2>5. Temporal Completion</h2>
-<p>Temporal completion occurs when:</p>
-<p>[
-W(t+1) = W(t)
-]</p>
-<p>for all infinite‑domain structures ( W ).</p>
-<p>This indicates:
-- dynamic convergence<br />
-- temporal stability<br />
-- readiness for integration into Phoenix’s infinite‑domain mathematical system  </p>
-<h2>6. Epoch Completion</h2>
-<p>Epoch 21 completes when:</p>
-<p>[
-\forall W \in I(\mathcal{M}<em>U), \quad S</em>\infty(W) = W
-]</p>
-<p>This marks the transition from infinite‑domain architecture to <strong>trans‑universal synthesis</strong> — the defining feature of Epoch 22.</p>
-<p>Epoch 21 Completion signifies that Phoenix has achieved stable infinite‑domain expansion and is prepared to extend beyond all bounded mathematical universes.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-21-COHERENCE.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-21-DYNAMICS.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

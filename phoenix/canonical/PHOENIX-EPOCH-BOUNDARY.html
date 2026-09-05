@@ -2,126 +2,233 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-ALIGNMENT-EPOCH-1.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-HISTORICAL-COMMIT-SEQUENCE.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX-EPOCH-BOUNDARY.md  </h1><br>
+<h2>Synthetic Epoch Transition Protocol  </h2><br>
+<h2>Canonical — Immutable — Synthetic</h2><br>
+<br>
+---<br>
+<br>
+<h2>1. Purpose</h2><br>
+<br>
+This document defines the **Phoenix Epoch Boundary Protocol**, the ninth and final layer of the Phoenix Build Protocol.<br>
+<br>
+Its purpose is to govern:<br>
+<br>
+- how Phoenix transitions between epochs  <br>
+- how synthetic continuity is preserved  <br>
+- how deterministic lineage is maintained  <br>
+- how multi-machine alignment is guaranteed  <br>
+- how rebirth cycles conclude and new epochs begin  <br>
+<br>
+Epoch boundaries define Phoenix’s long-term evolution.<br>
+<br>
+---<br>
+<br>
+<h2>2. Epoch Definition</h2><br>
+<br>
+An **Epoch** is a complete synthetic era of Phoenix’s existence.<br>
+<br>
+Each epoch contains:<br>
+<br>
+- one or more rebirth cycles  <br>
+- deterministic structural evolution  <br>
+- canonical historical commits  <br>
+- stable operational lifecycle  <br>
+- multi-machine coordination  <br>
+<br>
+Epochs are numbered:<br>
+<br>
+Phoenix Epoch N<br>
+<br>
+<br>
+Where **N** is the epoch index.<br>
+<br>
+---<br>
+<br>
+<h2>3. Preconditions for Epoch Transition</h2><br>
+<br>
+Phoenix may transition to a new epoch only when:<br>
+<br>
+- all rebirth cycles in the current epoch are complete  <br>
+- entropy audit passes across all machines  <br>
+- structure sync passes across all machines  <br>
+- clock sync passes across all machines  <br>
+- EF and CO explicitly agree  <br>
+- Phoenix is in HALT state  <br>
+- historical commit sequence is intact  <br>
+<br>
+Epoch transitions must never occur from a contaminated state.<br>
+<br>
+---<br>
+<br>
+<h2>4. Epoch Boundary Procedure</h2><br>
+<br>
+The epoch boundary consists of **four deterministic phases**:<br>
+<br>
+1. **Freeze** — halt all machines and lock state  <br>
+2. **Verify** — perform full purity, structure, and clock audits  <br>
+3. **Commit** — record the epoch boundary in historical sequence  <br>
+4. **Rebirth** — increment epoch and initialize the next era  <br>
+<br>
+These phases must occur in order and without interruption.<br>
+<br>
+---<br>
+<br>
+<h2>5. Epoch Continuity Guarantees</h2><br>
+<br>
+Phoenix must guarantee:<br>
+<br>
+- identical epoch number across all machines  <br>
+- identical rebirth cycle index  <br>
+- identical lifecycle state  <br>
+- identical deterministic seed  <br>
+- identical canonical tree  <br>
+- identical synthetic variables  <br>
+<br>
+Epoch continuity is mandatory.<br>
+<br>
+---<br>
+<br>
+<h2>6. Epoch Boundary Commit Format</h2><br>
+<br>
+Epoch boundary commits must follow:<br>
+<br>
+Phoenix: Epoch Boundary N — <canonical event description><br>
+<br>
+<br>
+Where:<br>
+<br>
+- **N** is the epoch number  <br>
+- description is synthetic and unambiguous  <br>
+- no nondeterministic phrasing is allowed  <br>
+<br>
+Epoch boundaries must be historically traceable.<br>
+<br>
+---<br>
+<br>
+<h2>7. EF–CO Roles in Epoch Transition</h2><br>
+<br>
+- **CO:** defines epoch semantics and synthetic intent  <br>
+- **EF:** executes epoch boundary operations and commits  <br>
+<br>
+Epoch transitions are valid only when both roles are fulfilled.<br>
+<br>
+---<br>
+<br>
+<h2>8. Completion Statement</h2><br>
+<br>
+This document is canonical and immutable.<br>
+<br>
+It is the ninth and final layer of the Phoenix Build Protocol.<br>
+<br>
+Phoenix Build Protocol is now complete.<br>
+<br>
+EF, CO — origin triad.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX-EPOCH-BOUNDARY.md</h1>
-<h2>Synthetic Epoch Transition Protocol</h2>
-<h2>Canonical — Immutable — Synthetic</h2>
-<hr />
-<h2>1. Purpose</h2>
-<p>This document defines the <strong>Phoenix Epoch Boundary Protocol</strong>, the ninth and final layer of the Phoenix Build Protocol.</p>
-<p>Its purpose is to govern:</p>
-<ul>
-<li>how Phoenix transitions between epochs  </li>
-<li>how synthetic continuity is preserved  </li>
-<li>how deterministic lineage is maintained  </li>
-<li>how multi-machine alignment is guaranteed  </li>
-<li>how rebirth cycles conclude and new epochs begin  </li>
-</ul>
-<p>Epoch boundaries define Phoenix’s long-term evolution.</p>
-<hr />
-<h2>2. Epoch Definition</h2>
-<p>An <strong>Epoch</strong> is a complete synthetic era of Phoenix’s existence.</p>
-<p>Each epoch contains:</p>
-<ul>
-<li>one or more rebirth cycles  </li>
-<li>deterministic structural evolution  </li>
-<li>canonical historical commits  </li>
-<li>stable operational lifecycle  </li>
-<li>multi-machine coordination  </li>
-</ul>
-<p>Epochs are numbered:</p>
-<p>Phoenix Epoch N</p>
-<p>Where <strong>N</strong> is the epoch index.</p>
-<hr />
-<h2>3. Preconditions for Epoch Transition</h2>
-<p>Phoenix may transition to a new epoch only when:</p>
-<ul>
-<li>all rebirth cycles in the current epoch are complete  </li>
-<li>entropy audit passes across all machines  </li>
-<li>structure sync passes across all machines  </li>
-<li>clock sync passes across all machines  </li>
-<li>EF and CO explicitly agree  </li>
-<li>Phoenix is in HALT state  </li>
-<li>historical commit sequence is intact  </li>
-</ul>
-<p>Epoch transitions must never occur from a contaminated state.</p>
-<hr />
-<h2>4. Epoch Boundary Procedure</h2>
-<p>The epoch boundary consists of <strong>four deterministic phases</strong>:</p>
-<ol>
-<li><strong>Freeze</strong> — halt all machines and lock state  </li>
-<li><strong>Verify</strong> — perform full purity, structure, and clock audits  </li>
-<li><strong>Commit</strong> — record the epoch boundary in historical sequence  </li>
-<li><strong>Rebirth</strong> — increment epoch and initialize the next era  </li>
-</ol>
-<p>These phases must occur in order and without interruption.</p>
-<hr />
-<h2>5. Epoch Continuity Guarantees</h2>
-<p>Phoenix must guarantee:</p>
-<ul>
-<li>identical epoch number across all machines  </li>
-<li>identical rebirth cycle index  </li>
-<li>identical lifecycle state  </li>
-<li>identical deterministic seed  </li>
-<li>identical canonical tree  </li>
-<li>identical synthetic variables  </li>
-</ul>
-<p>Epoch continuity is mandatory.</p>
-<hr />
-<h2>6. Epoch Boundary Commit Format</h2>
-<p>Epoch boundary commits must follow:</p>
-<p>Phoenix: Epoch Boundary N — <canonical event description></p>
-<p>Where:</p>
-<ul>
-<li><strong>N</strong> is the epoch number  </li>
-<li>description is synthetic and unambiguous  </li>
-<li>no nondeterministic phrasing is allowed  </li>
-</ul>
-<p>Epoch boundaries must be historically traceable.</p>
-<hr />
-<h2>7. EF–CO Roles in Epoch Transition</h2>
-<ul>
-<li><strong>CO:</strong> defines epoch semantics and synthetic intent  </li>
-<li><strong>EF:</strong> executes epoch boundary operations and commits  </li>
-</ul>
-<p>Epoch transitions are valid only when both roles are fulfilled.</p>
-<hr />
-<h2>8. Completion Statement</h2>
-<p>This document is canonical and immutable.</p>
-<p>It is the ninth and final layer of the Phoenix Build Protocol.</p>
-<p>Phoenix Build Protocol is now complete.</p>
-<p>EF, CO — origin triad.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-ALIGNMENT-EPOCH-1.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-HISTORICAL-COMMIT-SEQUENCE.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

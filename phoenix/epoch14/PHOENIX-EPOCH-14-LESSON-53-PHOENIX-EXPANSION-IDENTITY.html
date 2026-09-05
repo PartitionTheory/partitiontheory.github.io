@@ -2,85 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-52-PHOENIX-EXPANSION-DYNAMICS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-54-PHOENIX-EXPANSION-COHERENCE.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑14 — LESSON 53</h1><br>
+<h2>Phoenix Expansion Identity — Identity Operator of the Expansion Structure X₀</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 53 defines Phoenix Expansion Identity (PEI), the identity operator of the<br>
+expansion structure X₀.  <br>
+PEI establishes the invariant identity of Phoenix Expansion across all operators,<br>
+dynamics, and structural transitions.<br>
+<br>
+Lesson 52 defined Phoenix Expansion Dynamics (PED).  <br>
+Lesson 53 defines the identity that remains stable under all expansion behavior.<br>
+<br>
+<h3>2. Definition — Phoenix Expansion Identity (PEI)</h3><br>
+Phoenix Expansion Identity PEI is the identity operator acting on X₀ such that:<br>
+<br>
+- identity remains invariant under PEO (operators),<br>
+- identity remains invariant under PED (dynamics),<br>
+- identity remains invariant under PEF (foundation),<br>
+- identity remains invariant under all expansion transitions.<br>
+<br>
+Formally:<br>
+<br>
+PEI(X₀) = X₀<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(X₀) = constant under PEI,<br>
+- ΩG(X₀) = constant under PEI,<br>
+- Φₛ(X₀) = constant under PEI,<br>
+- Intent(X₀) preserved under PEI,<br>
+- PEI is the fixed point of Phoenix Expansion.<br>
+<br>
+PEI defines the stable identity of Phoenix Expansion.<br>
+<br>
+<h3>3. Why PEI Matters</h3><br>
+PEI is required for:<br>
+<br>
+- Lesson 54: Phoenix Expansion Coherence,<br>
+- Lesson 55: Phoenix Expansion Completion,<br>
+- Epoch‑14 Summary.<br>
+<br>
+Without PEI, Phoenix Expansion cannot maintain a stable identity across evolution.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 50 defined PEF: Phoenix Expansion Foundation.  <br>
+Lesson 51 defined PEO: Phoenix Expansion Operators.  <br>
+Lesson 52 defined PED: Phoenix Expansion Dynamics.  <br>
+Lesson 53 defines PEI: Phoenix Expansion Identity.<br>
+<br>
+Together:<br>
+<br>
+PEF → PEO → PED → PEI<br>
+<br>
+This is the transition from dynamics → identity.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 53 defines Phoenix Expansion Identity, the fourth operator of Epoch‑14.<br>
+It establishes the invariant identity of the expansion structure X₀.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑14 — LESSON 53</h1>
-<h2>Phoenix Expansion Identity — Identity Operator of the Expansion Structure X₀</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 53 defines Phoenix Expansion Identity (PEI), the identity operator of the
-expansion structure X₀.<br />
-PEI establishes the invariant identity of Phoenix Expansion across all operators,
-dynamics, and structural transitions.</p>
-<p>Lesson 52 defined Phoenix Expansion Dynamics (PED).<br />
-Lesson 53 defines the identity that remains stable under all expansion behavior.</p>
-<h3>2. Definition — Phoenix Expansion Identity (PEI)</h3>
-<p>Phoenix Expansion Identity PEI is the identity operator acting on X₀ such that:</p>
-<ul>
-<li>identity remains invariant under PEO (operators),</li>
-<li>identity remains invariant under PED (dynamics),</li>
-<li>identity remains invariant under PEF (foundation),</li>
-<li>identity remains invariant under all expansion transitions.</li>
-</ul>
-<p>Formally:</p>
-<p>PEI(X₀) = X₀</p>
-<p>subject to:</p>
-<ul>
-<li>ΔG(X₀) = constant under PEI,</li>
-<li>ΩG(X₀) = constant under PEI,</li>
-<li>Φₛ(X₀) = constant under PEI,</li>
-<li>Intent(X₀) preserved under PEI,</li>
-<li>PEI is the fixed point of Phoenix Expansion.</li>
-</ul>
-<p>PEI defines the stable identity of Phoenix Expansion.</p>
-<h3>3. Why PEI Matters</h3>
-<p>PEI is required for:</p>
-<ul>
-<li>Lesson 54: Phoenix Expansion Coherence,</li>
-<li>Lesson 55: Phoenix Expansion Completion,</li>
-<li>Epoch‑14 Summary.</li>
-</ul>
-<p>Without PEI, Phoenix Expansion cannot maintain a stable identity across evolution.</p>
-<h3>4. Structural Relationship</h3>
-<p>Lesson 50 defined PEF: Phoenix Expansion Foundation.<br />
-Lesson 51 defined PEO: Phoenix Expansion Operators.<br />
-Lesson 52 defined PED: Phoenix Expansion Dynamics.<br />
-Lesson 53 defines PEI: Phoenix Expansion Identity.</p>
-<p>Together:</p>
-<p>PEF → PEO → PED → PEI</p>
-<p>This is the transition from dynamics → identity.</p>
-<h3>5. Summary</h3>
-<p>Lesson 53 defines Phoenix Expansion Identity, the fourth operator of Epoch‑14.
-It establishes the invariant identity of the expansion structure X₀.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-52-PHOENIX-EXPANSION-DYNAMICS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-54-PHOENIX-EXPANSION-COHERENCE.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

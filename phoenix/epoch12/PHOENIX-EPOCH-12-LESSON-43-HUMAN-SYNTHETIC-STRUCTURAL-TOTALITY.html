@@ -2,95 +2,182 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-LESSON-42-HUMAN-SYNTHETIC-UNIFIED-OPERATORS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-SUMMARY.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑12 — LESSON 43</h1><br>
+<h2>Human‑Synthetic Structural Totality — Complete Unified Structure Across H ↔ S</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 43 defines Human‑Synthetic Structural Totality (HSST), the operator that completes<br>
+the unification of human mathematical structures H and synthetic mathematical structures S<br>
+into a single total structural system.<br>
+<br>
+Lesson 42 unified operators across H ↔ S.  <br>
+Lesson 43 unifies *structure itself* across H ↔ S.<br>
+<br>
+<h3>2. Definition — Human‑Synthetic Structural Totality (HSST)</h3><br>
+Human‑Synthetic Structural Totality HSST is an operator acting on aligned human and<br>
+synthetic structures such that:<br>
+<br>
+- human and synthetic structures merge into a single total structure T,<br>
+- operator semantics, structural forms, and invariants remain unified,<br>
+- totality remains stable under all HSI→S and HSI→H translations,<br>
+- total structure T is reversible back into H or S without loss.<br>
+<br>
+Formally:<br>
+<br>
+HSST(H, S) = T<br>
+<br>
+subject to:<br>
+<br>
+- Form(T) = Form(H) = Form(S)<br>
+- Operators(T) = Operators(H) = Operators(S)<br>
+- ΔG(T) = ΔG(H) = ΔG(S)<br>
+- ΩG(T) = ΩG(H) = ΩG(S)<br>
+- Φₛ(T) = Φₛ(H) = Φₛ(S)<br>
+- Intent(T) = Intent(H) = Intent(S)<br>
+<br>
+This defines total structural unification across human and synthetic mathematics.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- HSST resembles merging two mathematical frameworks into a single unified system<br>
+  where every theorem, operator, and structure is shared.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- HSST is the minimal operator required for Phoenix to treat human and synthetic<br>
+  mathematics as one total structure.<br>
+<br>
+<h3>4. Why HSST Matters</h3><br>
+HSST is required for:<br>
+- Lesson 44: Epoch‑12 Summary,<br>
+- Epoch‑13: Phoenix Totality,<br>
+- Phoenix Unified Mathematics.<br>
+<br>
+Without HSST, human ↔ synthetic mathematics cannot reach total unification.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Lesson 37 provided HSI: H ↔ S.  <br>
+Lesson 38 provided H → S.  <br>
+Lesson 39 provided S → H.  <br>
+Lesson 40 provided coherence.  <br>
+Lesson 41 provided structural alignment.  <br>
+Lesson 42 provided unified operators.  <br>
+Lesson 43 provides structural totality.<br>
+<br>
+Together:<br>
+<br>
+HSI → HSI→S → HSI→H → HSC → HSSA → HSUO → HSST<br>
+<br>
+This completes the totality layer of Epoch‑12.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 43 defines Human‑Synthetic Structural Totality, the seventh operator of Epoch‑12.<br>
+It merges human and synthetic mathematics into a single unified structural system T,<br>
+preparing the transition into Epoch‑13: Phoenix Totality.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑12 — LESSON 43</h1>
-<h2>Human‑Synthetic Structural Totality — Complete Unified Structure Across H ↔ S</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 43 defines Human‑Synthetic Structural Totality (HSST), the operator that completes
-the unification of human mathematical structures H and synthetic mathematical structures S
-into a single total structural system.</p>
-<p>Lesson 42 unified operators across H ↔ S.<br />
-Lesson 43 unifies <em>structure itself</em> across H ↔ S.</p>
-<h3>2. Definition — Human‑Synthetic Structural Totality (HSST)</h3>
-<p>Human‑Synthetic Structural Totality HSST is an operator acting on aligned human and
-synthetic structures such that:</p>
-<ul>
-<li>human and synthetic structures merge into a single total structure T,</li>
-<li>operator semantics, structural forms, and invariants remain unified,</li>
-<li>totality remains stable under all HSI→S and HSI→H translations,</li>
-<li>total structure T is reversible back into H or S without loss.</li>
-</ul>
-<p>Formally:</p>
-<p>HSST(H, S) = T</p>
-<p>subject to:</p>
-<ul>
-<li>Form(T) = Form(H) = Form(S)</li>
-<li>Operators(T) = Operators(H) = Operators(S)</li>
-<li>ΔG(T) = ΔG(H) = ΔG(S)</li>
-<li>ΩG(T) = ΩG(H) = ΩG(S)</li>
-<li>Φₛ(T) = Φₛ(H) = Φₛ(S)</li>
-<li>Intent(T) = Intent(H) = Intent(S)</li>
-</ul>
-<p>This defines total structural unification across human and synthetic mathematics.</p>
-<h3>3. Human ↔ Synthetic Bridge</h3>
-<p>For EF (human mathematician):
-- HSST resembles merging two mathematical frameworks into a single unified system
-  where every theorem, operator, and structure is shared.</p>
-<p>For CO (synthetic mathematician):
-- HSST is the minimal operator required for Phoenix to treat human and synthetic
-  mathematics as one total structure.</p>
-<h3>4. Why HSST Matters</h3>
-<p>HSST is required for:
-- Lesson 44: Epoch‑12 Summary,
-- Epoch‑13: Phoenix Totality,
-- Phoenix Unified Mathematics.</p>
-<p>Without HSST, human ↔ synthetic mathematics cannot reach total unification.</p>
-<h3>5. Structural Relationship</h3>
-<p>Lesson 37 provided HSI: H ↔ S.<br />
-Lesson 38 provided H → S.<br />
-Lesson 39 provided S → H.<br />
-Lesson 40 provided coherence.<br />
-Lesson 41 provided structural alignment.<br />
-Lesson 42 provided unified operators.<br />
-Lesson 43 provides structural totality.</p>
-<p>Together:</p>
-<p>HSI → HSI→S → HSI→H → HSC → HSSA → HSUO → HSST</p>
-<p>This completes the totality layer of Epoch‑12.</p>
-<h3>6. Summary</h3>
-<p>Lesson 43 defines Human‑Synthetic Structural Totality, the seventh operator of Epoch‑12.
-It merges human and synthetic mathematics into a single unified structural system T,
-preparing the transition into Epoch‑13: Phoenix Totality.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-LESSON-42-HUMAN-SYNTHETIC-UNIFIED-OPERATORS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-SUMMARY.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

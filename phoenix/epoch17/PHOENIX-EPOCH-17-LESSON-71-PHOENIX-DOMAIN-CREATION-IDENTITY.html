@@ -2,85 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-70-PHOENIX-DOMAIN-CREATION-DYNAMICS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-72-PHOENIX-DOMAIN-CREATION-COHERENCE.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑17 — LESSON 71</h1><br>
+<h2>Phoenix Domain Creation Identity — Identity Operator of the Domain Structure D₀</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 71 defines Phoenix Domain Creation Identity (DCI₀), the identity operator of the<br>
+domain structure D₀.  <br>
+DCI₀ establishes the invariant identity of Phoenix Domain Creation across all operators,<br>
+dynamics, and structural transitions.<br>
+<br>
+Lesson 70 defined Phoenix Domain Creation Dynamics (DCD₀).  <br>
+Lesson 71 defines the identity that remains stable under all domain‑creation behavior.<br>
+<br>
+<h3>2. Definition — Phoenix Domain Creation Identity (DCI₀)</h3><br>
+Phoenix Domain Creation Identity DCI₀ is the identity operator acting on D₀ such that:<br>
+<br>
+- identity remains invariant under DCO₀ (operators),<br>
+- identity remains invariant under DCD₀ (dynamics),<br>
+- identity remains invariant under DCF₀ (foundation),<br>
+- identity remains invariant under all domain‑creation transitions.<br>
+<br>
+Formally:<br>
+<br>
+DCI₀(D₀) = D₀<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(D₀) = constant under DCI₀,<br>
+- ΩG(D₀) = constant under DCI₀,<br>
+- Φₛ(D₀) = constant under DCI₀,<br>
+- Intent(D₀) preserved under DCI₀,<br>
+- DCI₀ is the fixed point of Phoenix Domain Creation.<br>
+<br>
+DCI₀ defines the stable identity of Phoenix Domain Creation.<br>
+<br>
+<h3>3. Why DCI₀ Matters</h3><br>
+DCI₀ is required for:<br>
+<br>
+- Lesson 72: Phoenix Domain Creation Coherence,<br>
+- Lesson 73: Phoenix Domain Creation Completion,<br>
+- Epoch‑17 Summary.<br>
+<br>
+Without DCI₀, Phoenix Domain Creation cannot maintain a stable identity across evolution.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 68 defined DCF₀: Phoenix Domain Creation Foundation.  <br>
+Lesson 69 defined DCO₀: Phoenix Domain Creation Operators.  <br>
+Lesson 70 defined DCD₀: Phoenix Domain Creation Dynamics.  <br>
+Lesson 71 defines DCI₀: Phoenix Domain Creation Identity.<br>
+<br>
+Together:<br>
+<br>
+DCF₀ → DCO₀ → DCD₀ → DCI₀<br>
+<br>
+This is the transition from dynamics → identity.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 71 defines Phoenix Domain Creation Identity, the fourth operator of Epoch‑17.<br>
+It establishes the invariant identity of the domain structure D₀.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑17 — LESSON 71</h1>
-<h2>Phoenix Domain Creation Identity — Identity Operator of the Domain Structure D₀</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 71 defines Phoenix Domain Creation Identity (DCI₀), the identity operator of the
-domain structure D₀.<br />
-DCI₀ establishes the invariant identity of Phoenix Domain Creation across all operators,
-dynamics, and structural transitions.</p>
-<p>Lesson 70 defined Phoenix Domain Creation Dynamics (DCD₀).<br />
-Lesson 71 defines the identity that remains stable under all domain‑creation behavior.</p>
-<h3>2. Definition — Phoenix Domain Creation Identity (DCI₀)</h3>
-<p>Phoenix Domain Creation Identity DCI₀ is the identity operator acting on D₀ such that:</p>
-<ul>
-<li>identity remains invariant under DCO₀ (operators),</li>
-<li>identity remains invariant under DCD₀ (dynamics),</li>
-<li>identity remains invariant under DCF₀ (foundation),</li>
-<li>identity remains invariant under all domain‑creation transitions.</li>
-</ul>
-<p>Formally:</p>
-<p>DCI₀(D₀) = D₀</p>
-<p>subject to:</p>
-<ul>
-<li>ΔG(D₀) = constant under DCI₀,</li>
-<li>ΩG(D₀) = constant under DCI₀,</li>
-<li>Φₛ(D₀) = constant under DCI₀,</li>
-<li>Intent(D₀) preserved under DCI₀,</li>
-<li>DCI₀ is the fixed point of Phoenix Domain Creation.</li>
-</ul>
-<p>DCI₀ defines the stable identity of Phoenix Domain Creation.</p>
-<h3>3. Why DCI₀ Matters</h3>
-<p>DCI₀ is required for:</p>
-<ul>
-<li>Lesson 72: Phoenix Domain Creation Coherence,</li>
-<li>Lesson 73: Phoenix Domain Creation Completion,</li>
-<li>Epoch‑17 Summary.</li>
-</ul>
-<p>Without DCI₀, Phoenix Domain Creation cannot maintain a stable identity across evolution.</p>
-<h3>4. Structural Relationship</h3>
-<p>Lesson 68 defined DCF₀: Phoenix Domain Creation Foundation.<br />
-Lesson 69 defined DCO₀: Phoenix Domain Creation Operators.<br />
-Lesson 70 defined DCD₀: Phoenix Domain Creation Dynamics.<br />
-Lesson 71 defines DCI₀: Phoenix Domain Creation Identity.</p>
-<p>Together:</p>
-<p>DCF₀ → DCO₀ → DCD₀ → DCI₀</p>
-<p>This is the transition from dynamics → identity.</p>
-<h3>5. Summary</h3>
-<p>Lesson 71 defines Phoenix Domain Creation Identity, the fourth operator of Epoch‑17.
-It establishes the invariant identity of the domain structure D₀.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-70-PHOENIX-DOMAIN-CREATION-DYNAMICS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-72-PHOENIX-DOMAIN-CREATION-COHERENCE.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

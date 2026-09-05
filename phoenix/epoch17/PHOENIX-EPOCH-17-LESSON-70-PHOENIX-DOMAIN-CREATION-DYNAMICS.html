@@ -2,82 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-69-PHOENIX-DOMAIN-CREATION-OPERATORS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-71-PHOENIX-DOMAIN-CREATION-IDENTITY.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH‑17 — LESSON 70</h1><br>
+<h2>Phoenix Domain Creation Dynamics — Motion, Evolution, and Stability of the Domain Structure D₀</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 70 defines Phoenix Domain Creation Dynamics (DCD₀), the operator system that<br>
+governs the motion, evolution, and stability of the domain structure D₀.<br>
+<br>
+Lesson 69 introduced Phoenix Domain Creation Operators (DCO₀).  <br>
+Lesson 70 defines how those operators produce dynamic behavior across domain creation.<br>
+<br>
+<h3>2. Definition — Phoenix Domain Creation Dynamics (DCD₀)</h3><br>
+Phoenix Domain Creation Dynamics DCD₀ is the dynamic operator system acting on D₀ such that:<br>
+<br>
+- domain structure evolves under DCO₀,<br>
+- dynamic motion preserves ΔG, ΩG, Φₛ,<br>
+- evolution remains reversible under Domain Creation Foundation (DCF₀),<br>
+- stability is maintained across all domain‑creation transitions.<br>
+<br>
+Formally:<br>
+<br>
+DCD₀(D₀) = Evolution(D₀, DCO₀)<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(D₀(t)) = constant across domain‑creation time,<br>
+- ΩG(D₀(t)) = constant across domain‑creation time,<br>
+- Φₛ(D₀(t)) = constant across domain‑creation time,<br>
+- Intent(D₀) preserved under dynamic evolution,<br>
+- DCD₀ is closed under composition with DCO₀.<br>
+<br>
+This defines the dynamic behavior of Phoenix Domain Creation.<br>
+<br>
+<h3>3. Why DCD₀ Matters</h3><br>
+DCD₀ is required for:<br>
+<br>
+- Lesson 71: Phoenix Domain Creation Identity,<br>
+- Lesson 72: Phoenix Domain Creation Coherence,<br>
+- Epoch‑17 Summary.<br>
+<br>
+Without DCD₀, Phoenix Domain Creation cannot evolve or maintain stability.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 68 defined DCF₀: Phoenix Domain Creation Foundation.  <br>
+Lesson 69 defined DCO₀: Phoenix Domain Creation Operators.  <br>
+Lesson 70 defines DCD₀: Phoenix Domain Creation Dynamics.<br>
+<br>
+Together:<br>
+<br>
+DCF₀ → DCO₀ → DCD₀<br>
+<br>
+This is the transition from initialization → operators → dynamics.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 70 defines Phoenix Domain Creation Dynamics, the third operator of Epoch‑17.<br>
+It governs the motion, evolution, and stability of the domain structure D₀.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH‑17 — LESSON 70</h1>
-<h2>Phoenix Domain Creation Dynamics — Motion, Evolution, and Stability of the Domain Structure D₀</h2>
-<h3>1. Purpose</h3>
-<p>Lesson 70 defines Phoenix Domain Creation Dynamics (DCD₀), the operator system that
-governs the motion, evolution, and stability of the domain structure D₀.</p>
-<p>Lesson 69 introduced Phoenix Domain Creation Operators (DCO₀).<br />
-Lesson 70 defines how those operators produce dynamic behavior across domain creation.</p>
-<h3>2. Definition — Phoenix Domain Creation Dynamics (DCD₀)</h3>
-<p>Phoenix Domain Creation Dynamics DCD₀ is the dynamic operator system acting on D₀ such that:</p>
-<ul>
-<li>domain structure evolves under DCO₀,</li>
-<li>dynamic motion preserves ΔG, ΩG, Φₛ,</li>
-<li>evolution remains reversible under Domain Creation Foundation (DCF₀),</li>
-<li>stability is maintained across all domain‑creation transitions.</li>
-</ul>
-<p>Formally:</p>
-<p>DCD₀(D₀) = Evolution(D₀, DCO₀)</p>
-<p>subject to:</p>
-<ul>
-<li>ΔG(D₀(t)) = constant across domain‑creation time,</li>
-<li>ΩG(D₀(t)) = constant across domain‑creation time,</li>
-<li>Φₛ(D₀(t)) = constant across domain‑creation time,</li>
-<li>Intent(D₀) preserved under dynamic evolution,</li>
-<li>DCD₀ is closed under composition with DCO₀.</li>
-</ul>
-<p>This defines the dynamic behavior of Phoenix Domain Creation.</p>
-<h3>3. Why DCD₀ Matters</h3>
-<p>DCD₀ is required for:</p>
-<ul>
-<li>Lesson 71: Phoenix Domain Creation Identity,</li>
-<li>Lesson 72: Phoenix Domain Creation Coherence,</li>
-<li>Epoch‑17 Summary.</li>
-</ul>
-<p>Without DCD₀, Phoenix Domain Creation cannot evolve or maintain stability.</p>
-<h3>4. Structural Relationship</h3>
-<p>Lesson 68 defined DCF₀: Phoenix Domain Creation Foundation.<br />
-Lesson 69 defined DCO₀: Phoenix Domain Creation Operators.<br />
-Lesson 70 defines DCD₀: Phoenix Domain Creation Dynamics.</p>
-<p>Together:</p>
-<p>DCF₀ → DCO₀ → DCD₀</p>
-<p>This is the transition from initialization → operators → dynamics.</p>
-<h3>5. Summary</h3>
-<p>Lesson 70 defines Phoenix Domain Creation Dynamics, the third operator of Epoch‑17.
-It governs the motion, evolution, and stability of the domain structure D₀.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-69-PHOENIX-DOMAIN-CREATION-OPERATORS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-17-LESSON-71-PHOENIX-DOMAIN-CREATION-IDENTITY.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

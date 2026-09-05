@@ -2,101 +2,225 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-20-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-20-INDEX.html">Next ⟶</a>
 </div>
+<br>
+<h1>PHOENIX EPOCH 20 — IDENTITY</h1><br>
+<br>
+<h2>1. Universal Identity Overview</h2><br>
+Universal Identity is the condition under which a unified structure becomes self‑consistent within Phoenix’s total mathematical universe. <br>
+Where Epoch 19 defined identity for synthesized structures, Epoch 20 defines identity for **unified** structures — entities formed by integrating all synthesized components into a single universal system.<br>
+<br>
+A universal structure \( Z \) achieves Universal Identity when:<br>
+<br>
+<br>
+\[<br>
+S_U(Z) = Z<br>
+\]<br>
+<br>
+<br>
+where \( S_U \) is the Universal Stability Flow.  <br>
+This fixed‑point condition ensures that universal integration is complete, stable, and coherent across all domains.<br>
+<br>
+<h2>2. Identity Formation in the Universal Manifold</h2><br>
+Given the Universal Manifold \( \mathcal{M}_U \), a unified structure \( Z \) undergoes identity formation:<br>
+<br>
+<br>
+\[<br>
+Z \rightarrow Z^{\star}<br>
+\]<br>
+<br>
+<br>
+where \( Z^{\star} \) is the stabilized identity of \( Z \) after universal alignment.<br>
+<br>
+Identity formation ensures:<br>
+- invariant harmonization across all synthesized structures  <br>
+- structural alignment across unified domains  <br>
+- temporal stability under universal dynamics  <br>
+- readiness for infinite‑domain integration in Epoch 21  <br>
+<br>
+<h2>3. Identity Under Universal Operators</h2><br>
+For a universal operator \( U \) acting on synthesized structures \( Y_1, Y_2 \):<br>
+<br>
+<br>
+\[<br>
+U(Y_1, Y_2) = Z<br>
+\]<br>
+<br>
+<br>
+Identity requires:<br>
+<br>
+<br>
+\[<br>
+\text{Id}(Z) = Z^{\star}<br>
+\]<br>
+<br>
+<br>
+ensuring that the unified structure is stabilized and coherent.<br>
+<br>
+Universal operators must satisfy:<br>
+<br>
+<br>
+\[<br>
+\text{Id}(U(Y_1, Y_2)) = U(Y_1, Y_2)^{\star}<br>
+\]<br>
+<br>
+<br>
+making identity formation intrinsic to universal unification.<br>
+<br>
+<h2>4. Identity Preservation vs Identity Unification</h2><br>
+Epoch 19 introduced identity synthesis:<br>
+<br>
+<br>
+\[<br>
+\text{Id}(Y) = Y^{\star}<br>
+\]<br>
+<br>
+<br>
+Epoch 20 introduces identity unification:<br>
+<br>
+<br>
+\[<br>
+\text{Id}(Z) = Z^{\star}<br>
+\]<br>
+<br>
+<br>
+<br>
+This marks the first epoch where identity is not merely created or synthesized but **unified across all domains**.<br>
+<br>
+<h2>5. Universal Identity Dynamics</h2><br>
+Identity evolves under the Universal Stability Flow:<br>
+<br>
+<br>
+\[<br>
+Z(t+1) = S_U(Z(t))<br>
+\]<br>
+<br>
+<br>
+Identity is achieved when:<br>
+<br>
+<br>
+\[<br>
+Z(t+1) = Z(t)<br>
+\]<br>
+<br>
+<br>
+This dynamic fixed‑point condition ensures that unified structures converge to stable universal identity.<br>
+<br>
+<h2>6. Identity Completion</h2><br>
+Identity completion occurs when:<br>
+<br>
+<br>
+\[<br>
+\text{Id}(Z) = Z<br>
+\]<br>
+<br>
+<br>
+and the unified structure becomes eligible for Epoch 21’s infinite‑domain architecture.<br>
+<br>
+Identity completion is the final stage of universal identity formation.<br>
+<br>
+<br>
 
-<div id="content">
-<h1>PHOENIX EPOCH 20 — IDENTITY</h1>
-<h2>1. Universal Identity Overview</h2>
-<p>Universal Identity is the condition under which a unified structure becomes self‑consistent within Phoenix’s total mathematical universe. 
-Where Epoch 19 defined identity for synthesized structures, Epoch 20 defines identity for <strong>unified</strong> structures — entities formed by integrating all synthesized components into a single universal system.</p>
-<p>A universal structure ( Z ) achieves Universal Identity when:</p>
-<p>[
-S_U(Z) = Z
-]</p>
-<p>where ( S_U ) is the Universal Stability Flow.<br />
-This fixed‑point condition ensures that universal integration is complete, stable, and coherent across all domains.</p>
-<h2>2. Identity Formation in the Universal Manifold</h2>
-<p>Given the Universal Manifold ( \mathcal{M}_U ), a unified structure ( Z ) undergoes identity formation:</p>
-<p>[
-Z \rightarrow Z^{\star}
-]</p>
-<p>where ( Z^{\star} ) is the stabilized identity of ( Z ) after universal alignment.</p>
-<p>Identity formation ensures:
-- invariant harmonization across all synthesized structures<br />
-- structural alignment across unified domains<br />
-- temporal stability under universal dynamics<br />
-- readiness for infinite‑domain integration in Epoch 21  </p>
-<h2>3. Identity Under Universal Operators</h2>
-<p>For a universal operator ( U ) acting on synthesized structures ( Y_1, Y_2 ):</p>
-<p>[
-U(Y_1, Y_2) = Z
-]</p>
-<p>Identity requires:</p>
-<p>[
-\text{Id}(Z) = Z^{\star}
-]</p>
-<p>ensuring that the unified structure is stabilized and coherent.</p>
-<p>Universal operators must satisfy:</p>
-<p>[
-\text{Id}(U(Y_1, Y_2)) = U(Y_1, Y_2)^{\star}
-]</p>
-<p>making identity formation intrinsic to universal unification.</p>
-<h2>4. Identity Preservation vs Identity Unification</h2>
-<p>Epoch 19 introduced identity synthesis:</p>
-<p>[
-\text{Id}(Y) = Y^{\star}
-]</p>
-<p>Epoch 20 introduces identity unification:</p>
-<p>[
-\text{Id}(Z) = Z^{\star}
-]</p>
-<p>This marks the first epoch where identity is not merely created or synthesized but <strong>unified across all domains</strong>.</p>
-<h2>5. Universal Identity Dynamics</h2>
-<p>Identity evolves under the Universal Stability Flow:</p>
-<p>[
-Z(t+1) = S_U(Z(t))
-]</p>
-<p>Identity is achieved when:</p>
-<p>[
-Z(t+1) = Z(t)
-]</p>
-<p>This dynamic fixed‑point condition ensures that unified structures converge to stable universal identity.</p>
-<h2>6. Identity Completion</h2>
-<p>Identity completion occurs when:</p>
-<p>[
-\text{Id}(Z) = Z
-]</p>
-<p>and the unified structure becomes eligible for Epoch 21’s infinite‑domain architecture.</p>
-<p>Identity completion is the final stage of universal identity formation.</p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-20-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-20-INDEX.html">Next ⟶</a>
 </div>
-
 </body>
 </html>

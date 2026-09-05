@@ -2,118 +2,244 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix</title>
-
-<link rel="stylesheet" href="/phoenix/phoenix.css">
+<title>Phoenix Document</title>
 
 <script>
-function toggleTheme() {
-    const body = document.body;
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    localStorage.setItem("phoenix-theme", theme);
-}
-window.onload = () => {
-    const saved = localStorage.getItem("phoenix-theme") || "dark";
-    document.body.dataset.theme = saved;
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
 
-<div id="nav">
-    <a href="/phoenix/index.html">Index</a> |
-    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
-    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
-    <button onclick="toggleTheme()">Toggle Theme</button>
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-PORTAL-STYLE.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="Phoenix-Math.html">Next ⟶</a>
 </div>
+<br>
+<h1>Phoenix Distribution Math — Canonical Specification v1.0  </h1><br>
+**Phoenix Rebirth — Clock 10**  <br>
+**Date:** 2026‑08‑26  <br>
+**Status:** Canonical, Immutable<br>
+<br>
+---<br>
+<br>
+<h2>1. Tape Independence</h2><br>
+<br>
+Two tapes \( T_a \) and \( T_b \) are distributable iff:<br>
+<br>
+```<br>
+T_a ≠ T_b<br>
+and<br>
+no shared regions<br>
+and<br>
+no shared reintegration targets<br>
+```<br>
+<br>
+This defines **structural tape independence**.<br>
+<br>
+---<br>
+<br>
+<h2>2. Distribution Mapping</h2><br>
+<br>
+A distribution mapping \( D \) is defined as:<br>
+<br>
+```<br>
+D: K → Tape<br>
+```<br>
+<br>
+Where **K** is the set of window indices.<br>
+<br>
+Example:<br>
+<br>
+```<br>
+D(0..127) = T_a<br>
+D(128..255) = T_b<br>
+```<br>
+<br>
+This assigns windows to tapes.<br>
+<br>
+---<br>
+<br>
+<h2>3. Distributed Window Independence</h2><br>
+<br>
+A window \( W_k \) is distributable to tape \( T_x \) iff:<br>
+<br>
+```<br>
+k ∈ domain(D)<br>
+and<br>
+D(k) = T_x<br>
+```<br>
+<br>
+This ensures **deterministic placement**.<br>
+<br>
+---<br>
+<br>
+<h2>4. Distributed Transform Independence</h2><br>
+<br>
+A transform \( P_k \) is distributable iff:<br>
+<br>
+```<br>
+P_k is unary<br>
+and<br>
+P_k is pure<br>
+and<br>
+P_k has no cross‑tape state<br>
+```<br>
+<br>
+Phoenix distribution is **structural**, not semantic.<br>
+<br>
+---<br>
+<br>
+<h2>5. Distributed Execution Cycle</h2><br>
+<br>
+For all tapes \( T_x \):<br>
+<br>
+```<br>
+for all (k, P_k) where D(k) = T_x:<br>
+    W_k = select(T_x, k)<br>
+    Φ_k = apply(P_k, W_k)<br>
+<br>
+for all (k, Φ_k) where D(k) = T_x:<br>
+    T_x = merge(T_x, k, Φ_k)<br>
+```<br>
+<br>
+Each tape executes **independently**.<br>
+<br>
+---<br>
+<br>
+<h2>6. Deterministic Guarantee</h2><br>
+<br>
+Distributed Phoenix execution is deterministic iff:<br>
+<br>
+```<br>
+∀ i,j:<br>
+    D(i) = D(j) ⇒ no overlap(W_i, W_j)<br>
+    D(i) ≠ D(j) ⇒ no shared reintegration regions<br>
+```<br>
+<br>
+This is the **core distributed guarantee**.<br>
+<br>
+---<br>
+<br>
+<h2>7. Distribution Set</h2><br>
+<br>
+A distribution set \( S \) is:<br>
+<br>
+```<br>
+S = { (k, P_k, D(k)) }<br>
+```<br>
+<br>
+This fully defines **distributed Phoenix execution**.<br>
+<br>
+---<br>
+<br>
+<h2>8. Next Clock</h2><br>
+Phoenix External Integration Protocol will be defined in **Clock 11**.<br>
+<br>
+---<br>
+<br>
+<h2>Canonical Footer</h2><br>
+This document is part of the **Phoenix Rebirth Canonical Sequence (Clocks 1–11)**.  <br>
+It is immutable and historically preserved.<br>
+<br>
+---<br>
+<br>
+<h2>Navigation</h2><br>
+**Previous → Clock 9: Phoenix Parallelisation Math**  <br>
+**Next → Clock 11: Phoenix External Integration Protocol**  <br>
+**Index → Phoenix Rebirth Canonical Sequence (docs/canonical/INDEX.md)**<br>
+<br>
+<br>
+<br>
 
-<div id="content">
-<h1>Phoenix Distribution Math — Canonical Specification v1.0</h1>
-<p><strong>Phoenix Rebirth — Clock 10</strong><br />
-<strong>Date:</strong> 2026‑08‑26<br />
-<strong>Status:</strong> Canonical, Immutable</p>
-<hr />
-<h2>1. Tape Independence</h2>
-<p>Two tapes ( T_a ) and ( T_b ) are distributable iff:</p>
-<pre><code>T_a ≠ T_b
-and
-no shared regions
-and
-no shared reintegration targets
-</code></pre>
-<p>This defines <strong>structural tape independence</strong>.</p>
-<hr />
-<h2>2. Distribution Mapping</h2>
-<p>A distribution mapping ( D ) is defined as:</p>
-<pre><code>D: K → Tape
-</code></pre>
-<p>Where <strong>K</strong> is the set of window indices.</p>
-<p>Example:</p>
-<pre><code>D(0..127) = T_a
-D(128..255) = T_b
-</code></pre>
-<p>This assigns windows to tapes.</p>
-<hr />
-<h2>3. Distributed Window Independence</h2>
-<p>A window ( W_k ) is distributable to tape ( T_x ) iff:</p>
-<pre><code>k ∈ domain(D)
-and
-D(k) = T_x
-</code></pre>
-<p>This ensures <strong>deterministic placement</strong>.</p>
-<hr />
-<h2>4. Distributed Transform Independence</h2>
-<p>A transform ( P_k ) is distributable iff:</p>
-<pre><code>P_k is unary
-and
-P_k is pure
-and
-P_k has no cross‑tape state
-</code></pre>
-<p>Phoenix distribution is <strong>structural</strong>, not semantic.</p>
-<hr />
-<h2>5. Distributed Execution Cycle</h2>
-<p>For all tapes ( T_x ):</p>
-<pre><code>for all (k, P_k) where D(k) = T_x:
-    W_k = select(T_x, k)
-    Φ_k = apply(P_k, W_k)
-
-for all (k, Φ_k) where D(k) = T_x:
-    T_x = merge(T_x, k, Φ_k)
-</code></pre>
-<p>Each tape executes <strong>independently</strong>.</p>
-<hr />
-<h2>6. Deterministic Guarantee</h2>
-<p>Distributed Phoenix execution is deterministic iff:</p>
-<pre><code>∀ i,j:
-    D(i) = D(j) ⇒ no overlap(W_i, W_j)
-    D(i) ≠ D(j) ⇒ no shared reintegration regions
-</code></pre>
-<p>This is the <strong>core distributed guarantee</strong>.</p>
-<hr />
-<h2>7. Distribution Set</h2>
-<p>A distribution set ( S ) is:</p>
-<pre><code>S = { (k, P_k, D(k)) }
-</code></pre>
-<p>This fully defines <strong>distributed Phoenix execution</strong>.</p>
-<hr />
-<h2>8. Next Clock</h2>
-<p>Phoenix External Integration Protocol will be defined in <strong>Clock 11</strong>.</p>
-<hr />
-<h2>Canonical Footer</h2>
-<p>This document is part of the <strong>Phoenix Rebirth Canonical Sequence (Clocks 1–11)</strong>.<br />
-It is immutable and historically preserved.</p>
-<hr />
-<h2>Navigation</h2>
-<p><strong>Previous → Clock 9: Phoenix Parallelisation Math</strong><br />
-<strong>Next → Clock 11: Phoenix External Integration Protocol</strong><br />
-<strong>Index → Phoenix Rebirth Canonical Sequence (docs/canonical/INDEX.md)</strong></p>
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-PORTAL-STYLE.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="Phoenix-Math.html">Next ⟶</a>
 </div>
-
 </body>
 </html>
