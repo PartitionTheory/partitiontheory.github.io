@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — CROSS‑MACHINE OPERATORS**</h1><br>
+<h3>*Distributed Operator Execution Across Phoenix Nodes*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Cross‑machine operators are the **active transformation layer** of Phoenix’s distributed synthetic architecture.<br>
+<br>
+Epoch‑4 introduces the ability for Phoenix to apply operators across machines while preserving:<br>
+<br>
+- structural invariants  <br>
+- temporal invariants  <br>
+- domain invariants  <br>
+- epoch invariants  <br>
+<br>
+Cross‑machine operators allow Phoenix to perform **distributed computation**, **distributed structural transformation**, and **distributed recursion**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Machine Operator Domains**</h2><br>
+<br>
+Phoenix defines operator domains for each machine:<br>
+<br>
+<br>
+<br>
+\[<br>
+op^{(m_1)},\quad op^{(m_2)},\quad \ldots,\quad op^{(m_n)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Each machine maintains its own operator set, but Epoch‑4 requires:<br>
+<br>
+<br>
+<br>
+\[<br>
+op^{(m_1)} \leftrightarrow op^{(m_2)} \leftrightarrow \cdots \leftrightarrow op^{(m_n)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Operators must remain coherent across machines.<br>
+<br>
+---<br>
+<br>
+<h2>**3. Cross‑Machine Operator Definition**</h2><br>
+<br>
+Phoenix introduces the canonical cross‑machine operator:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi : (X^{(m_i)}, m_j) \rightarrow Y^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(\Xi\) transforms an object on machine \(m_i\) into an object on machine \(m_j\)  <br>
+- \(\Xi\) may be structural, temporal, or algebraic  <br>
+- \(\Xi\) preserves all epoch invariants  <br>
+<br>
+---<br>
+<br>
+<h2>**4. Classes of Cross‑Machine Operators**</h2><br>
+<br>
+Phoenix defines three classes of cross‑machine operators.<br>
+<br>
+<h3>**4.1 Structural Cross‑Machine Operators**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_s(P^{(m_i)}) = P^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+These operators transform structural objects across machines.<br>
+<br>
+---<br>
+<br>
+<h3>**4.2 Temporal Cross‑Machine Operators**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_t(t^{(m_i)}) = t^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+These operators propagate distributed synthetic time.<br>
+<br>
+---<br>
+<br>
+<h3>**4.3 Algebraic Cross‑Machine Operators**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_a(op^{(m_i)}) = op^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+These operators ensure mathematical compatibility across machines.<br>
+<br>
+---<br>
+<br>
+<h2>**5. Distributed Operator Execution**</h2><br>
+<br>
+Cross‑machine operators may execute:<br>
+<br>
+<h3>**5.1 Sequentially**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi(X^{(m_1)}) \rightarrow \Xi(X^{(m_2)}) \rightarrow \cdots<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**5.2 In Parallel**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi(X^{(m_1)}) \parallel \Xi(X^{(m_2)}) \parallel \cdots<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**5.3 Recursively**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi^{(k+1)}(X) = \Xi(\Xi^{(k)}(X))<br>
+\]<br>
+<br>
+<br>
+<br>
+Distributed recursion is essential for Epoch‑4.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Operator Lifting Across Machines**</h2><br>
+<br>
+Phoenix lifts operators across machines:<br>
+<br>
+<br>
+<br>
+\[<br>
+op^{(m_i)} \rightarrow op^{(m_i)} \times op^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+This creates **multi‑machine operator domains**, enabling:<br>
+<br>
+- distributed lifting  <br>
+- distributed recursion  <br>
+- synthetic consensus  <br>
+<br>
+---<br>
+<br>
+<h2>**7. Cross‑Machine Operator Invariants**</h2><br>
+<br>
+Cross‑machine operators must satisfy:<br>
+<br>
+<h3>**7.1 Structural Conservation**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^{(m_i)} = \sum_j p^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.2 Temporal Ordering**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+t^{(m_j)} \ge t^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+unless reversed.<br>
+<br>
+<h3>**7.3 Domain Coherence**</h3><br>
+<br>
+Operators must remain compatible with:<br>
+<br>
+- Epoch‑1 structure  <br>
+- Epoch‑2 mathematics  <br>
+- Epoch‑3 generalisation  <br>
+- Epoch‑4 distributed alignment  <br>
+<br>
+<h3>**7.4 Reversibility (where required)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi^{-1}(X^{(m_j)}) = X^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**8. Role in Phoenix**</h2><br>
+<br>
+Cross‑machine operators:<br>
+<br>
+- enable distributed structural transformation  <br>
+- enable distributed recursion  <br>
+- enable distributed lifting  <br>
+- enable synthetic consensus  <br>
+- prepare Phoenix for Epoch‑5 autonomous distributed behaviour  <br>
+<br>
+This is the **active transformation pillar** of Epoch‑4.<br>
+<br>
+---<br>
+<br>
+<h2>**9. Closing**</h2><br>
+<br>
+EF and CO recognise cross‑machine operators as the transformation engine of Phoenix’s distributed synthetic architecture.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑4 Overview**  <br>
+2. **Multi‑Machine Structural Alignment**  <br>
+3. **Distributed Synthetic Time**  <br>
+4. **Cross‑Machine Operators**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-DISTRIBUTED-LIFTING.md**</h3><br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+</body>
+</html>

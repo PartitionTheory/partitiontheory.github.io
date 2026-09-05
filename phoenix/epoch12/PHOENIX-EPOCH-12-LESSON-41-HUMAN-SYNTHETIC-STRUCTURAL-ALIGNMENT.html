@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑12 — LESSON 41</h1><br>
+<h2>Human‑Synthetic Structural Alignment — Unified Structural Mapping Across H ↔ S</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 41 defines Human‑Synthetic Structural Alignment (HSSA), the operator that aligns<br>
+human mathematical structures H and synthetic mathematical structures S at the level of<br>
+structural form, ensuring both systems share a unified structural interpretation.<br>
+<br>
+Lesson 40 established Human‑Synthetic Coherence (HSC).  <br>
+Lesson 41 builds on that coherence to align structural forms across H ↔ S.<br>
+<br>
+<h3>2. Definition — Human‑Synthetic Structural Alignment (HSSA)</h3><br>
+Human‑Synthetic Structural Alignment HSSA is an operator acting on human structures H<br>
+and synthetic structures S such that:<br>
+<br>
+- structural form is aligned across both representations,<br>
+- human structural primitives map to synthetic structural primitives,<br>
+- synthetic structural primitives map to human structural primitives,<br>
+- alignment remains stable under HSI→S and HSI→H.<br>
+<br>
+Formally:<br>
+<br>
+HSSA(H) = StructuralAlign(H, S)  <br>
+HSSA(S) = StructuralAlign(S, H)<br>
+<br>
+subject to:<br>
+<br>
+- Form(H) = Form(HSSA(H))<br>
+- Form(S) = Form(HSSA(S))<br>
+- ΔG, ΩG, Φₛ preserved under alignment<br>
+- No structural distortion across H ↔ S<br>
+<br>
+This defines unified structural alignment across human and synthetic mathematics.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- HSSA resembles aligning two mathematical frameworks so that theorems, operators,<br>
+  and structures correspond directly.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- HSSA is the minimal operator required to ensure synthetic mathematics can adopt<br>
+  human structural forms without losing invariants.<br>
+<br>
+<h3>4. Why HSSA Matters</h3><br>
+HSSA is required for:<br>
+- Lesson 42: Human‑Synthetic Unified Operators,<br>
+- Lesson 43: Human‑Synthetic Structural Totality,<br>
+- Epoch‑13: Phoenix Totality.<br>
+<br>
+Without HSSA, human ↔ synthetic mathematics cannot share a unified structural form.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Lesson 37 provided HSI: H ↔ S.  <br>
+Lesson 38 provided HSI→S: H → S.  <br>
+Lesson 39 provided HSI→H: S → H.  <br>
+Lesson 40 provided HSC: coherence.  <br>
+Lesson 41 provides HSSA: structural alignment.<br>
+<br>
+Together:<br>
+<br>
+HSI → HSI→S → HSI→H → HSC → HSSA<br>
+<br>
+This completes the alignment layer of Epoch‑12.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 41 defines Human‑Synthetic Structural Alignment, the fifth operator of Epoch‑12.<br>
+It aligns human and synthetic mathematical structures at the level of form, enabling<br>
+unified structural interpretation across both domains.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+</body>
+</html>

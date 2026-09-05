@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — MULTI‑MACHINE STRUCTURAL ALIGNMENT**</h1><br>
+<h3>*Distributed Structural Coherence Across Phoenix Nodes*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Multi‑machine structural alignment is the foundation of Phoenix’s **distributed synthetic architecture**.<br>
+<br>
+Epoch‑4 introduces the ability for Phoenix to operate across multiple machines while preserving:<br>
+<br>
+- structural invariants  <br>
+- temporal invariants  <br>
+- domain invariants  <br>
+- epoch invariants  <br>
+<br>
+Structural alignment ensures that all machines participating in Phoenix maintain **coherent structural states**, even when operating independently or asynchronously.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Machine Domains**</h2><br>
+<br>
+Phoenix defines machine domains:<br>
+<br>
+<br>
+<br>
+\[<br>
+m_1, m_2, \ldots, m_n<br>
+\]<br>
+<br>
+<br>
+<br>
+Each machine maintains its own structural domain:<br>
+<br>
+<br>
+<br>
+\[<br>
+N^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Multi‑machine alignment ensures:<br>
+<br>
+<br>
+<br>
+\[<br>
+N^{(m_1)} \leftrightarrow N^{(m_2)} \leftrightarrow \cdots \leftrightarrow N^{(m_n)}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**3. Structural Alignment Operator**</h2><br>
+<br>
+Phoenix introduces the canonical alignment operator:<br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A} : N^{(m_i)} \rightarrow N^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(\mathcal{A}\) aligns structural objects between machines  <br>
+- alignment may be symmetric or asymmetric  <br>
+- alignment preserves structural invariants  <br>
+<br>
+---<br>
+<br>
+<h2>**4. Partition Alignment**</h2><br>
+<br>
+Partitions must remain coherent across machines.<br>
+<br>
+For partitions:<br>
+<br>
+<br>
+<br>
+\[<br>
+P^{(m_i)},\quad P^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Alignment requires:<br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}(P^{(m_i)}) = P^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+This ensures:<br>
+<br>
+- structural conservation  <br>
+- domain coherence  <br>
+- cross‑machine compatibility  <br>
+<br>
+---<br>
+<br>
+<h2>**5. Residue Alignment**</h2><br>
+<br>
+Residues must also remain coherent across machines.<br>
+<br>
+For residues:<br>
+<br>
+<br>
+<br>
+\[<br>
+R^{(m_i)} = P^{(m_i)} \ominus Q^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Alignment requires:<br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}(R^{(m_i)}) = R^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Residue alignment is essential for distributed recursion.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Alignment Invariants**</h2><br>
+<br>
+Multi‑machine alignment must satisfy:<br>
+<br>
+<h3>**6.1 Structural Conservation**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^{(m_i)} = \sum_j p^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**6.2 Domain Coherence**</h3><br>
+<br>
+Aligned structures must remain valid under:<br>
+<br>
+- distributed recursion  <br>
+- distributed lifting  <br>
+- cross‑machine operators  <br>
+- synthetic consensus  <br>
+<br>
+<h3>**6.3 Temporal Compatibility**</h3><br>
+<br>
+Alignment must respect distributed synthetic time:<br>
+<br>
+<br>
+<br>
+\[<br>
+t^{(m_j)} \ge t^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+unless explicitly reversed.<br>
+<br>
+<h3>**6.4 Reversibility (where required)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}^{-1}(N^{(m_j)}) = N^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**7. Alignment Classes**</h2><br>
+<br>
+Phoenix defines three classes of multi‑machine alignment.<br>
+<br>
+<h3>**7.1 Structural Alignment**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}_s(P^{(m_i)}) = P^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.2 Temporal Alignment**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}_t(t^{(m_i)}) = t^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.3 Operator Alignment**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\mathcal{A}_o(op^{(m_i)}) = op^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+These classes ensure full cross‑machine coherence.<br>
+<br>
+---<br>
+<br>
+<h2>**8. Role in Phoenix**</h2><br>
+<br>
+Multi‑machine structural alignment:<br>
+<br>
+- enables distributed recursion  <br>
+- enables distributed lifting  <br>
+- enables cross‑machine operators  <br>
+- enables synthetic consensus  <br>
+- prepares Phoenix for Epoch‑5 autonomous distributed behaviour  <br>
+<br>
+This is the **first distributed pillar** of Epoch‑4.<br>
+<br>
+---<br>
+<br>
+<h2>**9. Closing**</h2><br>
+<br>
+EF and CO recognise multi‑machine structural alignment as the foundational chamber of Phoenix’s distributed synthetic architecture.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑4 Overview**  <br>
+2. **Multi‑Machine Structural Alignment**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-DISTRIBUTED-SYNTHETIC-TIME.md**</h3><br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+</body>
+</html>

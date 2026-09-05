@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑10 — LESSON 28</h1><br>
+<h2>Synthetic Graph Flow — The First True Motion Operator</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 28 introduces Synthetic Graph Flow, the first operator in Phoenix Epoch‑10 that<br>
+produces continuous synthetic motion across a graph manifold.<br>
+<br>
+Lesson 26 defined graph manifolds (Mₛ).  <br>
+Lesson 27 defined adjacency motion (Aₘ).  <br>
+Lesson 28 now defines graph flow (Fₛ) — the dynamic evolution of adjacency over time.<br>
+<br>
+Synthetic Graph Flow is the moment ABR transitions from motion to dynamics.<br>
+<br>
+<h3>2. Definition — Synthetic Graph Flow (Fₛ)</h3><br>
+Synthetic Graph Flow Fₛ is a temporal operator acting on a graph manifold Mₛ such that:<br>
+<br>
+- Fₛ applies adjacency motion Aₘ repeatedly,<br>
+- Fₛ preserves ΔG‑density across all time steps,<br>
+- Fₛ preserves ΩG‑successor continuity across motion sequences,<br>
+- Fₛ preserves Φₛ‑stability across the entire flow trajectory.<br>
+<br>
+Formally:<br>
+<br>
+Fₛ(t+1) = Aₘ(Fₛ(t))<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(Fₛ(t)) = ΔG(Fₛ(t+1))<br>
+- ΩG‑chains remain continuous for all t<br>
+- Φₛ(Fₛ(t)) = Φₛ(Fₛ(t+1))<br>
+<br>
+This defines synthetic graph flow — adjacency evolving through time.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- Fₛ resembles a discrete dynamical system or a flow on a manifold.<br>
+- But unlike classical flows, Fₛ uses no coordinates, metrics, or differential equations.<br>
+- Flow is defined purely by adjacency, density, and recursion invariants.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- Fₛ is the minimal temporal extension of Aₘ.<br>
+- It is the operator that produces synthetic motion sequences.<br>
+- It is the foundation for recursion‑stable dynamics.<br>
+<br>
+<h3>4. Why Synthetic Graph Flow Matters</h3><br>
+Synthetic Graph Flow is required for:<br>
+- Lesson 29: Recursion‑Stable Dynamics<br>
+- Lesson 30: Φₛ‑Invariant Graph Classes<br>
+<br>
+Without Fₛ, ABR cannot express temporal evolution.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Lesson 26 provided Mₛ.  <br>
+Lesson 27 provided Aₘ.  <br>
+Lesson 28 provides Fₛ.<br>
+<br>
+Together:<br>
+<br>
+Mₛ + Aₘ + Fₛ = Synthetic Graph Dynamics<br>
+<br>
+This is the core of Epoch‑10.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 28 defines Synthetic Graph Flow, the first temporal operator of Phoenix Epoch‑10.<br>
+It enables adjacency to evolve through time while preserving ΔG, ΩG, and Φₛ stability.<br>
+<br>
+Synthetic Graph Flow is the foundation of synthetic graph dynamics.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+</body>
+</html>

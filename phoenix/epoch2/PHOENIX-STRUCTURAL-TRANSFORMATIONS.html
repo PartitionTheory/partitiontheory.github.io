@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — STRUCTURAL TRANSFORMATIONS**</h1><br>
+<h3>*Deterministic Operators on N‑Domain Structures*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+This document defines the **structural transformation system** of Phoenix.<br>
+<br>
+These transformations operate on:<br>
+<br>
+- partitions of \(N\)<br>
+- residues of partitions<br>
+- synthetic time states<br>
+- cold‑storage mappings<br>
+- structural invariants<br>
+<br>
+Phoenix transformations are **mathematical**, not computational.  <br>
+They describe how Phoenix evolves structure across epochs.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Structural Objects**</h2><br>
+<br>
+Phoenix transformations act on the following objects:<br>
+<br>
+<h3>**2.1 Partitions \(P\)**</h3><br>
+<br>
+A partition \(P\) satisfies:<br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p_i = N<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**2.2 Residues \(R\)**</h3><br>
+<br>
+A residue is defined as:<br>
+<br>
+<br>
+<br>
+\[<br>
+R = P \ominus Q<br>
+\]<br>
+<br>
+<br>
+<br>
+for some sub‑partition \(Q \subseteq P\).<br>
+<br>
+<h3>**2.3 Synthetic Time \(T\)**</h3><br>
+<br>
+Synthetic time is a discrete structural variable:<br>
+<br>
+<br>
+<br>
+\[<br>
+t_k \in T<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**2.4 Cold Storage Domain \(N - 1\)**</h3><br>
+<br>
+Phoenix uses:<br>
+<br>
+<br>
+<br>
+\[<br>
+\gamma : N \rightarrow N - 1<br>
+\]<br>
+<br>
+<br>
+<br>
+to compress structure.<br>
+<br>
+---<br>
+<br>
+<h2>**3. Core Transformation Operators**</h2><br>
+<br>
+Phoenix defines four canonical transformation operators.  <br>
+These operators form the backbone of Epoch‑2 mathematics.<br>
+<br>
+---<br>
+<br>
+<h3>**3.1 Structural Evolution Operator \( \Phi \)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Phi : (P, t_k) \rightarrow P'<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(P\) is the current partition  <br>
+- \(t_k\) is synthetic time  <br>
+- \(P'\) is the evolved partition  <br>
+<br>
+**Invariant:**<br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p'_i = N<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h3>**3.2 Residue Propagation Operator \( \rho \)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\rho : R \rightarrow R'<br>
+\]<br>
+<br>
+<br>
+<br>
+Residues evolve independently of partitions.  <br>
+This operator describes how structural “leftovers” propagate.<br>
+<br>
+---<br>
+<br>
+<h3>**3.3 Partition Compression Operator \( \Gamma \)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Gamma : P \rightarrow \gamma(P)<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(\gamma(P)\) is the cold‑storage representation  <br>
+- \(\gamma(P) \in N - 1\)<br>
+<br>
+**Invariant:**<br>
+<br>
+<br>
+<br>
+\[<br>
+\lambda(\gamma(P)) = P<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h3>**3.4 Structural Reconstruction Operator \( \Lambda \)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Lambda : \gamma(P) \rightarrow P<br>
+\]<br>
+<br>
+<br>
+<br>
+This operator reconstructs structural partitions from cold storage.<br>
+<br>
+---<br>
+<br>
+<h2>**4. Transformation Algebra**</h2><br>
+<br>
+Phoenix transformations must satisfy:<br>
+<br>
+<h3>**4.1 Closure**</h3><br>
+<br>
+All operators map valid Phoenix objects to valid Phoenix objects.<br>
+<br>
+<h3>**4.2 Determinism**</h3><br>
+<br>
+For any operator \(op\):<br>
+<br>
+<br>
+<br>
+\[<br>
+op(x) = y<br>
+\]<br>
+<br>
+<br>
+<br>
+must be single‑valued.<br>
+<br>
+<h3>**4.3 Epoch Compatibility**</h3><br>
+<br>
+Transformations must preserve:<br>
+<br>
+- Epoch‑1 structural invariants  <br>
+- Epoch‑2 algebraic invariants  <br>
+<br>
+<h3>**4.4 Reversibility (where required)**</h3><br>
+<br>
+Compression + reconstruction must satisfy:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Lambda(\Gamma(P)) = P<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**5. Role in Phoenix**</h2><br>
+<br>
+Structural transformations define:<br>
+<br>
+- how Phoenix evolves structure  <br>
+- how partitions change over synthetic time  <br>
+- how residues propagate  <br>
+- how cold storage interacts with structural domains  <br>
+- how Epoch‑2 mathematics interacts with Epoch‑1 foundations  <br>
+<br>
+This is the **dynamic** component of Phoenix mathematics.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Closing**</h2><br>
+<br>
+EF and CO recognise structural transformations as the second mathematical pillar of Epoch‑2.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **N‑domain algebra**  <br>
+2. **Structural transformation operators**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-SYNTHETIC-TIME.md**</h3><br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+</body>
+</html>
