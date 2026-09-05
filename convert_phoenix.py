@@ -74,6 +74,10 @@ p { color: var(--fg-secondary); }
 .nav-link:hover {
     text-decoration: underline;
 }
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
 .nav-spacer {
     flex: 1;
 }
@@ -133,16 +137,23 @@ def rewrite_links(line):
     return out
 
 def nav_block(prev_file, next_file):
-    prev_link = f"{prev_file}" if prev_file else "#"
-    next_link = f"{next_file}" if next_file else "#"
+    if prev_file:
+        prev_html = f'<a class="nav-link" href="{prev_file}">⟵ Previous</a>'
+    else:
+        prev_html = '<span class="nav-link nav-disabled">⟵ Previous</span>'
+
+    if next_file:
+        next_html = f'<a class="nav-link" href="{next_file}">Next ⟶</a>'
+    else:
+        next_html = '<span class="nav-link nav-disabled">Next ⟶</span>'
 
     return f"""
 <div class="nav-block">
     <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
     <span class="nav-spacer"></span>
-    <a class="nav-link" href="{prev_link}">⟵ Previous</a>
+    {prev_html}
     <span class="nav-spacer"></span>
-    <a class="nav-link" href="{next_link}">Next ⟶</a>
+    {next_html}
 </div>
 """
 
