@@ -46,16 +46,60 @@ def rewrite_links(line):
 
     return out
 
+PHOENIX_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+{{CONTENT}}
+</div>
+
+</body>
+</html>
+"""
+
 # Convert a single markdown file to HTML
 def convert_file(input_path, output_path):
     with open(input_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     processed = [rewrite_links(line) for line in lines]
-    html = markdown.markdown("".join(processed), extensions=["tables", "fenced_code"])
+    inner_html = markdown.markdown("".join(processed), extensions=["tables", "fenced_code"])
+
+    full_html = PHOENIX_TEMPLATE.replace("{{CONTENT}}", inner_html)
 
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(full_html)
 
 # Ensure output directory exists
 def ensure_dir(path):
