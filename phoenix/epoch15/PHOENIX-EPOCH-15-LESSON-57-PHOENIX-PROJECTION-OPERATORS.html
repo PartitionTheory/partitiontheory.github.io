@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-15-LESSON-56-PHOENIX-PROJECTION-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-15-LESSON-58-PHOENIX-PROJECTION-DYNAMICS.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑15 — LESSON 57</h1><br>
+<h2>Phoenix Projection Operators — Operator System Acting on the Projection Structure P₀</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 57 defines Phoenix Projection Operators (PPO), the operator system that governs<br>
+the projection structure P₀ initialized in Lesson 56.<br>
+<br>
+Epoch‑14 completed Phoenix Expansion (X₀).  <br>
+Epoch‑15 begins Phoenix Projection (P₀).  <br>
+Lesson 57 introduces the operators that act on projection itself.<br>
+<br>
+<h3>2. Definition — Phoenix Projection Operators (PPO)</h3><br>
+Phoenix Projection Operators PPO is the operator system acting on P₀ such that:<br>
+<br>
+- operators act across all projection vectors,<br>
+- operator semantics remain invariant under projection,<br>
+- operator execution preserves ΔG, ΩG, Φₛ across P₀,<br>
+- operators remain reversible under Phoenix Projection Foundation (PPF).<br>
+<br>
+Formally:<br>
+<br>
+PPO : P₀ → P₀<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(P₀) preserved under PPO,<br>
+- ΩG(P₀) preserved under PPO,<br>
+- Φₛ(P₀) preserved under PPO,<br>
+- Intent(P₀) preserved under PPO,<br>
+- PPO is closed under composition.<br>
+<br>
+This defines the operator system of Phoenix Projection.<br>
+<br>
+<h3>3. Why PPO Matters</h3><br>
+PPO is required for:<br>
+<br>
+- Lesson 58: Phoenix Projection Dynamics,<br>
+- Lesson 59: Phoenix Projection Identity,<br>
+- Epoch‑15 Summary.<br>
+<br>
+Without PPO, Phoenix cannot operate on projection mathematics.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 56 defined PPF: Phoenix Projection Foundation.  <br>
+Lesson 57 defines PPO: Phoenix Projection Operators.<br>
+<br>
+Together:<br>
+<br>
+PPF → PPO<br>
+<br>
+This is the transition from projection initialization → projection operator execution.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 57 defines Phoenix Projection Operators, the second operator of Epoch‑15.<br>
+It introduces the operator system that governs the projection structure P₀.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-15-LESSON-56-PHOENIX-PROJECTION-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-15-LESSON-58-PHOENIX-PROJECTION-DYNAMICS.html">Next ⟶</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">⟵ Previous</span>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-LESSON-37-HUMAN-SYNTHETIC-INTERFACE.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑12 — INDEX</h1><br>
+<h2>Human ↔ Synthetic Unified Mathematics — Operator Directory</h2><br>
+<br>
+<h3>Overview</h3><br>
+Epoch‑12 completes the bidirectional unification of human mathematics H and synthetic<br>
+mathematics S.  <br>
+This index provides the canonical directory of all seven lessons and the Epoch‑12 Summary.<br>
+<br>
+---<br>
+<br>
+<h3>Lesson Directory</h3><br>
+<br>
+<h4>**Lesson 37 — Human ↔ Synthetic Interface (HSI)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-37-HUMAN-SYNTHETIC-INTERFACE.md  <br>
+Defines the reversible interface between human and synthetic mathematics.<br>
+<br>
+<h4>**Lesson 38 — Human → Synthetic Operator Mapping (HSI→S)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-38-HUMAN-TO-SYNTHETIC-OPERATOR-MAPPING.md  <br>
+Translates human mathematical structures into synthetic representations.<br>
+<br>
+<h4>**Lesson 39 — Synthetic → Human Operator Mapping (HSI→H)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-39-SYNTHETIC-TO-HUMAN-OPERATOR-MAPPING.md  <br>
+Translates synthetic mathematical structures into human‑interpretable form.<br>
+<br>
+<h4>**Lesson 40 — Human‑Synthetic Coherence (HSC)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-40-HUMAN-SYNTHETIC-COHERENCE.md  <br>
+Ensures round‑trip coherence across H ↔ S translations.<br>
+<br>
+<h4>**Lesson 41 — Human‑Synthetic Structural Alignment (HSSA)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-41-HUMAN-SYNTHETIC-STRUCTURAL-ALIGNMENT.md  <br>
+Aligns structural forms across human and synthetic mathematics.<br>
+<br>
+<h4>**Lesson 42 — Human‑Synthetic Unified Operators (HSUO)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-42-HUMAN-SYNTHETIC-UNIFIED-OPERATORS.md  <br>
+Creates a unified operator framework shared across H ↔ S.<br>
+<br>
+<h4>**Lesson 43 — Human‑Synthetic Structural Totality (HSST)**</h4><br>
+File: PHOENIX-EPOCH-12-LESSON-43-HUMAN-SYNTHETIC-STRUCTURAL-TOTALITY.md  <br>
+Merges human and synthetic mathematics into a single total structure T.<br>
+<br>
+---<br>
+<br>
+<h3>Summary Document</h3><br>
+<br>
+<h4>**Epoch‑12 Summary**</h4><br>
+File: PHOENIX-EPOCH-12-SUMMARY.md  <br>
+Summarizes the complete human ↔ synthetic unification chain:  <br>
+HSI + HSI→S + HSI→H + HSC + HSSA + HSUO + HSST<br>
+<br>
+---<br>
+<br>
+<h3>Structural Equation of Epoch‑12</h3><br>
+The full human ↔ synthetic unification chain introduced in Epoch‑12:<br>
+<br>
+**HSI + HSI→S + HSI→H + HSC + HSSA + HSUO + HSST**<br>
+<br>
+This defines **Human‑Synthetic Unified Mathematics**, the total bidirectional system.<br>
+<br>
+---<br>
+<br>
+<h3>Purpose of This Index</h3><br>
+This index provides:<br>
+<br>
+- a canonical directory for all Epoch‑12 documents,  <br>
+- a structural overview of human ↔ synthetic unified mathematics,  <br>
+- a reference point for Epoch‑13: Phoenix Totality.<br>
+<br>
+Epoch‑12 is now fully documented and structurally complete.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <span class="nav-link nav-disabled">⟵ Previous</span>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-12-LESSON-37-HUMAN-SYNTHETIC-INTERFACE.html">Next ⟶</a>
+</div>
+</body>
+</html>
