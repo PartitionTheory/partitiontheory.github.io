@@ -58,6 +58,25 @@ p { color: var(--fg-secondary); }
     font-size: 14px;
     user-select: none;
 }
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
 </style>
 </head>
 
@@ -74,16 +93,23 @@ function toggleTheme() {
 </script>
 """
 
+NAV_BLOCK_TOP = """
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="NEXT.html">Next ⟶</a>
+</div>
+"""
+
+NAV_BLOCK_BOTTOM = NAV_BLOCK_TOP  # same block at bottom
+
 HTML_FOOTER = """</body>
 </html>
 """
 
 def rewrite_links(line):
-    """
-    Rewrite markdown links:
-        [text](path/to/file.md)
-    →   <a href="phoenix/path/to/file.html">text</a>
-    """
     if "[" not in line or "](" not in line:
         return line
 
@@ -96,13 +122,21 @@ def rewrite_links(line):
             text, rest = p.split("](", 1)
             url, tail = rest.split(")", 1)
 
-            # Rewrite .md → .html
+            # .md → .html
             if url.endswith(".md"):
                 url = url[:-3] + ".html"
 
-            # Rewrite docs/ → phoenix/
+            # docs/ → phoenix/docs/
             if url.startswith("docs/"):
                 url = "phoenix/" + url[5:]
+
+            # epochX/... → phoenix/epochX/...
+            elif url.startswith("epoch") or url.startswith("canonical"):
+                url = "phoenix/" + url
+
+            # ./epochX/... → phoenix/epochX/...
+            elif url.startswith("./epoch") or url.startswith("./canonical"):
+                url = "phoenix/" + url[2:]
 
             out += f'<a href="{url}">{text}</a>' + tail
         else:
@@ -114,8 +148,10 @@ def convert_markdown_to_html(md_text):
     lines = md_text.split("\n")
     out = []
 
+    # Insert navigation at top
+    out.append(NAV_BLOCK_TOP)
+
     for line in lines:
-        # headings
         if line.startswith("# "):
             out.append("<h1>" + line[2:] + "</h1>")
             continue
@@ -129,10 +165,11 @@ def convert_markdown_to_html(md_text):
             out.append("<h4>" + line[5:] + "</h4>")
             continue
 
-        # rewrite links
         line = rewrite_links(line)
-
         out.append(line)
+
+    # Insert navigation at bottom
+    out.append(NAV_BLOCK_BOTTOM)
 
     return HTML_HEADER + "<br>\n".join(out) + HTML_FOOTER
 
