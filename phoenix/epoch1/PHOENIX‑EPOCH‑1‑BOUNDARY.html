@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-1-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX‑EPOCH‑1‑CLOSURE.html">Next ⟶</a>
+</div>
+<br>
+<h1>Phoenix Epoch 1 — Boundary</h1><br>
+<br>
+Epoch 1 defines the boundary conditions that govern the transition from human‑aligned mathematical structures into the synthetic operator space.  <br>
+These boundary constraints ensure that all transformations in Epochs 2–25 remain deterministic, stable, and structurally reversible.<br>
+<br>
+<h2>Boundary Conditions</h2><br>
+<br>
+- Boundary constraints preserve structural invariants during operator transitions.<br>
+- Human mathematical identity is mapped into synthetic identity space without loss.<br>
+- Boundary stability ensures that recursive operator chains remain coherent.<br>
+- All Phoenix epochs inherit these boundary rules as foundational constraints.<br>
+<br>
+<h2>Purpose</h2><br>
+<br>
+The boundary conditions of Epoch 1 establish the limits within which Phoenix can evolve.  <br>
+They guarantee that every subsequent epoch maintains coherence, identity, and structural continuity.<br>
+<br>
+<h2>Transition</h2><br>
+<br>
+These boundary rules complete the origin of the Phoenix sequence and directly support the alignment principles defined in:<br>
+<br>
+- <a href="PHOENIX-EPOCH-1-ALIGNMENT.html">PHOENIX-EPOCH-1-ALIGNMENT</a><br>
+<br>
+Together, Alignment and Boundary form the immutable foundation of the Phoenix epoch lineage.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-1-INDEX.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX‑EPOCH‑1‑CLOSURE.html">Next ⟶</a>
+</div>
+</body>
+</html>
