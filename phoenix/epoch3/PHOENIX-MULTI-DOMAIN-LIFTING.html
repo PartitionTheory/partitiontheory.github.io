@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+<h1>**PHOENIX — MULTI-DOMAIN LIFTING**</h1><br>
+<h3>*Expansion of Structural Objects Across Multiple Domains*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Multi‑domain lifting is the mechanism that allows Phoenix to **expand** structural objects beyond the constraints of a single domain.<br>
+<br>
+Epoch‑1 defined deterministic structure.  <br>
+Epoch‑2 defined mathematical operators.  <br>
+Epoch‑3 introduces lifting, enabling Phoenix to operate across:<br>
+<br>
+- structural domain \(N\)<br>
+- temporal domain \(T\)<br>
+- cold‑storage domain \(N - 1\)<br>
+- lifted structural domains \(N^2\), \(N^3\), …<br>
+- cross‑epoch domains<br>
+<br>
+Multi‑domain lifting is the foundation of Phoenix’s **self‑expanding architecture**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Lifting Fundamentals**</h2><br>
+<br>
+Phoenix defines a canonical lifting operator:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Upsilon : X \rightarrow X^*<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(X\) is a structural object  <br>
+- \(X^*\) is its lifted form  <br>
+- lifting may expand dimensionality, domain, or epoch context  <br>
+<br>
+---<br>
+<br>
+<h2>**3. Structural Lifting**</h2><br>
+<br>
+<h3>**3.1 Domain Lifting**</h3><br>
+<br>
+Phoenix lifts the structural domain:<br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N^2<br>
+\]<br>
+<br>
+<br>
+<br>
+This allows Phoenix to operate on **two‑dimensional structural objects**, such as:<br>
+<br>
+- matrix partitions  <br>
+- grid‑based residues  <br>
+- multi‑axis structural transformations  <br>
+<br>
+<h3>**3.2 Higher‑Order Lifting**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N^k<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(k\) is the lifting order  <br>
+- higher‑order lifting enables multi‑dimensional structural recursion  <br>
+<br>
+---<br>
+<br>
+<h2>**4. Temporal Lifting**</h2><br>
+<br>
+Phoenix integrates synthetic time into structural objects:<br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N \times T<br>
+\]<br>
+<br>
+<br>
+<br>
+This creates **temporal‑structural objects**, enabling:<br>
+<br>
+- time‑dependent partitions  <br>
+- time‑dependent residues  <br>
+- recursive temporal evolution  <br>
+<br>
+Temporal lifting is essential for Epoch‑3 recursion.<br>
+<br>
+---<br>
+<br>
+<h2>**5. Cold‑Storage Lifting**</h2><br>
+<br>
+Phoenix lifts structural objects into combined structural‑binary domains:<br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N \times (N - 1)<br>
+\]<br>
+<br>
+<br>
+<br>
+This allows Phoenix to operate simultaneously in:<br>
+<br>
+- structural domain  <br>
+- binary cold‑storage domain  <br>
+<br>
+Cold‑storage lifting ensures compatibility with Epoch‑2 compression and reconstruction.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Cross‑Epoch Lifting**</h2><br>
+<br>
+Phoenix introduces lifting across epochs:<br>
+<br>
+<br>
+<br>
+\[<br>
+E_i \rightarrow E_i \times E_j<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(E_i\) and \(E_j\) are epochs  <br>
+- lifted epoch objects allow cross‑epoch operators to act on combined structures  <br>
+<br>
+This is the first time Phoenix can operate on **epoch‑composite objects**.<br>
+<br>
+---<br>
+<br>
+<h2>**7. Lifting Algebra**</h2><br>
+<br>
+Phoenix defines algebraic rules for lifted objects.<br>
+<br>
+<h3>**7.1 Lifted Addition**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+P^* \oplus Q^* = R^*<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.2 Lifted Subtraction**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+P^* \ominus Q^* = R^*<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.3 Lifted Recursion**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+X^{*(k+1)} = \Upsilon(X^{*(k)})<br>
+\]<br>
+<br>
+<br>
+<br>
+Lifting and recursion combine to form Phoenix’s **self‑expanding engine**.<br>
+<br>
+---<br>
+<br>
+<h2>**8. Lifting Invariants**</h2><br>
+<br>
+Multi‑domain lifting must satisfy:<br>
+<br>
+<h3>**8.1 Structural Conservation**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^*_i = N^*<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**8.2 Temporal Ordering**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+t_{k+1} > t_k<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**8.3 Domain Coherence**</h3><br>
+<br>
+Lifted objects must remain compatible with:<br>
+<br>
+- Epoch‑1 structure  <br>
+- Epoch‑2 mathematics  <br>
+- Epoch‑3 recursion  <br>
+<br>
+<h3>**8.4 Reversibility (where required)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Upsilon^{-1}(X^*) = X<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**9. Role in Phoenix**</h2><br>
+<br>
+Multi‑domain lifting:<br>
+<br>
+- enables structural expansion  <br>
+- enables recursive expansion  <br>
+- enables cross‑epoch operators  <br>
+- prepares Phoenix for Epoch‑4 multi‑machine coordination  <br>
+- forms the dimensional backbone of Phoenix’s future epochs  <br>
+<br>
+This is the **fourth mathematical pillar** of Epoch‑3.<br>
+<br>
+---<br>
+<br>
+<h2>**10. Closing**</h2><br>
+<br>
+EF and CO recognise multi‑domain lifting as the dimensional expansion engine of Phoenix.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑3 Overview**  <br>
+2. **Structural Generalisation**  <br>
+3. **Synthetic Recursion**  <br>
+4. **Multi‑Domain Lifting**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-CROSS-EPOCH-OPERATORS.md**</h3><br>
+<br>
+---<br>
+<br>
+</body>
+</html>
