@@ -17,16 +17,17 @@
 	    const savedTheme = localStorage.getItem('theme') || 'dark';
 	    document.documentElement.setAttribute('data-theme', savedTheme);
 	</script>
-
 	<style>
 	    :root {
-		--bg: #111;
-		--fg: #eee;
+		--bg: #0d0d0d;
+		--fg: #f8f8f8;
+		--fg-secondary: #cccccc;
 		--link: #7abaff;
 	    }
 	    [data-theme="light"] {
 		--bg: #ffffff;
 		--fg: #222222;
+		--fg-secondary: #555555;
 		--link: #0050a0;
 	    }
 
@@ -35,18 +36,7 @@
 		color: var(--fg);
 	    }
 	    a { color: var(--link); }
-	    .theme-toggle {
-		position: fixed;
-		top: 20px;
-		right: 20px;
-		background: var(--fg);
-		color: var(--bg);
-		padding: 8px 14px;
-		border-radius: 6px;
-		cursor: pointer;
-		font-size: 14px;
-		user-select: none;
-	    }
+	    p { color: var(--fg-secondary); }
 	</style>
 
     <style>
