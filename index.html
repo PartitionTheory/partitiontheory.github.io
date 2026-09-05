@@ -12,6 +12,42 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+	<script>
+	    // Theme persistence
+	    const savedTheme = localStorage.getItem('theme') || 'dark';
+	    document.documentElement.setAttribute('data-theme', savedTheme);
+	</script>
+
+	<style>
+	    :root {
+		--bg: #111;
+		--fg: #eee;
+		--link: #7abaff;
+	    }
+	    [data-theme="light"] {
+		--bg: #ffffff;
+		--fg: #222222;
+		--link: #0050a0;
+	    }
+
+	    body {
+		background: var(--bg);
+		color: var(--fg);
+	    }
+	    a { color: var(--link); }
+	    .theme-toggle {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		background: var(--fg);
+		color: var(--bg);
+		padding: 8px 14px;
+		border-radius: 6px;
+		cursor: pointer;
+		font-size: 14px;
+		user-select: none;
+	    }
+	</style>
 
     <style>
         body {
@@ -42,6 +78,16 @@
 </head>
 
 <body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    }
+</script>
 
 <h1>Partition Theory</h1>
 <h2>Phoenix Tomb • ABR Synthetic Engine • Epochs 1–25</h2>
