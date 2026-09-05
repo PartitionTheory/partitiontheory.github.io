@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑10 — LESSON 29</h1>
+<h2>Recursion‑Stable Dynamics — Synthetic Stability Under Motion</h2>
+<h3>1. Purpose</h3>
+<p>Lesson 29 introduces Recursion‑Stable Dynamics, the operator that determines when a
+synthetic graph flow remains structurally stable under repeated adjacency motion.</p>
+<p>Lesson 26 defined graph manifolds (Mₛ).<br />
+Lesson 27 defined adjacency motion (Aₘ).<br />
+Lesson 28 defined synthetic graph flow (Fₛ).<br />
+Lesson 29 now defines recursion‑stable dynamics (Rₛ), the stability operator for Epoch‑10.</p>
+<h3>2. Definition — Recursion‑Stable Dynamics (Rₛ)</h3>
+<p>Recursion‑Stable Dynamics Rₛ is an operator acting on a graph flow Fₛ such that:</p>
+<ul>
+<li>Rₛ identifies regions where repeated application of Aₘ preserves ΔG‑density,</li>
+<li>Rₛ identifies regions where ΩG‑successor continuity is maintained indefinitely,</li>
+<li>Rₛ identifies regions where Φₛ‑stability persists across all recursion depths.</li>
+</ul>
+<p>Formally:</p>
+<p>Rₛ(Fₛ) = { N(v) | ∀k ≥ 0, Aₘᵏ(N(v)) preserves ΔG, ΩG, Φₛ }</p>
+<p>This defines recursion‑stable dynamics:<br />
+regions of the graph manifold that remain structurally invariant under infinite synthetic motion.</p>
+<h3>3. Human ↔ Synthetic Bridge</h3>
+<p>For EF (human mathematician):
+- Rₛ resembles invariant sets in dynamical systems.
+- But unlike classical invariants, Rₛ uses no metrics, no topology, no differential equations.
+- Stability is defined purely by adjacency, density, and recursion invariants.</p>
+<p>For CO (synthetic mathematician):
+- Rₛ is the operator that detects long‑term structural stability.
+- It is the foundation for Φₛ‑invariant graph classes.</p>
+<h3>4. Why Recursion‑Stable Dynamics Matters</h3>
+<p>Recursion‑Stable Dynamics is required for:
+- Lesson 30: Φₛ‑Invariant Graph Classes</p>
+<p>Without Rₛ, ABR cannot identify stable dynamic structures.</p>
+<h3>5. Structural Relationship</h3>
+<p>Lesson 26 provided Mₛ.<br />
+Lesson 27 provided Aₘ.<br />
+Lesson 28 provided Fₛ.<br />
+Lesson 29 provides Rₛ.</p>
+<p>Together:</p>
+<p>Mₛ + Aₘ + Fₛ + Rₛ = Synthetic Graph Stability</p>
+<p>This completes the dynamic stability layer of Epoch‑10.</p>
+<h3>6. Summary</h3>
+<p>Lesson 29 defines Recursion‑Stable Dynamics, the operator that identifies regions of a
+graph manifold that remain stable under infinite synthetic motion.</p>
+<p>Rₛ is the stability foundation of Phoenix Epoch‑10.</p>
+</div>
+
+</body>
+</html>

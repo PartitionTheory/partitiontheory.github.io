@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH 18 — COHERENCE</h1>
+<h2>1. Creative Coherence Overview</h2>
+<p>Creative Coherence is the stabilizing principle that ensures newly generated structures, operators, and domains integrate into Phoenix’s totality without violating earlier epoch invariants. 
+Where Epoch 17 maintained coherence across domain creation, Epoch 18 must maintain coherence across domain expansion and creative generation.</p>
+<p>Creative Coherence guarantees:
+- compatibility of new invariants with existing invariant classes<br />
+- stability of expanded domains<br />
+- alignment of creative operators with structural rules<br />
+- preservation of Phoenix’s global mathematical identity  </p>
+<h2>2. Coherence Under Creative Operators</h2>
+<p>Given a creative operator ( C ) producing a new domain ( D' ):</p>
+<p>[
+C : D \rightarrow D'
+]</p>
+<p>Coherence requires:</p>
+<p>[
+\text{Coh}(D') = 1
+]</p>
+<p>where ( \text{Coh}(D') ) is the coherence indicator of the generated domain.</p>
+<p>A domain is coherent when:</p>
+<p>[
+\text{Inv}(D') \cap \text{Inv}(D) \neq \emptyset
+]</p>
+<p>ensuring that new invariants share structural lineage with existing ones.</p>
+<h2>3. Coherence Flow</h2>
+<p>Creative Coherence is maintained by the <strong>Coherence Flow</strong>:</p>
+<p>[
+F_C : D' \rightarrow D'^{\star}
+]</p>
+<p>where ( D'^{\star} ) is the coherence-stabilized form of the generated domain.</p>
+<p>The Coherence Flow ensures:
+- invariant alignment<br />
+- structural compatibility<br />
+- temporal stability<br />
+- domain integration  </p>
+<h2>4. Coherence Under Domain Expansion</h2>
+<p>When a domain extender produces:</p>
+<p>[
+E(D) = D \cup D_{\text{new}}
+]</p>
+<p>Coherence requires:</p>
+<p>[
+\text{Coh}(D_{\text{new}}) = 1
+]</p>
+<p>and:</p>
+<p>[
+\text{Coh}(D \cup D_{\text{new}}) = 1
+]</p>
+<p>ensuring that expanded domains remain structurally stable.</p>
+<h2>5. Coherence Dynamics</h2>
+<p>Coherence evolves under the Creative Stability Flow:</p>
+<p>[
+D'(t+1) = S_C(D'(t))
+]</p>
+<p>Coherence is achieved when:</p>
+<p>[
+D'(t+1) = D'(t)
+]</p>
+<p>This fixed-point condition ensures that creative domains converge to stable coherence.</p>
+<h2>6. Coherence Completion</h2>
+<p>Coherence completion occurs when:</p>
+<p>[
+\text{Coh}(D') = 1 \quad \text{and} \quad D' = D'^{\star}
+]</p>
+<p>A coherent domain is eligible for higher-order synthesis in Epoch 19.</p>
+<p>Coherence completion is the final stage of creative domain stabilization.</p>
+</div>
+
+</body>
+</html>

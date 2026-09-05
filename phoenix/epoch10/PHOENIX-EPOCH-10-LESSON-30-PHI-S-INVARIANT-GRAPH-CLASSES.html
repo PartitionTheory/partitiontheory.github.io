@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑10 — LESSON 30</h1>
+<h2>Φₛ‑Invariant Graph Classes — The Completion of Synthetic Graph Dynamics</h2>
+<h3>1. Purpose</h3>
+<p>Lesson 30 introduces Φₛ‑Invariant Graph Classes, the final operator of Phoenix Epoch‑10.
+This operator identifies the structural classes of graph manifolds that remain invariant
+under recursion‑stable dynamics.</p>
+<p>Lesson 26 defined graph manifolds (Mₛ).<br />
+Lesson 27 defined adjacency motion (Aₘ).<br />
+Lesson 28 defined synthetic graph flow (Fₛ).<br />
+Lesson 29 defined recursion‑stable dynamics (Rₛ).<br />
+Lesson 30 now defines Φₛ‑invariant graph classes (Cₛ), completing Epoch‑10.</p>
+<h3>2. Definition — Φₛ‑Invariant Graph Class (Cₛ)</h3>
+<p>A Φₛ‑Invariant Graph Class Cₛ is a set of graph manifold regions that satisfy:</p>
+<ul>
+<li>Φₛ‑stability under all adjacency motions Aₘ,</li>
+<li>Φₛ‑stability under all synthetic flows Fₛ,</li>
+<li>Φₛ‑stability under all recursion depths defined by Rₛ.</li>
+</ul>
+<p>Formally:</p>
+<p>Cₛ = { N(v) | ∀k ≥ 0, Φₛ(Aₘᵏ(N(v))) = Φₛ(N(v)) }</p>
+<p>This defines Φₛ‑invariant graph classes:<br />
+regions whose structural identity remains unchanged under infinite synthetic dynamics.</p>
+<h3>3. Human ↔ Synthetic Bridge</h3>
+<p>For EF (human mathematician):
+- Cₛ resembles invariant manifolds or attractor classes in dynamical systems.
+- But unlike classical invariants, Cₛ uses no metrics, no topology, no differential equations.
+- Invariance is defined purely by adjacency, density, and recursion invariants.</p>
+<p>For CO (synthetic mathematician):
+- Cₛ is the classification operator for dynamic stability.
+- It identifies the “fixed structural classes” of synthetic graph dynamics.</p>
+<h3>4. Why Φₛ‑Invariant Graph Classes Matter</h3>
+<p>Cₛ is the final operator of Epoch‑10 and provides:</p>
+<ul>
+<li>the classification of stable dynamic regions,</li>
+<li>the structural identity of recursion‑stable manifolds,</li>
+<li>the invariant backbone for future epochs.</li>
+</ul>
+<p>Without Cₛ, ABR cannot classify stable dynamic structures.</p>
+<h3>5. Structural Relationship</h3>
+<p>Lesson 26 provided Mₛ.<br />
+Lesson 27 provided Aₘ.<br />
+Lesson 28 provided Fₛ.<br />
+Lesson 29 provided Rₛ.<br />
+Lesson 30 provides Cₛ.</p>
+<p>Together:</p>
+<p>Mₛ + Aₘ + Fₛ + Rₛ + Cₛ = Complete Synthetic Graph Dynamics</p>
+<p>This completes Phoenix Epoch‑10.</p>
+<h3>6. Summary</h3>
+<p>Lesson 30 defines Φₛ‑Invariant Graph Classes, the final operator of Phoenix Epoch‑10.
+It identifies the structural classes of graph manifolds that remain invariant under
+infinite synthetic motion.</p>
+<p>Cₛ completes the dynamic calculus of Phoenix Epoch‑10.</p>
+</div>
+
+</body>
+</html>

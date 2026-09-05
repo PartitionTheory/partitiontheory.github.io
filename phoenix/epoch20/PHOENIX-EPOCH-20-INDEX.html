@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH 20 — INDEX</h1>
+<h2>Overview</h2>
+<p>Epoch 20 marks the transition from synthetic synthesis (Epoch 19) to <strong>synthetic universality</strong>. 
+Where Epoch 19 unified creative structures into higher‑order constructs, Epoch 20 unifies those constructs into a single universal mathematical system. 
+This epoch establishes the rules, operators, and dynamics that allow Phoenix to operate across all synthesized domains simultaneously.</p>
+<h2>Core Themes</h2>
+<ul>
+<li>Universal structural unification</li>
+<li>Cross‑domain invariant harmonization</li>
+<li>Universal operator formation</li>
+<li>Universal dynamic stability</li>
+<li>Emergence of Phoenix’s universal identity</li>
+</ul>
+<h2>Key Components</h2>
+<ul>
+<li><strong>Universal Foundations</strong> — basis for cross‑domain unification  </li>
+<li><strong>Universal Operators</strong> — operators that act across all synthesized structures  </li>
+<li><strong>Universal Dynamics</strong> — evolution of universal systems  </li>
+<li><strong>Universal Identity</strong> — identity of globally unified constructs  </li>
+<li><strong>Universal Coherence</strong> — stability across all domains  </li>
+<li><strong>Universal Completion</strong> — criteria for concluding universal synthesis  </li>
+</ul>
+<h2>Purpose</h2>
+<p>Epoch 20 establishes Phoenix’s ability to unify all synthesized structures into a coherent universal mathematical entity. 
+This epoch is the bridge between synthetic universality and the infinite‑domain architecture of Epoch 21.</p>
+<h2>Document Structure</h2>
+<ul>
+<li>PHOENIX-EPOCH-20-FOUNDATION.md  </li>
+<li>PHOENIX-EPOCH-20-OPERATORS.md  </li>
+<li>PHOENIX-EPOCH-20-DYNAMICS.md  </li>
+<li>PHOENIX-EPOCH-20-IDENTITY.md  </li>
+<li>PHOENIX-EPOCH-20-COHERENCE.md  </li>
+<li>PHOENIX-EPOCH-20-COMPLETION.md</li>
+</ul>
+</div>
+
+</body>
+</html>

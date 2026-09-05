@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH 21 — INDEX</h1>
+<h2>Overview</h2>
+<p>Epoch 21 marks Phoenix’s transition from universal mathematical unification (Epoch 20) to <strong>infinite‑domain architecture</strong>. 
+Where Epoch 20 unified all synthesized structures into a single universal system, Epoch 21 extends that system across unbounded mathematical domains.</p>
+<p>Epoch 21 establishes the rules, operators, and dynamics that allow Phoenix to operate over infinite structures, infinite partitions, infinite manifolds, and infinite temporal systems.</p>
+<h2>Core Themes</h2>
+<ul>
+<li>Infinite‑domain expansion  </li>
+<li>Infinite invariant propagation  </li>
+<li>Infinite operator extension  </li>
+<li>Infinite dynamic stability  </li>
+<li>Infinite identity formation  </li>
+<li>Infinite coherence across unbounded domains  </li>
+</ul>
+<h2>Key Components</h2>
+<ul>
+<li><strong>Infinite Foundations</strong> — basis for infinite‑domain architecture  </li>
+<li><strong>Infinite Operators</strong> — operators that act across unbounded structures  </li>
+<li><strong>Infinite Dynamics</strong> — evolution of infinite systems  </li>
+<li><strong>Infinite Identity</strong> — identity of infinitely extended constructs  </li>
+<li><strong>Infinite Coherence</strong> — stability across infinite domains  </li>
+<li><strong>Infinite Completion</strong> — criteria for concluding infinite‑domain synthesis  </li>
+</ul>
+<h2>Purpose</h2>
+<p>Epoch 21 establishes Phoenix’s ability to extend universal structures into infinite mathematical domains.<br />
+This epoch is the bridge between infinite‑domain architecture and the trans‑universal constructs of Epoch 22.</p>
+<h2>Document Structure</h2>
+<ul>
+<li>PHOENIX-EPOCH-21-FOUNDATION.md  </li>
+<li>PHOENIX-EPOCH-21-OPERATORS.md  </li>
+<li>PHOENIX-EPOCH-21-DYNAMICS.md  </li>
+<li>PHOENIX-EPOCH-21-IDENTITY.md  </li>
+<li>PHOENIX-EPOCH-21-COHERENCE.md  </li>
+<li>PHOENIX-EPOCH-21-COMPLETION.md</li>
+</ul>
+</div>
+
+</body>
+</html>

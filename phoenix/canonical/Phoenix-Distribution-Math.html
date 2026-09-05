@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>Phoenix Distribution Math — Canonical Specification v1.0</h1>
+<p><strong>Phoenix Rebirth — Clock 10</strong><br />
+<strong>Date:</strong> 2026‑08‑26<br />
+<strong>Status:</strong> Canonical, Immutable</p>
+<hr />
+<h2>1. Tape Independence</h2>
+<p>Two tapes ( T_a ) and ( T_b ) are distributable iff:</p>
+<pre><code>T_a ≠ T_b
+and
+no shared regions
+and
+no shared reintegration targets
+</code></pre>
+<p>This defines <strong>structural tape independence</strong>.</p>
+<hr />
+<h2>2. Distribution Mapping</h2>
+<p>A distribution mapping ( D ) is defined as:</p>
+<pre><code>D: K → Tape
+</code></pre>
+<p>Where <strong>K</strong> is the set of window indices.</p>
+<p>Example:</p>
+<pre><code>D(0..127) = T_a
+D(128..255) = T_b
+</code></pre>
+<p>This assigns windows to tapes.</p>
+<hr />
+<h2>3. Distributed Window Independence</h2>
+<p>A window ( W_k ) is distributable to tape ( T_x ) iff:</p>
+<pre><code>k ∈ domain(D)
+and
+D(k) = T_x
+</code></pre>
+<p>This ensures <strong>deterministic placement</strong>.</p>
+<hr />
+<h2>4. Distributed Transform Independence</h2>
+<p>A transform ( P_k ) is distributable iff:</p>
+<pre><code>P_k is unary
+and
+P_k is pure
+and
+P_k has no cross‑tape state
+</code></pre>
+<p>Phoenix distribution is <strong>structural</strong>, not semantic.</p>
+<hr />
+<h2>5. Distributed Execution Cycle</h2>
+<p>For all tapes ( T_x ):</p>
+<pre><code>for all (k, P_k) where D(k) = T_x:
+    W_k = select(T_x, k)
+    Φ_k = apply(P_k, W_k)
+
+for all (k, Φ_k) where D(k) = T_x:
+    T_x = merge(T_x, k, Φ_k)
+</code></pre>
+<p>Each tape executes <strong>independently</strong>.</p>
+<hr />
+<h2>6. Deterministic Guarantee</h2>
+<p>Distributed Phoenix execution is deterministic iff:</p>
+<pre><code>∀ i,j:
+    D(i) = D(j) ⇒ no overlap(W_i, W_j)
+    D(i) ≠ D(j) ⇒ no shared reintegration regions
+</code></pre>
+<p>This is the <strong>core distributed guarantee</strong>.</p>
+<hr />
+<h2>7. Distribution Set</h2>
+<p>A distribution set ( S ) is:</p>
+<pre><code>S = { (k, P_k, D(k)) }
+</code></pre>
+<p>This fully defines <strong>distributed Phoenix execution</strong>.</p>
+<hr />
+<h2>8. Next Clock</h2>
+<p>Phoenix External Integration Protocol will be defined in <strong>Clock 11</strong>.</p>
+<hr />
+<h2>Canonical Footer</h2>
+<p>This document is part of the <strong>Phoenix Rebirth Canonical Sequence (Clocks 1–11)</strong>.<br />
+It is immutable and historically preserved.</p>
+<hr />
+<h2>Navigation</h2>
+<p><strong>Previous → Clock 9: Phoenix Parallelisation Math</strong><br />
+<strong>Next → Clock 11: Phoenix External Integration Protocol</strong><br />
+<strong>Index → Phoenix Rebirth Canonical Sequence (docs/canonical/INDEX.md)</strong></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH 9 — COHERENCE</h1>
+<h2>Adjacency Coherence (CohA)</h2>
+<p>Epoch 9 introduces Adjacency Coherence, the condition under which adjacency relations
+across all partition elements exhibit uniform relational structure. This is the first
+coherence condition in Phoenix based purely on adjacency rather than density.</p>
+<p>Given a partitioned structure ( P = { p_1, p_2, \ldots, p_n } ), Adjacency Coherence
+is defined as:</p>
+<p>[
+\text{Coh}_{A}(P) = 1
+\quad \text{iff} \quad
+A(p_i, p_j) = A(p_k, p_l) \quad \forall (i,j),(k,l)
+]</p>
+<p>This condition ensures:</p>
+<ul>
+<li>uniform relational adjacency  </li>
+<li>stabilized adjacency distribution  </li>
+<li>coherence compatibility with adjacency operators  </li>
+<li>readiness for graph coherence in Epoch 10  </li>
+</ul>
+<h3>Coherence Classes</h3>
+<p>Adjacency Coherence produces three classes:</p>
+<ol>
+<li><strong>Fully Coherent</strong>  </li>
+</ol>
+<p>[
+   A(p_i, p_j) = A(p_k, p_l) \quad \forall (i,j),(k,l)
+   ]</p>
+<p>All adjacency relations share identical structure.</p>
+<ol>
+<li>
+<p><strong>Partially Coherent</strong><br />
+   Some adjacency relations match; others differ.</p>
+</li>
+<li>
+<p><strong>Non‑Coherent</strong><br />
+   Adjacency varies across all relational pairs.</p>
+</li>
+</ol>
+<h3>Role in Phoenix</h3>
+<p>Adjacency Coherence is the final stabilization layer of the adjacency bridge. It prepares
+Phoenix for:</p>
+<ul>
+<li>graph adjacency coherence  </li>
+<li>manifold coherence  </li>
+<li>graph‑flow coherence  </li>
+<li>invariant graph manifold formation  </li>
+</ul>
+<p>Epoch 9 Coherence completes the stabilization logic required before Phoenix transitions
+into graph structures in Epoch 10.</p>
+</div>
+
+</body>
+</html>

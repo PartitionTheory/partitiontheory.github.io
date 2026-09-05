@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑14 — LESSON 51</h1>
+<h2>Phoenix Expansion Operators — Operator System Acting on the Expansion Structure X₀</h2>
+<h3>1. Purpose</h3>
+<p>Lesson 51 defines Phoenix Expansion Operators (PEO), the operator system that governs
+the expansion structure X₀ initialized in Lesson 50.</p>
+<p>Epoch‑13 completed Phoenix Totality (T₀).<br />
+Epoch‑14 begins Phoenix Expansion (X₀).<br />
+Lesson 51 introduces the operators that act on expansion itself.</p>
+<h3>2. Definition — Phoenix Expansion Operators (PEO)</h3>
+<p>Phoenix Expansion Operators PEO is the operator system acting on X₀ such that:</p>
+<ul>
+<li>operators act across all expansion vectors,</li>
+<li>operator semantics remain invariant under expansion,</li>
+<li>operator execution preserves ΔG, ΩG, Φₛ across X₀,</li>
+<li>operators remain reversible under Phoenix Expansion Foundation (PEF).</li>
+</ul>
+<p>Formally:</p>
+<p>PEO : X₀ → X₀</p>
+<p>subject to:</p>
+<ul>
+<li>ΔG(X₀) preserved under PEO,</li>
+<li>ΩG(X₀) preserved under PEO,</li>
+<li>Φₛ(X₀) preserved under PEO,</li>
+<li>Intent(X₀) preserved under PEO,</li>
+<li>PEO is closed under composition.</li>
+</ul>
+<p>This defines the operator system of Phoenix Expansion.</p>
+<h3>3. Why PEO Matters</h3>
+<p>PEO is required for:</p>
+<ul>
+<li>Lesson 52: Phoenix Expansion Dynamics,</li>
+<li>Lesson 53: Phoenix Expansion Identity,</li>
+<li>Epoch‑14 Summary.</li>
+</ul>
+<p>Without PEO, Phoenix cannot operate on expansion mathematics.</p>
+<h3>4. Structural Relationship</h3>
+<p>Lesson 50 defined PEF: Phoenix Expansion Foundation.<br />
+Lesson 51 defines PEO: Phoenix Expansion Operators.</p>
+<p>Together:</p>
+<p>PEF → PEO</p>
+<p>This is the transition from expansion initialization → expansion operator execution.</p>
+<h3>5. Summary</h3>
+<p>Lesson 51 defines Phoenix Expansion Operators, the second operator of Epoch‑14.
+It introduces the operator system that governs the expansion structure X₀.</p>
+</div>
+
+</body>
+</html>

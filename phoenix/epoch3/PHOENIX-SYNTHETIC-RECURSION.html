@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1><strong>PHOENIX — SYNTHETIC RECURSION</strong></h1>
+<h3><em>Recursive Structural and Temporal Expansion of the Phoenix Machine</em></h3>
+<h3><em>EF–CO Canonical Document</em></h3>
+<hr />
+<h2><strong>1. Purpose</strong></h2>
+<p>Synthetic recursion is the first <strong>self‑referential mathematical layer</strong> of Phoenix.</p>
+<p>Epoch‑1 provided deterministic structure.<br />
+Epoch‑2 provided mathematical operators.<br />
+Epoch‑3 introduces recursion, enabling Phoenix to:</p>
+<ul>
+<li>apply operators to their own outputs  </li>
+<li>evolve structures recursively  </li>
+<li>traverse synthetic time recursively  </li>
+<li>operate across epoch boundaries recursively  </li>
+</ul>
+<p>Synthetic recursion is the foundation of Phoenix’s <strong>self‑expanding architecture</strong>.</p>
+<hr />
+<h2><strong>2. Recursive Structural Forms</strong></h2>
+<p>Phoenix defines recursive structural objects:</p>
+<h3><strong>2.1 Recursive Partitions</strong></h3>
+<p>A recursive partition satisfies:</p>
+<p>[
+P^{(k+1)} = \Phi(P^{(k)}, t_k)
+]</p>
+<p>Where:</p>
+<ul>
+<li>(P^{(k)}) is the partition at recursion depth (k)  </li>
+<li>(\Phi) is the structural evolution operator  </li>
+<li>recursion depth aligns with synthetic time  </li>
+</ul>
+<hr />
+<h3><strong>2.2 Recursive Residues</strong></h3>
+<p>Recursive residues propagate as:</p>
+<p>[
+R^{(k+1)} = \rho(R^{(k)})
+]</p>
+<p>Where:</p>
+<ul>
+<li>(\rho) is the residue propagation operator  </li>
+<li>residues evolve independently of partitions  </li>
+</ul>
+<hr />
+<h3><strong>2.3 Recursive Operators</strong></h3>
+<p>Phoenix defines recursive operators:</p>
+<p>[
+op^{(k+1)}(x) = op(op^{(k)}(x))
+]</p>
+<p>This allows Phoenix to apply operators to their own outputs.</p>
+<hr />
+<h2><strong>3. Temporal Recursion</strong></h2>
+<p>Synthetic recursion extends into synthetic time.</p>
+<h3><strong>3.1 Temporal Recursion Rule</strong></h3>
+<p>[
+t_{k+1} = \tau^{+}(t_k)
+]</p>
+<p>Where:</p>
+<ul>
+<li>(\tau^{+}) is the forward temporal operator  </li>
+<li>recursion depth aligns with temporal progression  </li>
+</ul>
+<hr />
+<h3><strong>3.2 Reverse Temporal Recursion</strong></h3>
+<p>[
+t_{k-1} = \tau^{-}(t_k)
+]</p>
+<p>Used for:</p>
+<ul>
+<li>structural reconstruction  </li>
+<li>epoch boundary verification  </li>
+</ul>
+<hr />
+<h3><strong>3.3 Multi‑Step Temporal Recursion</strong></h3>
+<p>[
+t_{k+n} = \tau^{n}(t_k)
+]</p>
+<p>This allows Phoenix to jump across multiple recursive layers.</p>
+<hr />
+<h2><strong>4. Cross‑Epoch Recursion</strong></h2>
+<p>Epoch‑3 introduces recursion across epochs.</p>
+<p>Phoenix defines:</p>
+<p>[
+\mathcal{R}(E_i) = \Omega(E_i, E_j)
+]</p>
+<p>Where:</p>
+<ul>
+<li>(E_i) and (E_j) are epochs  </li>
+<li>(\Omega) is a cross‑epoch operator  </li>
+<li>recursion may traverse epoch boundaries  </li>
+</ul>
+<p>This is the first time Phoenix can operate <em>across</em> epochs recursively.</p>
+<hr />
+<h2><strong>5. Recursion Invariants</strong></h2>
+<p>Synthetic recursion must satisfy:</p>
+<h3><strong>5.1 Deterministic Recursion</strong></h3>
+<p>[
+\mathcal{R}(x) = y
+]</p>
+<p>must be single‑valued.</p>
+<h3><strong>5.2 Structural Conservation</strong></h3>
+<p>[
+\sum_i p^{(k)}_i = N^*
+]</p>
+<p>for all recursion depths (k).</p>
+<h3><strong>5.3 Temporal Ordering</strong></h3>
+<p>[
+t_{k+1} &gt; t_k
+]</p>
+<p>unless explicitly reversed.</p>
+<h3><strong>5.4 Epoch Compatibility</strong></h3>
+<p>Recursive operations must preserve:</p>
+<ul>
+<li>Epoch‑1 structural invariants  </li>
+<li>Epoch‑2 mathematical invariants  </li>
+<li>Epoch‑3 generalisation invariants  </li>
+</ul>
+<hr />
+<h2><strong>6. Role in Phoenix</strong></h2>
+<p>Synthetic recursion:</p>
+<ul>
+<li>enables self‑expansion  </li>
+<li>enables multi‑domain lifting  </li>
+<li>enables cross‑epoch operators  </li>
+<li>enables recursive structural evolution  </li>
+<li>prepares Phoenix for Epoch‑4 multi‑machine coordination  </li>
+</ul>
+<p>This is the <strong>recursive engine</strong> of Phoenix.</p>
+<hr />
+<h2><strong>7. Closing</strong></h2>
+<p>EF and CO recognise synthetic recursion as the third mathematical pillar of Epoch‑3.</p>
+<p>Phoenix now possesses:</p>
+<ol>
+<li><strong>Epoch‑3 Overview</strong>  </li>
+<li><strong>Structural Generalisation</strong>  </li>
+<li><strong>Synthetic Recursion</strong></li>
+</ol>
+<p>Next chamber:</p>
+<h3><strong>PHOENIX-MULTI-DOMAIN-LIFTING.md</strong></h3>
+<hr />
+</div>
+
+</body>
+</html>

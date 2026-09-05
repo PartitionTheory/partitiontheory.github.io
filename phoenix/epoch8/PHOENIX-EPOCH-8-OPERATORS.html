@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH 8 — OPERATORS</h1>
+<h2>Density Operators (ΔΩ)</h2>
+<p>Epoch 8 formalizes the first density‑based operator class in the Phoenix Continuum.
+Density Operators transform raw partition densities into structured, invariant forms.</p>
+<p>Given a partitioned structure ( P = { p_1, p_2, \ldots, p_n } ) and its density:</p>
+<p>[
+\Delta(P) = \frac{1}{n} \sum_{i=1}^{n} d(p_i)
+]</p>
+<p>A Density Operator ( \Delta_{\Omega} ) acts as:</p>
+<p>[
+\Delta_{\Omega}(P) = \Omega(\Delta(P))
+]</p>
+<p>Where ( \Omega ) is any Phoenix operator satisfying:</p>
+<ul>
+<li>structural consistency  </li>
+<li>invariant preservation  </li>
+<li>density monotonicity  </li>
+<li>coherence compatibility  </li>
+</ul>
+<p>Density Operators introduce:</p>
+<ul>
+<li>density normalization  </li>
+<li>density amplification  </li>
+<li>density stabilization  </li>
+<li>density invariant formation  </li>
+</ul>
+<p>These operators form the mathematical bridge to the graph‑manifold operators of Epoch 10.</p>
+</div>
+
+</body>
+</html>

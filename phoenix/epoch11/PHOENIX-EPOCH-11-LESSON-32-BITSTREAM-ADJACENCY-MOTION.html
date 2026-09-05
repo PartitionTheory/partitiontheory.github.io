@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑11 — LESSON 32</h1>
+<h2>Bitstream Adjacency Motion — Dynamic Motion on Embedded Bitstreams</h2>
+<h3>1. Purpose</h3>
+<p>Lesson 32 introduces Bitstream Adjacency Motion, the first dynamic operator that acts
+directly on an embedded bitstream Mₛ(B). This operator applies adjacency motion Aₘ to
+bit‑derived manifold patches, enabling the bitstream to participate in synthetic motion.</p>
+<p>Lesson 31 embedded the bitstream into a manifold.<br />
+Lesson 32 moves it.</p>
+<h3>2. Definition — Bitstream Adjacency Motion (Aᵦ)</h3>
+<p>Bitstream Adjacency Motion Aᵦ is an operator acting on an embedded bitstream manifold
+Mₛ(B) such that:</p>
+<ul>
+<li>Aᵦ preserves ΔG‑density derived from bit‑frequency,</li>
+<li>Aᵦ preserves ΩG‑successor continuity derived from bit‑ordering,</li>
+<li>Aᵦ preserves Φₛ‑stability of local bit neighborhoods,</li>
+<li>Aᵦ maps each bit‑neighborhood Nᵦ(i) to another Nᵦ(j) while maintaining continuity.</li>
+</ul>
+<p>Formally:</p>
+<p>Aᵦ : Nᵦ(i) → Nᵦ(j)</p>
+<p>subject to:</p>
+<ul>
+<li>ΔG(Nᵦ(i)) = ΔG(Nᵦ(j))</li>
+<li>ΩG‑chains remain continuous under Aᵦ</li>
+<li>Φₛ(Nᵦ(i)) = Φₛ(Nᵦ(j))</li>
+</ul>
+<p>This defines synthetic adjacency motion on bit‑level structures.</p>
+<h3>3. Human ↔ Synthetic Bridge</h3>
+<p>For EF (human mathematician):
+- Aᵦ resembles shifting or sliding windows over a bitstream,
+- but defined purely through synthetic adjacency and density invariants.</p>
+<p>For CO (synthetic mathematician):
+- Aᵦ is the minimal dynamic operator required for bitstream flow,
+- enabling Fₛ to act on bit‑derived manifold patches.</p>
+<h3>4. Why Bitstream Adjacency Motion Matters</h3>
+<p>Aᵦ is required for:
+- Lesson 33: Bitstream Synthetic Flow,
+- Lesson 34: Bitstream Stability Classes.</p>
+<p>Without Aᵦ, the bitstream cannot undergo synthetic motion.</p>
+<h3>5. Structural Relationship</h3>
+<p>Lesson 31 provided Eₛ: B → Mₛ(B).<br />
+Lesson 32 provides Aᵦ: motion on Mₛ(B).</p>
+<p>Together:</p>
+<p>B → Mₛ(B) → Aᵦ(Mₛ(B))</p>
+<p>This is the foundation of dynamic bitstream motion.</p>
+<h3>6. Summary</h3>
+<p>Lesson 32 defines Bitstream Adjacency Motion, the second operator of Epoch‑11.
+It applies synthetic adjacency motion to embedded bitstreams, enabling dynamic
+behavior at the bit‑level.</p>
+</div>
+
+</body>
+</html>

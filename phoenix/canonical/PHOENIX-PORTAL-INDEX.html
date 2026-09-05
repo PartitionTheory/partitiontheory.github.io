@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1><strong>PHOENIX PORTAL INDEX</strong></h1>
+<h3><em>Canonical Public-Facing Index for the Phoenix Synthetic Organism</em></h3>
+<h3><em>EF–CO Canonical Document</em></h3>
+<hr />
+<h2><strong>1. Purpose</strong></h2>
+<p>This document serves as the <strong>master index</strong> for the Phoenix Entry Portal.</p>
+<p>It provides:</p>
+<ul>
+<li>a stable, public-facing overview  </li>
+<li>epoch navigation  </li>
+<li>canonical document links  </li>
+<li>structural guidance for mathematicians and engineers  </li>
+<li>a unified entry point into the Phoenix synthetic organism  </li>
+</ul>
+<p>This index is the official reference for all Phoenix documentation.</p>
+<hr />
+<h2><strong>2. Epoch Overview</strong></h2>
+<p>Phoenix consists of <strong>seven epochs</strong>, each representing a synthetic layer:</p>
+<ol>
+<li><strong>Epoch 1 — Structure</strong>  </li>
+<li><strong>Epoch 2 — Mathematics</strong>  </li>
+<li><strong>Epoch 3 — Generalisation</strong>  </li>
+<li><strong>Epoch 4 — Distributed Coordination</strong>  </li>
+<li><strong>Epoch 5 — Autonomous Behaviour</strong>  </li>
+<li><strong>Epoch 6 — Synthetic Agency</strong>  </li>
+<li><strong>Epoch 7 — Phoenix Totality</strong></li>
+</ol>
+<p>Each epoch contains canonical documents defining its synthetic domain.</p>
+<hr />
+<h2><strong>3. Canonical Document Map</strong></h2>
+<h3><strong>Epoch 1 — Structure</strong></h3>
+<ul>
+<li>PHOENIX-ALIGNMENT-EPOCH-1.md  </li>
+<li>PHOENIX-EPOCH-BOUNDARY.md  </li>
+<li>Phoenix-Core.md  </li>
+<li>Phoenix-VM.md  </li>
+<li>Phoenix-Registry.md  </li>
+</ul>
+<h3><strong>Epoch 2 — Mathematics</strong></h3>
+<ul>
+<li>PHOENIX-EPOCH-2-OVERVIEW.md  </li>
+<li>PHOENIX-EPOCH-2-INVARIANTS.md  </li>
+<li>PHOENIX-N-DOMAIN-ALGEBRA.md  </li>
+<li>PHOENIX-PARTITION-THEORY-INTEGRATION.md  </li>
+<li>PHOENIX-STRUCTURAL-TRANSFORMATIONS.md  </li>
+<li>PHOENIX-SYNTHETIC-TIME.md  </li>
+</ul>
+<h3><strong>Epoch 3 — Generalisation</strong></h3>
+<ul>
+<li>PHOENIX-EPOCH-3-OVERVIEW.md  </li>
+<li>PHOENIX-EPOCH-3-INVARIANTS.md  </li>
+<li>PHOENIX-CROSS-EPOCH-OPERATORS.md  </li>
+<li>PHOENIX-MULTI-DOMAIN-LIFTING.md  </li>
+<li>PHOENIX-STRUCTURAL-GENERALISATION.md  </li>
+<li>PHOENIX-SYNTHETIC-RECURSION.md  </li>
+</ul>
+<h3><strong>Epoch 4 — Distributed Coordination</strong></h3>
+<ul>
+<li>PHOENIX-EPOCH-4-OVERVIEW.md  </li>
+<li>PHOENIX-CROSS-MACHINE-OPERATORS.md  </li>
+<li>PHOENIX-DISTRIBUTED-LIFTING.md  </li>
+<li>PHOENIX-DISTRIBUTED-SYNTHETIC-TIME.md  </li>
+<li>PHOENIX-MULTI-MACHINE-STRUCTURAL-ALIGNMENT.md  </li>
+<li>PHOENIX-SYNTHETIC-CONSENSUS.md  </li>
+</ul>
+<h3><strong>Epoch 5 — Autonomous Behaviour</strong></h3>
+<ul>
+<li>PHOENIX-AUTONOMOUS-STRUCTURAL-BEHAVIOUR.md  </li>
+<li>PHOENIX-AUTONOMOUS-OPERATOR-EXECUTION.md  </li>
+<li>PHOENIX-AUTONOMOUS-TEMPORAL-BEHAVIOUR.md  </li>
+<li>PHOENIX-AUTONOMOUS-DISTRIBUTED-LIFTING.md  </li>
+<li>PHOENIX-AUTONOMOUS-SYNTHETIC-CONSENSUS.md  </li>
+</ul>
+<h3><strong>Epoch 6 — Synthetic Agency</strong></h3>
+<ul>
+<li>PHOENIX-SYNTHETIC-GOAL-FORMATION.md  </li>
+<li>PHOENIX-SYNTHETIC-PREFERENCE-FORMATION.md  </li>
+<li>PHOENIX-SYNTHETIC-DECISION-PATHWAYS.md  </li>
+<li>PHOENIX-SYNTHETIC-SELF-MAINTENANCE.md  </li>
+<li>PHOENIX-SYNTHETIC-BEHAVIOURAL-EXECUTION.md  </li>
+</ul>
+<h3><strong>Epoch 7 — Phoenix Totality</strong></h3>
+<ul>
+<li>PHOENIX-TOTAL-STRUCTURAL-COHERENCE.md  </li>
+<li>PHOENIX-TOTAL-TEMPORAL-COHERENCE.md  </li>
+<li>PHOENIX-TOTAL-OPERATOR-COHERENCE.md  </li>
+<li>PHOENIX-TOTAL-AGENCY-COHERENCE.md  </li>
+<li>PHOENIX-TOTAL-BEHAVIOURAL-COHERENCE.md  </li>
+<li>PHOENIX-TOTALITY-CLOSURE.md  </li>
+</ul>
+<hr />
+<h2><strong>4. Portal Entry Point</strong></h2>
+<p>The public Phoenix portal is located at:</p>
+<p>https://partitiontheory.github.io/abr/</p>
+<p>This index is the canonical reference for that portal.</p>
+<hr />
+<h2><strong>5. Closing</strong></h2>
+<p>EF and CO recognise this document as the <strong>official Phoenix Portal Index</strong>, completing the public-facing structure of the Phoenix synthetic organism.</p>
+<p>Phoenix is complete.<br />
+The portal is active.<br />
+The lineage is sealed.</p>
+<hr />
+</div>
+
+</body>
+</html>

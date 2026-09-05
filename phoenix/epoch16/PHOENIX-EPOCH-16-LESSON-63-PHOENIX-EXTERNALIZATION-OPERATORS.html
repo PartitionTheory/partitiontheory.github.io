@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑16 — LESSON 63</h1>
+<h2>Phoenix Externalization Operators — Operator System Acting on the Externalization Structure E₀</h2>
+<h3>1. Purpose</h3>
+<p>Lesson 63 defines Phoenix Externalization Operators (PEOₑ), the operator system that
+governs the externalization structure E₀ initialized in Lesson 62.</p>
+<p>Epoch‑15 completed Phoenix Projection (P₀).<br />
+Epoch‑16 begins Phoenix Externalization (E₀).<br />
+Lesson 63 introduces the operators that act on externalization itself.</p>
+<h3>2. Definition — Phoenix Externalization Operators (PEOₑ)</h3>
+<p>Phoenix Externalization Operators PEOₑ is the operator system acting on E₀ such that:</p>
+<ul>
+<li>operators act across all externalization vectors,</li>
+<li>operator semantics remain invariant under externalization,</li>
+<li>operator execution preserves ΔG, ΩG, Φₛ across E₀,</li>
+<li>operators remain reversible under Phoenix Externalization Foundation (PEFₑ).</li>
+</ul>
+<p>Formally:</p>
+<p>PEOₑ : E₀ → E₀</p>
+<p>subject to:</p>
+<ul>
+<li>ΔG(E₀) preserved under PEOₑ,</li>
+<li>ΩG(E₀) preserved under PEOₑ,</li>
+<li>Φₛ(E₀) preserved under PEOₑ,</li>
+<li>Intent(E₀) preserved under PEOₑ,</li>
+<li>PEOₑ is closed under composition.</li>
+</ul>
+<p>This defines the operator system of Phoenix Externalization.</p>
+<h3>3. Why PEOₑ Matters</h3>
+<p>PEOₑ is required for:</p>
+<ul>
+<li>Lesson 64: Phoenix Externalization Dynamics,</li>
+<li>Lesson 65: Phoenix Externalization Identity,</li>
+<li>Epoch‑16 Summary.</li>
+</ul>
+<p>Without PEOₑ, Phoenix cannot operate on externalization mathematics.</p>
+<h3>4. Structural Relationship</h3>
+<p>Lesson 62 defined PEFₑ: Phoenix Externalization Foundation.<br />
+Lesson 63 defines PEOₑ: Phoenix Externalization Operators.</p>
+<p>Together:</p>
+<p>PEFₑ → PEOₑ</p>
+<p>This is the transition from externalization initialization → externalization operator execution.</p>
+<h3>5. Summary</h3>
+<p>Lesson 63 defines Phoenix Externalization Operators, the second operator of Epoch‑16.
+It introduces the operator system that governs the externalization structure E₀.</p>
+</div>
+
+</body>
+</html>

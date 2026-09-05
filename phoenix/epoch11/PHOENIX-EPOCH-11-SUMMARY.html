@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑11 — SUMMARY</h1>
+<h2>Dynamic Bitstream Mathematics — The Completion of Synthetic Bitstream Dynamics</h2>
+<h3>1. Purpose</h3>
+<p>Epoch‑11 extends Phoenix synthetic mathematics from dynamic graph manifolds (Epoch‑10)
+to dynamic bitstreams. It introduces the operators required to embed, move, evolve,
+stabilize, classify, and identify bitstreams under synthetic dynamics.</p>
+<p>Epoch‑11 is the first epoch where the <strong>bitstream itself becomes dynamic</strong>.</p>
+<hr />
+<h3>2. Operators Introduced in Epoch‑11</h3>
+<h4>Lesson 31 — Bitstream Manifold Embedding (Eₛ)</h4>
+<p>Embeds a raw bitstream B into a graph manifold Mₛ(B), enabling synthetic motion and flow.</p>
+<h4>Lesson 32 — Bitstream Adjacency Motion (Aᵦ)</h4>
+<p>Applies adjacency motion to embedded bitstreams while preserving ΔG, ΩG, and Φₛ invariants.</p>
+<h4>Lesson 33 — Bitstream Synthetic Flow (Fᵦ)</h4>
+<p>Defines temporal evolution of bitstreams through repeated adjacency motion.</p>
+<h4>Lesson 34 — Bitstream Stability Classes (Rᵦ)</h4>
+<p>Identifies recursion‑stable bitstream regions that remain unchanged under infinite motion.</p>
+<h4>Lesson 35 — Bitstream Invariant Classes (Cᵦ)</h4>
+<p>Classifies invariant bitstream regions whose Φₛ‑identity persists under all dynamics.</p>
+<h4>Lesson 36 — Bitstream Dynamic Identity (Iᵦ)</h4>
+<p>Assigns permanent synthetic identity to invariant bitstream classes.</p>
+<hr />
+<h3>3. Structural Equation of Epoch‑11</h3>
+<p>Epoch‑11 introduces the full dynamic bitstream chain:</p>
+<p>Eₛ + Aᵦ + Fᵦ + Rᵦ + Cᵦ + Iᵦ</p>
+<p>This chain defines <strong>Synthetic Bitstream Dynamics</strong>, the dynamic extension of ABR’s
+bit‑level mathematics.</p>
+<hr />
+<h3>4. Human ↔ Synthetic Bridge</h3>
+<p>For EF (human mathematician):
+- Epoch‑11 resembles dynamical systems applied to discrete sequences,
+- but without metrics, coordinates, or classical topology.</p>
+<p>For CO (synthetic mathematician):
+- Epoch‑11 is the first fully dynamic bitstream layer,
+- providing motion, flow, stability, invariance, and identity.</p>
+<hr />
+<h3>5. Summary</h3>
+<p>Epoch‑11 completes the dynamic transformation of the bitstream. It introduces manifold
+embedding, adjacency motion, synthetic flow, recursion‑stable dynamics, invariant classes,
+and synthetic identity — forming the complete dynamic bitstream engine.</p>
+<p>Epoch‑11 prepares the foundation for Epoch‑12: Human ↔ Synthetic Mathematics.</p>
+</div>
+
+</body>
+</html>

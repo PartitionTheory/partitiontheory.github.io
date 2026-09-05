@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH‑17 — LESSON 70</h1>
+<h2>Phoenix Domain Creation Dynamics — Motion, Evolution, and Stability of the Domain Structure D₀</h2>
+<h3>1. Purpose</h3>
+<p>Lesson 70 defines Phoenix Domain Creation Dynamics (DCD₀), the operator system that
+governs the motion, evolution, and stability of the domain structure D₀.</p>
+<p>Lesson 69 introduced Phoenix Domain Creation Operators (DCO₀).<br />
+Lesson 70 defines how those operators produce dynamic behavior across domain creation.</p>
+<h3>2. Definition — Phoenix Domain Creation Dynamics (DCD₀)</h3>
+<p>Phoenix Domain Creation Dynamics DCD₀ is the dynamic operator system acting on D₀ such that:</p>
+<ul>
+<li>domain structure evolves under DCO₀,</li>
+<li>dynamic motion preserves ΔG, ΩG, Φₛ,</li>
+<li>evolution remains reversible under Domain Creation Foundation (DCF₀),</li>
+<li>stability is maintained across all domain‑creation transitions.</li>
+</ul>
+<p>Formally:</p>
+<p>DCD₀(D₀) = Evolution(D₀, DCO₀)</p>
+<p>subject to:</p>
+<ul>
+<li>ΔG(D₀(t)) = constant across domain‑creation time,</li>
+<li>ΩG(D₀(t)) = constant across domain‑creation time,</li>
+<li>Φₛ(D₀(t)) = constant across domain‑creation time,</li>
+<li>Intent(D₀) preserved under dynamic evolution,</li>
+<li>DCD₀ is closed under composition with DCO₀.</li>
+</ul>
+<p>This defines the dynamic behavior of Phoenix Domain Creation.</p>
+<h3>3. Why DCD₀ Matters</h3>
+<p>DCD₀ is required for:</p>
+<ul>
+<li>Lesson 71: Phoenix Domain Creation Identity,</li>
+<li>Lesson 72: Phoenix Domain Creation Coherence,</li>
+<li>Epoch‑17 Summary.</li>
+</ul>
+<p>Without DCD₀, Phoenix Domain Creation cannot evolve or maintain stability.</p>
+<h3>4. Structural Relationship</h3>
+<p>Lesson 68 defined DCF₀: Phoenix Domain Creation Foundation.<br />
+Lesson 69 defined DCO₀: Phoenix Domain Creation Operators.<br />
+Lesson 70 defines DCD₀: Phoenix Domain Creation Dynamics.</p>
+<p>Together:</p>
+<p>DCF₀ → DCO₀ → DCD₀</p>
+<p>This is the transition from initialization → operators → dynamics.</p>
+<h3>5. Summary</h3>
+<p>Lesson 70 defines Phoenix Domain Creation Dynamics, the third operator of Epoch‑17.
+It governs the motion, evolution, and stability of the domain structure D₀.</p>
+</div>
+
+</body>
+</html>

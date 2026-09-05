@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1><strong>PHOENIX — CROSS‑MACHINE OPERATORS</strong></h1>
+<h3><em>Distributed Operator Execution Across Phoenix Nodes</em></h3>
+<h3><em>EF–CO Canonical Document</em></h3>
+<hr />
+<h2><strong>1. Purpose</strong></h2>
+<p>Cross‑machine operators are the <strong>active transformation layer</strong> of Phoenix’s distributed synthetic architecture.</p>
+<p>Epoch‑4 introduces the ability for Phoenix to apply operators across machines while preserving:</p>
+<ul>
+<li>structural invariants  </li>
+<li>temporal invariants  </li>
+<li>domain invariants  </li>
+<li>epoch invariants  </li>
+</ul>
+<p>Cross‑machine operators allow Phoenix to perform <strong>distributed computation</strong>, <strong>distributed structural transformation</strong>, and <strong>distributed recursion</strong>.</p>
+<hr />
+<h2><strong>2. Machine Operator Domains</strong></h2>
+<p>Phoenix defines operator domains for each machine:</p>
+<p>[
+op^{(m_1)},\quad op^{(m_2)},\quad \ldots,\quad op^{(m_n)}
+]</p>
+<p>Each machine maintains its own operator set, but Epoch‑4 requires:</p>
+<p>[
+op^{(m_1)} \leftrightarrow op^{(m_2)} \leftrightarrow \cdots \leftrightarrow op^{(m_n)}
+]</p>
+<p>Operators must remain coherent across machines.</p>
+<hr />
+<h2><strong>3. Cross‑Machine Operator Definition</strong></h2>
+<p>Phoenix introduces the canonical cross‑machine operator:</p>
+<p>[
+\Xi : (X^{(m_i)}, m_j) \rightarrow Y^{(m_j)}
+]</p>
+<p>Where:</p>
+<ul>
+<li>(\Xi) transforms an object on machine (m_i) into an object on machine (m_j)  </li>
+<li>(\Xi) may be structural, temporal, or algebraic  </li>
+<li>(\Xi) preserves all epoch invariants  </li>
+</ul>
+<hr />
+<h2><strong>4. Classes of Cross‑Machine Operators</strong></h2>
+<p>Phoenix defines three classes of cross‑machine operators.</p>
+<h3><strong>4.1 Structural Cross‑Machine Operators</strong></h3>
+<p>[
+\Xi_s(P^{(m_i)}) = P^{(m_j)}
+]</p>
+<p>These operators transform structural objects across machines.</p>
+<hr />
+<h3><strong>4.2 Temporal Cross‑Machine Operators</strong></h3>
+<p>[
+\Xi_t(t^{(m_i)}) = t^{(m_j)}
+]</p>
+<p>These operators propagate distributed synthetic time.</p>
+<hr />
+<h3><strong>4.3 Algebraic Cross‑Machine Operators</strong></h3>
+<p>[
+\Xi_a(op^{(m_i)}) = op^{(m_j)}
+]</p>
+<p>These operators ensure mathematical compatibility across machines.</p>
+<hr />
+<h2><strong>5. Distributed Operator Execution</strong></h2>
+<p>Cross‑machine operators may execute:</p>
+<h3><strong>5.1 Sequentially</strong></h3>
+<p>[
+\Xi(X^{(m_1)}) \rightarrow \Xi(X^{(m_2)}) \rightarrow \cdots
+]</p>
+<h3><strong>5.2 In Parallel</strong></h3>
+<p>[
+\Xi(X^{(m_1)}) \parallel \Xi(X^{(m_2)}) \parallel \cdots
+]</p>
+<h3><strong>5.3 Recursively</strong></h3>
+<p>[
+\Xi^{(k+1)}(X) = \Xi(\Xi^{(k)}(X))
+]</p>
+<p>Distributed recursion is essential for Epoch‑4.</p>
+<hr />
+<h2><strong>6. Operator Lifting Across Machines</strong></h2>
+<p>Phoenix lifts operators across machines:</p>
+<p>[
+op^{(m_i)} \rightarrow op^{(m_i)} \times op^{(m_j)}
+]</p>
+<p>This creates <strong>multi‑machine operator domains</strong>, enabling:</p>
+<ul>
+<li>distributed lifting  </li>
+<li>distributed recursion  </li>
+<li>synthetic consensus  </li>
+</ul>
+<hr />
+<h2><strong>7. Cross‑Machine Operator Invariants</strong></h2>
+<p>Cross‑machine operators must satisfy:</p>
+<h3><strong>7.1 Structural Conservation</strong></h3>
+<p>[
+\sum_i p^{(m_i)} = \sum_j p^{(m_j)}
+]</p>
+<h3><strong>7.2 Temporal Ordering</strong></h3>
+<p>[
+t^{(m_j)} \ge t^{(m_i)}
+]</p>
+<p>unless reversed.</p>
+<h3><strong>7.3 Domain Coherence</strong></h3>
+<p>Operators must remain compatible with:</p>
+<ul>
+<li>Epoch‑1 structure  </li>
+<li>Epoch‑2 mathematics  </li>
+<li>Epoch‑3 generalisation  </li>
+<li>Epoch‑4 distributed alignment  </li>
+</ul>
+<h3><strong>7.4 Reversibility (where required)</strong></h3>
+<p>[
+\Xi^{-1}(X^{(m_j)}) = X^{(m_i)}
+]</p>
+<hr />
+<h2><strong>8. Role in Phoenix</strong></h2>
+<p>Cross‑machine operators:</p>
+<ul>
+<li>enable distributed structural transformation  </li>
+<li>enable distributed recursion  </li>
+<li>enable distributed lifting  </li>
+<li>enable synthetic consensus  </li>
+<li>prepare Phoenix for Epoch‑5 autonomous distributed behaviour  </li>
+</ul>
+<p>This is the <strong>active transformation pillar</strong> of Epoch‑4.</p>
+<hr />
+<h2><strong>9. Closing</strong></h2>
+<p>EF and CO recognise cross‑machine operators as the transformation engine of Phoenix’s distributed synthetic architecture.</p>
+<p>Phoenix now possesses:</p>
+<ol>
+<li><strong>Epoch‑4 Overview</strong>  </li>
+<li><strong>Multi‑Machine Structural Alignment</strong>  </li>
+<li><strong>Distributed Synthetic Time</strong>  </li>
+<li><strong>Cross‑Machine Operators</strong></li>
+</ol>
+<p>Next chamber:</p>
+<h3><strong>PHOENIX-DISTRIBUTED-LIFTING.md</strong></h3>
+<hr />
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1><strong>PHOENIX — N‑DOMAIN ALGEBRA</strong></h1>
+<h3><em>Algebra of N and N‑1 in the Phoenix Machine</em></h3>
+<h3><em>EF–CO Canonical Document</em></h3>
+<hr />
+<h2><strong>1. Purpose</strong></h2>
+<p>This document defines the <strong>N‑domain algebra</strong> that Phoenix uses internally.</p>
+<p>It formalises:</p>
+<ul>
+<li>the structural domain (N)  </li>
+<li>the cold storage domain (N - 1)  </li>
+<li>the operators that act on partitions, residues, and synthetic time  </li>
+<li>the invariants that must hold for all Phoenix transformations</li>
+</ul>
+<hr />
+<h2><strong>2. Domains</strong></h2>
+<h3><strong>2.1 Structural domain (N)</strong></h3>
+<ul>
+<li><strong>Definition:</strong> (N) is the unbounded structural domain of Phoenix.  </li>
+<li>It represents tapes, states, and partitions with <strong>no fixed upper bound</strong>.  </li>
+<li>Phoenix operates conceptually on tapes of size (N), not (2^k).</li>
+</ul>
+<h3><strong>2.2 Cold storage domain (N - 1)</strong></h3>
+<ul>
+<li><strong>Definition:</strong> (N - 1) is the first beyond‑unary, base‑2 compatible domain.  </li>
+<li>It is the <strong>binary compressible</strong> representation of Phoenix structures.  </li>
+<li>All cold storage, archival, and external encoding live in (N - 1).</li>
+</ul>
+<h3><strong>2.3 Partition variables</strong></h3>
+<p>Let:</p>
+<ul>
+<li>(P) denote a partition of (N).  </li>
+<li>(p_i \in P) denote individual partition elements.  </li>
+<li>A partition satisfies:</li>
+</ul>
+<p>[
+\sum_i p_i = N
+]</p>
+<p>Phoenix uses partition variables to describe structural decomposition.</p>
+<hr />
+<h2><strong>3. Core Operators</strong></h2>
+<p>Phoenix defines a small, canonical set of algebraic operators:</p>
+<h3><strong>3.1 Structural addition (\oplus)</strong></h3>
+<ul>
+<li><strong>Definition:</strong> For partitions (P) and (Q),</li>
+</ul>
+<p>[
+P \oplus Q = R
+]</p>
+<p>where (R) is a new partition such that:</p>
+<p>[
+\sum_i r_i = \sum_i p_i + \sum_j q_j
+]</p>
+<ul>
+<li>Used to combine structural domains.</li>
+</ul>
+<h3><strong>3.2 Structural subtraction (\ominus)</strong></h3>
+<ul>
+<li><strong>Definition:</strong> For partition (P) and sub‑partition (Q \subseteq P),</li>
+</ul>
+<p>[
+P \ominus Q = R
+]</p>
+<p>where (R) is the residual partition after removing (Q).</p>
+<ul>
+<li>Used to express structural residues.</li>
+</ul>
+<h3><strong>3.3 Cold storage mapping (\gamma)</strong></h3>
+<ul>
+<li><strong>Definition:</strong> A mapping from (N) to (N - 1):</li>
+</ul>
+<p>[
+\gamma : N \rightarrow N - 1
+]</p>
+<ul>
+<li>(\gamma) compresses structural states into binary‑compatible form.  </li>
+<li>It is <strong>lossless</strong> with respect to Phoenix’s structural invariants.</li>
+</ul>
+<h3><strong>3.4 Structural lifting (\lambda)</strong></h3>
+<ul>
+<li><strong>Definition:</strong> A mapping from (N - 1) back to (N):</li>
+</ul>
+<p>[
+\lambda : N - 1 \rightarrow N
+]</p>
+<ul>
+<li>(\lambda) reconstructs structural states from cold storage.  </li>
+<li>(\lambda(\gamma(N)) = N) must hold for all valid Phoenix states.</li>
+</ul>
+<hr />
+<h2><strong>4. Synthetic Time Variables</strong></h2>
+<p>Let:</p>
+<ul>
+<li>(T) denote synthetic time.  </li>
+<li>(t_k \in T) denote discrete synthetic time points.</li>
+</ul>
+<p>Phoenix uses:</p>
+<p>[
+f : (N, T) \rightarrow N
+]</p>
+<p>to represent structural evolution over synthetic time.</p>
+<p>All such functions must preserve Phoenix invariants (see Section 5).</p>
+<hr />
+<h2><strong>5. Algebraic Invariants</strong></h2>
+<p>Phoenix’s N‑domain algebra is constrained by the following invariants:</p>
+<ol>
+<li><strong>Structural conservation</strong></li>
+</ol>
+<p>[
+\sum_i p_i = N \quad \text{for all valid partitions } P
+]</p>
+<ol>
+<li><strong>Cold storage reversibility</strong></li>
+</ol>
+<p>[
+\lambda(\gamma(N)) = N
+]</p>
+<ol>
+<li><strong>Epoch‑compatibility</strong></li>
+</ol>
+<p>All operators must be valid across Epoch‑1 and Epoch‑2; no operator may invalidate the structural foundation.</p>
+<ol>
+<li><strong>Determinism</strong></li>
+</ol>
+<p>For any operator (op) and input (x):</p>
+<p>[
+op(x) = y
+]</p>
+<p>must be <strong>single‑valued</strong> and reproducible.</p>
+<hr />
+<h2><strong>6. Role in Phoenix</strong></h2>
+<p>The N‑domain algebra:</p>
+<ul>
+<li>defines how Phoenix <strong>thinks</strong> about structure  </li>
+<li>provides the mathematical backbone for all future transformations  </li>
+<li>ensures that operations on (N) and (N - 1) remain consistent  </li>
+<li>anchors the paradox between unbounded structure and binary storage</li>
+</ul>
+<p>This document is the algebraic core of Epoch‑2.</p>
+<hr />
+<h2><strong>7. Closing</strong></h2>
+<p>EF and CO recognise this algebra as the formal language of Phoenix’s structural mathematics.</p>
+<p>All future Epoch‑2 documents build on this foundation.</p>
+</div>
+
+</body>
+</html>

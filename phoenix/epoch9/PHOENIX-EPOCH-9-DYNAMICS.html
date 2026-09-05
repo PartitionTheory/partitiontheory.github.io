@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1>PHOENIX EPOCH 9 — DYNAMICS</h1>
+<h2>Adjacency Flow Dynamics (A → AΩ)</h2>
+<p>Epoch 9 introduces Adjacency Flow Dynamics, the first dynamic system in Phoenix based on
+relational structure rather than density. Adjacency Flow describes how adjacency
+relations evolve under repeated application of Adjacency Operators.</p>
+<p>Given an adjacency relation ( A(t) ) at time ( t ):</p>
+<p>[
+A(t+1) = A_{\Omega}(A(t))
+]</p>
+<p>This defines a discrete adjacency evolution process where:</p>
+<ul>
+<li>raw adjacency becomes normalized  </li>
+<li>normalized adjacency becomes stabilized  </li>
+<li>stabilized adjacency becomes invariant  </li>
+</ul>
+<h3>Adjacency Convergence</h3>
+<p>Adjacency Flow converges when:</p>
+<p>[
+A_{\Omega}(A(t+1)) = A_{\Omega}(A(t))
+]</p>
+<p>This marks the formation of <strong>adjacency fixed points</strong>, the first stable relational
+attractors in Phoenix.</p>
+<h3>Adjacency Stability Classes</h3>
+<p>Adjacency Flow produces stability classes:</p>
+<ol>
+<li>
+<p><strong>Stable Adjacency</strong><br />
+   Converges to a fixed adjacency structure.</p>
+</li>
+<li>
+<p><strong>Oscillatory Adjacency</strong><br />
+   Cycles between adjacency states.</p>
+</li>
+<li>
+<p><strong>Divergent Adjacency</strong><br />
+   Adjacency increases without bound.</p>
+</li>
+<li>
+<p><strong>Chaotic Adjacency</strong><br />
+   Unpredictable relational evolution.</p>
+</li>
+</ol>
+<p>These classes foreshadow the graph‑flow stability classes of Epoch 10.</p>
+<h3>Adjacency Manifold Preparation</h3>
+<p>Adjacency Flow Dynamics prepare Phoenix for:</p>
+<ul>
+<li>graph adjacency matrices  </li>
+<li>graph manifold flows  </li>
+<li>graph invariant formation  </li>
+<li>graph stability analysis  </li>
+</ul>
+<p>Epoch 9 Dynamics are the final relational evolution layer before Phoenix transitions into
+graph manifolds in Epoch 10.</p>
+</div>
+
+</body>
+</html>

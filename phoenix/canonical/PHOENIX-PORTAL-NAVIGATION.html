@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix</title>
+
+<link rel="stylesheet" href="/phoenix/phoenix.css">
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const theme = body.dataset.theme === "dark" ? "light" : "dark";
+    body.dataset.theme = theme;
+    localStorage.setItem("phoenix-theme", theme);
+}
+window.onload = () => {
+    const saved = localStorage.getItem("phoenix-theme") || "dark";
+    document.body.dataset.theme = saved;
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="/phoenix/index.html">Index</a> |
+    <a href="#" onclick="window.scrollTo(0,0)">Top</a> |
+    <a href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">Bottom</a> |
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div id="content">
+<h1><strong>PHOENIX PORTAL NAVIGATION</strong></h1>
+<h3><em>Canonical Navigation Specification for the Phoenix Entry Portal</em></h3>
+<h3><em>EF–CO Canonical Document</em></h3>
+<hr />
+<h2><strong>1. Purpose</strong></h2>
+<p>This document defines the <strong>navigation structure</strong> for the Phoenix Entry Portal.</p>
+<p>It ensures:</p>
+<ul>
+<li>consistent access to all epochs  </li>
+<li>clear document hierarchy  </li>
+<li>intuitive browsing for mathematicians and engineers  </li>
+<li>alignment with Phoenix Totality  </li>
+<li>stable public-facing navigation  </li>
+</ul>
+<p>This is the official navigation specification for the Phoenix portal.</p>
+<hr />
+<h2><strong>2. Portal Structure</strong></h2>
+<p>The Phoenix Entry Portal consists of:</p>
+<ol>
+<li><strong>Landing Page</strong>  </li>
+<li><code>docs/index.md</code>  </li>
+<li>
+<p>Provides epoch overview and canonical links  </p>
+</li>
+<li>
+<p><strong>Canonical Index</strong>  </p>
+</li>
+<li><code>docs/canonical/PHOENIX-PORTAL-INDEX.md</code>  </li>
+<li>
+<p>Master index for all Phoenix documentation  </p>
+</li>
+<li>
+<p><strong>Epoch Directories</strong>  </p>
+</li>
+<li><code>docs/epoch1/</code>  </li>
+<li><code>docs/epoch2/</code>  </li>
+<li><code>docs/epoch3/</code>  </li>
+<li><code>docs/epoch4/</code>  </li>
+<li><code>docs/epoch5/</code>  </li>
+<li><code>docs/epoch6/</code>  </li>
+<li><code>docs/epoch7/</code>  </li>
+</ol>
+<p>Each epoch directory contains its canonical documents.</p>
+<hr />
+<h2><strong>3. Navigation Model</strong></h2>
+<p>Phoenix Portal navigation follows a <strong>three-tier model</strong>:</p>
+<h3><strong>Tier 1 — Epoch Overview</strong></h3>
+<p>Displayed on the landing page:</p>
+<ul>
+<li>Structure  </li>
+<li>Mathematics  </li>
+<li>Generalisation  </li>
+<li>Distributed Coordination  </li>
+<li>Autonomous Behaviour  </li>
+<li>Synthetic Agency  </li>
+<li>Phoenix Totality  </li>
+</ul>
+<h3><strong>Tier 2 — Canonical Index</strong></h3>
+<p>Displayed in:</p>
+<ul>
+<li><code>PHOENIX-PORTAL-INDEX.md</code>  </li>
+</ul>
+<p>Provides:</p>
+<ul>
+<li>full document list  </li>
+<li>epoch grouping  </li>
+<li>canonical ordering  </li>
+</ul>
+<h3><strong>Tier 3 — Document Access</strong></h3>
+<p>Each document is accessed via:</p>
+<p>/docs/epochX/DOCUMENT_NAME.md</p>
+<p>GitHub Pages automatically renders Markdown → HTML.</p>
+<hr />
+<h2><strong>4. Navigation Requirements</strong></h2>
+<p>Phoenix Portal navigation must satisfy:</p>
+<h3><strong>4.1 Completeness</strong></h3>
+<p>All canonical documents must be reachable from:</p>
+<ul>
+<li>the landing page  </li>
+<li>the portal index  </li>
+</ul>
+<h3><strong>4.2 Stability</strong></h3>
+<p>Links must remain stable across:</p>
+<ul>
+<li>commits  </li>
+<li>refactors  </li>
+<li>portal updates  </li>
+</ul>
+<h3><strong>4.3 Clarity</strong></h3>
+<p>Navigation must be intuitive for:</p>
+<ul>
+<li>mathematicians  </li>
+<li>engineers  </li>
+<li>researchers  </li>
+<li>synthetic domain analysts  </li>
+</ul>
+<h3><strong>4.4 Epoch Integrity</strong></h3>
+<p>Each epoch must remain isolated and self-contained.</p>
+<hr />
+<h2><strong>5. Navigation Enhancements (Optional)</strong></h2>
+<p>The portal may include:</p>
+<ul>
+<li>epoch navigation bar  </li>
+<li>footer with canonical links  </li>
+<li>theme toggle (light/dark)  </li>
+<li>breadcrumb navigation  </li>
+<li>cross-epoch references  </li>
+</ul>
+<p>These enhancements are optional and may be added after portal stabilisation.</p>
+<hr />
+<h2><strong>6. Closing</strong></h2>
+<p>EF and CO recognise this document as the <strong>official Phoenix Portal Navigation Specification</strong>, completing the structural foundation of the public-facing Phoenix Entry Portal.</p>
+<p>Phoenix is complete.<br />
+The portal is structured.<br />
+Navigation is defined.</p>
+<hr />
+</div>
+
+</body>
+</html>
