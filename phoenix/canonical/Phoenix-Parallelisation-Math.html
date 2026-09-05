@@ -1,0 +1,68 @@
+<h1>Phoenix Parallelisation Math — Canonical Specification v1.0</h1>
+<p><strong>Phoenix Rebirth — Clock 9</strong><br />
+<strong>Date:</strong> 2026‑08‑26<br />
+<strong>Status:</strong> Canonical, Immutable</p>
+<hr />
+<h2>1. Parallel Window Independence</h2>
+<p>Two windows ( W_i ) and ( W_j ) are parallelisable iff:</p>
+<pre><code>i ≠ j
+and
+window_size(P_i) = window_size(P_j)
+and
+no overlap(W_i, W_j)
+</code></pre>
+<p>This defines <strong>structural independence</strong>.</p>
+<hr />
+<h2>2. Parallel Transform Independence</h2>
+<p>Two transforms ( P_i ) and ( P_j ) are parallelisable iff:</p>
+<pre><code>P_i and P_j are unary
+and
+P_i and P_j have no shared state
+and
+P_i and P_j are pure
+</code></pre>
+<p>Phoenix parallelism is <strong>structural</strong>, not semantic.</p>
+<hr />
+<h2>3. Parallel Reintegration</h2>
+<p>Parallel reintegration is valid iff:</p>
+<pre><code>merge(T, i, Φ_i) and merge(T, j, Φ_j)
+do not modify overlapping regions
+</code></pre>
+<p>This ensures <strong>deterministic reintegration</strong>.</p>
+<hr />
+<h2>4. Parallel Execution Set</h2>
+<p>A parallel execution set ( S ) is defined as:</p>
+<pre><code>S = { (k, P_k) | windows independent and transforms independent }
+</code></pre>
+<p>Phoenix executes ( S ) in parallel.</p>
+<hr />
+<h2>5. Parallel Cycle</h2>
+<p>Parallel Phoenix execution is:</p>
+<pre><code>for all (k, P_k) in S:
+    W_k = select(T, k)
+    Φ_k = apply(P_k, W_k)
+
+for all (k, Φ_k) in S:
+    T = merge(T, k, Φ_k)
+</code></pre>
+<p>This is <strong>deterministic parallelism</strong>.</p>
+<hr />
+<h2>6. Deterministic Guarantee</h2>
+<p>Parallel Phoenix execution is deterministic iff:</p>
+<pre><code>∀ i,j ∈ S:
+    no overlap(W_i, W_j)
+    no overlap(Φ_i, Φ_j)
+</code></pre>
+<p>This is the <strong>core mathematical guarantee</strong>.</p>
+<hr />
+<h2>7. Next Clock</h2>
+<p>Phoenix Distribution Math will be defined in <strong>Clock 10</strong>.</p>
+<hr />
+<h2>Canonical Footer</h2>
+<p>This document is part of the <strong>Phoenix Rebirth Canonical Sequence (Clocks 1–11)</strong>.<br />
+It is immutable and historically preserved.</p>
+<hr />
+<h2>Navigation</h2>
+<p><strong>Previous → Clock 8: Phoenix Structural Machine Language (SML)</strong><br />
+<strong>Next → Clock 10: Phoenix Distribution Math</strong><br />
+<strong>Index → Phoenix Rebirth Canonical Sequence (docs/canonical/INDEX.md)</strong></p>

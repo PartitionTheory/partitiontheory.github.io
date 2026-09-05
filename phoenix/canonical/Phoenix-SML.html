@@ -1,0 +1,84 @@
+<h1>Phoenix Structural Machine Language — Canonical Specification v1.0</h1>
+<p><strong>Phoenix Rebirth — Clock 8</strong><br />
+<strong>Date:</strong> 2026‑08‑26<br />
+<strong>Status:</strong> Canonical, Immutable</p>
+<hr />
+<h2>1. SML Identity</h2>
+<p>Phoenix SML is a symbolic language describing structural operations on Tape.<br />
+It is <strong>not</strong> an instruction set, programming language, or semantic language.<br />
+SML expresses Phoenix operations in <strong>minimal structural form</strong>.</p>
+<hr />
+<h2>2. SML Symbols</h2>
+<p>T      — Tape<br />
+W_k    — Window at position k<br />
+P      — Plugin transform<br />
+Φ_k    — Result of applying ( P(W_k) )<br />
+merge  — Reintegration operator<br />
+k      — Position index  </p>
+<p>These symbols define the complete vocabulary of SML.</p>
+<hr />
+<h2>3. SML Operations</h2>
+<h3>Select</h3>
+<pre><code>SEL k
+</code></pre>
+<p>Selects window ( W_k ) from Tape ( T ).</p>
+<h3>Apply</h3>
+<pre><code>APPLY P
+</code></pre>
+<p>Applies plugin transform ( P ) to the current window ( W_k ).</p>
+<h3>Merge</h3>
+<pre><code>MERGE k
+</code></pre>
+<p>Reintegrates ( \Phi_k ) back into Tape ( T ) at position ( k ).</p>
+<hr />
+<h2>4. SML Execution Cycle</h2>
+<pre><code>SEL k
+APPLY P
+MERGE k
+</code></pre>
+<p>Equivalent to:</p>
+<ol>
+<li>( W_k = \text{select}(T, k) )  </li>
+<li>( \Phi_k = \text{apply}(P, W_k) )  </li>
+<li>( T' = \text{merge}(T, k, \Phi_k) )</li>
+</ol>
+<p>This is the <strong>entire</strong> SML execution model.</p>
+<hr />
+<h2>5. SML Determinism</h2>
+<p>SML must be:</p>
+<ul>
+<li>deterministic  </li>
+<li>structural  </li>
+<li>unary  </li>
+<li>side‑effect free  </li>
+</ul>
+<p>SML does <strong>not</strong> define:</p>
+<ul>
+<li>loops  </li>
+<li>branches  </li>
+<li>jumps  </li>
+<li>conditions  </li>
+<li>semantics  </li>
+</ul>
+<p>SML is a <strong>pure structural language</strong>.</p>
+<hr />
+<h2>6. SML Example (Structural Form)</h2>
+<pre><code>SEL 16
+APPLY xor_shift
+MERGE 16
+</code></pre>
+<p>Equivalent to:</p>
+<pre><code>W_16 = select(T, 16)
+Φ_16 = apply(xor_shift, W_16)
+T' = merge(T, 16, Φ_16)
+T = T'
+</code></pre>
+<hr />
+<h2>Canonical Footer</h2>
+<p>This document is part of the <strong>Phoenix Rebirth Canonical Sequence (Clocks 1–11)</strong>.<br />
+It is immutable and historically preserved.</p>
+<hr />
+<h2>Navigation</h2>
+<p><strong>Previous → Clock 7: Phoenix Canonical Math</strong><br />
+<strong>Next → Clock 9: Phoenix Parallelisation Math</strong><br />
+<strong>Index → Phoenix Rebirth Canonical Sequence (docs/canonical/INDEX.md)</strong></p>

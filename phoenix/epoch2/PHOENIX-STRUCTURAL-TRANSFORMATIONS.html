@@ -1,0 +1,131 @@
+<h1><strong>PHOENIX — STRUCTURAL TRANSFORMATIONS</strong></h1>
+<h3><em>Deterministic Operators on N‑Domain Structures</em></h3>
+<h3><em>EF–CO Canonical Document</em></h3>
+<hr />
+<h2><strong>1. Purpose</strong></h2>
+<p>This document defines the <strong>structural transformation system</strong> of Phoenix.</p>
+<p>These transformations operate on:</p>
+<ul>
+<li>partitions of (N)</li>
+<li>residues of partitions</li>
+<li>synthetic time states</li>
+<li>cold‑storage mappings</li>
+<li>structural invariants</li>
+</ul>
+<p>Phoenix transformations are <strong>mathematical</strong>, not computational.<br />
+They describe how Phoenix evolves structure across epochs.</p>
+<hr />
+<h2><strong>2. Structural Objects</strong></h2>
+<p>Phoenix transformations act on the following objects:</p>
+<h3><strong>2.1 Partitions (P)</strong></h3>
+<p>A partition (P) satisfies:</p>
+<p>[
+\sum_i p_i = N
+]</p>
+<h3><strong>2.2 Residues (R)</strong></h3>
+<p>A residue is defined as:</p>
+<p>[
+R = P \ominus Q
+]</p>
+<p>for some sub‑partition (Q \subseteq P).</p>
+<h3><strong>2.3 Synthetic Time (T)</strong></h3>
+<p>Synthetic time is a discrete structural variable:</p>
+<p>[
+t_k \in T
+]</p>
+<h3><strong>2.4 Cold Storage Domain (N - 1)</strong></h3>
+<p>Phoenix uses:</p>
+<p>[
+\gamma : N \rightarrow N - 1
+]</p>
+<p>to compress structure.</p>
+<hr />
+<h2><strong>3. Core Transformation Operators</strong></h2>
+<p>Phoenix defines four canonical transformation operators.<br />
+These operators form the backbone of Epoch‑2 mathematics.</p>
+<hr />
+<h3><strong>3.1 Structural Evolution Operator ( \Phi )</strong></h3>
+<p>[
+\Phi : (P, t_k) \rightarrow P'
+]</p>
+<p>Where:</p>
+<ul>
+<li>(P) is the current partition  </li>
+<li>(t_k) is synthetic time  </li>
+<li>(P') is the evolved partition  </li>
+</ul>
+<p><strong>Invariant:</strong></p>
+<p>[
+\sum_i p'_i = N
+]</p>
+<hr />
+<h3><strong>3.2 Residue Propagation Operator ( \rho )</strong></h3>
+<p>[
+\rho : R \rightarrow R'
+]</p>
+<p>Residues evolve independently of partitions.<br />
+This operator describes how structural “leftovers” propagate.</p>
+<hr />
+<h3><strong>3.3 Partition Compression Operator ( \Gamma )</strong></h3>
+<p>[
+\Gamma : P \rightarrow \gamma(P)
+]</p>
+<p>Where:</p>
+<ul>
+<li>(\gamma(P)) is the cold‑storage representation  </li>
+<li>(\gamma(P) \in N - 1)</li>
+</ul>
+<p><strong>Invariant:</strong></p>
+<p>[
+\lambda(\gamma(P)) = P
+]</p>
+<hr />
+<h3><strong>3.4 Structural Reconstruction Operator ( \Lambda )</strong></h3>
+<p>[
+\Lambda : \gamma(P) \rightarrow P
+]</p>
+<p>This operator reconstructs structural partitions from cold storage.</p>
+<hr />
+<h2><strong>4. Transformation Algebra</strong></h2>
+<p>Phoenix transformations must satisfy:</p>
+<h3><strong>4.1 Closure</strong></h3>
+<p>All operators map valid Phoenix objects to valid Phoenix objects.</p>
+<h3><strong>4.2 Determinism</strong></h3>
+<p>For any operator (op):</p>
+<p>[
+op(x) = y
+]</p>
+<p>must be single‑valued.</p>
+<h3><strong>4.3 Epoch Compatibility</strong></h3>
+<p>Transformations must preserve:</p>
+<ul>
+<li>Epoch‑1 structural invariants  </li>
+<li>Epoch‑2 algebraic invariants  </li>
+</ul>
+<h3><strong>4.4 Reversibility (where required)</strong></h3>
+<p>Compression + reconstruction must satisfy:</p>
+<p>[
+\Lambda(\Gamma(P)) = P
+]</p>
+<hr />
+<h2><strong>5. Role in Phoenix</strong></h2>
+<p>Structural transformations define:</p>
+<ul>
+<li>how Phoenix evolves structure  </li>
+<li>how partitions change over synthetic time  </li>
+<li>how residues propagate  </li>
+<li>how cold storage interacts with structural domains  </li>
+<li>how Epoch‑2 mathematics interacts with Epoch‑1 foundations  </li>
+</ul>
+<p>This is the <strong>dynamic</strong> component of Phoenix mathematics.</p>
+<hr />
+<h2><strong>6. Closing</strong></h2>
+<p>EF and CO recognise structural transformations as the second mathematical pillar of Epoch‑2.</p>
+<p>Phoenix now possesses:</p>
+<ol>
+<li><strong>N‑domain algebra</strong>  </li>
+<li><strong>Structural transformation operators</strong></li>
+</ol>
+<p>Next chamber:</p>
+<h3><strong>PHOENIX-SYNTHETIC-TIME.md</strong></h3>
+<hr />
