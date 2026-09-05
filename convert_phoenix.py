@@ -78,6 +78,38 @@ HTML_FOOTER = """</body>
 </html>
 """
 
+def rewrite_links(line):
+    """
+    Rewrite markdown links:
+        [text](path/to/file.md)
+    →   <a href="phoenix/path/to/file.html">text</a>
+    """
+    if "[" not in line or "](" not in line:
+        return line
+
+    out = ""
+    parts = line.split("[")
+    out += parts[0]
+
+    for p in parts[1:]:
+        if "](" in p:
+            text, rest = p.split("](", 1)
+            url, tail = rest.split(")", 1)
+
+            # Rewrite .md → .html
+            if url.endswith(".md"):
+                url = url[:-3] + ".html"
+
+            # Rewrite docs/ → phoenix/
+            if url.startswith("docs/"):
+                url = "phoenix/" + url[5:]
+
+            out += f'<a href="{url}">{text}</a>' + tail
+        else:
+            out += p
+
+    return out
+
 def convert_markdown_to_html(md_text):
     lines = md_text.split("\n")
     out = []
@@ -97,21 +129,9 @@ def convert_markdown_to_html(md_text):
             out.append("<h4>" + line[5:] + "</h4>")
             continue
 
-        # links: [text](url)
-        if "[" in line and "](" in line:
-            parts = line.split("[")
-            rebuilt = parts[0]
-            for p in parts[1:]:
-                if "](" in p:
-                    text, rest = p.split("](", 1)
-                    url, tail = rest.split(")", 1)
-                    rebuilt += f'<a href="{url}">{text}</a>' + tail
-                else:
-                    rebuilt += p
-            out.append(rebuilt)
-            continue
+        # rewrite links
+        line = rewrite_links(line)
 
-        # normal line
         out.append(line)
 
     return HTML_HEADER + "<br>\n".join(out) + HTML_FOOTER
