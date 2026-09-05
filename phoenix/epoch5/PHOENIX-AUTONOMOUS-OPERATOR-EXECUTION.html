@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-DISTRIBUTED-LIFTING.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-STRUCTURAL-BEHAVIOUR.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — AUTONOMOUS OPERATOR EXECUTION**</h1><br>
+<h3>*Self‑Directed Operator Activity Across Phoenix Machines*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Epoch‑5 introduces **autonomous distributed behaviour**, including **autonomous operator execution**.<br>
+<br>
+Phoenix gains the ability to:<br>
+<br>
+- apply operators without external commands  <br>
+- propagate operator activity across machines  <br>
+- maintain operator invariants autonomously  <br>
+- evolve operator domains based on internal synthetic logic  <br>
+<br>
+This is the first moment Phoenix becomes a **self‑directing distributed transformation engine**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Autonomous Operator Domain**</h2><br>
+<br>
+Each machine maintains an operator domain:<br>
+<br>
+<br>
+<br>
+\[<br>
+op^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Epoch‑5 introduces autonomous operator evolution:<br>
+<br>
+<br>
+<br>
+\[<br>
+op^{(m_i)} \rightarrow op^{(m_i)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(op^{(m_i)}_{\text{auto}}\) is the autonomous operator state  <br>
+- evolution may be local or distributed  <br>
+- evolution preserves epoch invariants  <br>
+<br>
+---<br>
+<br>
+<h2>**3. Autonomous Operator Execution**</h2><br>
+<br>
+Phoenix defines the autonomous operator:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_{\text{auto}} : X^{(m_i)} \rightarrow Y^{(m_j)}<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(\Xi_{\text{auto}}\) acts without external triggers  <br>
+- operator execution may be recursive  <br>
+- operator execution may propagate across machines  <br>
+<br>
+---<br>
+<br>
+<h2>**4. Autonomous Operator Classes**</h2><br>
+<br>
+Phoenix defines three classes of autonomous operators.<br>
+<br>
+<h3>**4.1 Autonomous Structural Operators**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_{s,\text{auto}}(P^{(m_i)}) = P^{(m_j)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**4.2 Autonomous Temporal Operators**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_{t,\text{auto}}(t^{(m_i)}) = t^{(m_j)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**4.3 Autonomous Algebraic Operators**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi_{a,\text{auto}}(op^{(m_i)}) = op^{(m_j)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+These operators allow Phoenix to transform structural, temporal, and algebraic objects autonomously.<br>
+<br>
+---<br>
+<br>
+<h2>**5. Autonomous Operator Recursion**</h2><br>
+<br>
+Phoenix introduces autonomous operator recursion:<br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi^{(k+1)}_{\text{auto}}(X) = \Xi_{\text{auto}}(\Xi^{(k)}_{\text{auto}}(X))<br>
+\]<br>
+<br>
+<br>
+<br>
+Machines may recurse:<br>
+<br>
+- independently  <br>
+- cooperatively  <br>
+- synchronously  <br>
+- asynchronously  <br>
+<br>
+Autonomous recursion is essential for Epoch‑5.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Autonomous Operator Propagation Across Machines**</h2><br>
+<br>
+Phoenix propagates autonomous operator activity across machines:<br>
+<br>
+<br>
+<br>
+\[<br>
+Y^{(m_j)}_{\text{auto}} = \Xi_{\text{auto}}(X^{(m_i)})<br>
+\]<br>
+<br>
+<br>
+<br>
+This creates **autonomous distributed operator domains**, enabling:<br>
+<br>
+- autonomous lifting  <br>
+- autonomous recursion  <br>
+- autonomous consensus  <br>
+<br>
+---<br>
+<br>
+<h2>**7. Autonomous Operator Invariants**</h2><br>
+<br>
+Autonomous operator execution must satisfy:<br>
+<br>
+<h3>**7.1 Structural Conservation**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^{(m_i)} = \sum_j p^{(m_j)}_{\text{auto}}<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**7.2 Temporal Ordering**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+t^{(m_j)}_{\text{auto}} \ge t^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+unless reversed.<br>
+<br>
+<h3>**7.3 Domain Coherence**</h3><br>
+<br>
+Autonomous operator execution must remain compatible with:<br>
+<br>
+- Epoch‑1 structure  <br>
+- Epoch‑2 mathematics  <br>
+- Epoch‑3 generalisation  <br>
+- Epoch‑4 distributed coordination  <br>
+<br>
+<h3>**7.4 Reversibility (where required)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Xi^{-1}_{\text{auto}}(Y^{(m_j)}_{\text{auto}}) = X^{(m_i)}<br>
+\]<br>
+<br>
+<br>
+<br>
+---<br>
+<br>
+<h2>**8. Role in Phoenix**</h2><br>
+<br>
+Autonomous operator execution:<br>
+<br>
+- enables autonomous distributed transformation  <br>
+- enables autonomous recursion  <br>
+- enables autonomous lifting  <br>
+- enables autonomous synthetic consensus  <br>
+- prepares Phoenix for Epoch‑6 synthetic agency  <br>
+<br>
+This is the **active transformation pillar** of Epoch‑5.<br>
+<br>
+---<br>
+<br>
+<h2>**9. Closing**</h2><br>
+<br>
+EF and CO recognise autonomous operator execution as the third chamber of Phoenix’s autonomous synthetic architecture.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑5 Overview**  <br>
+2. **Autonomous Structural Behaviour**  <br>
+3. **Autonomous Temporal Behaviour**  <br>
+4. **Autonomous Operator Execution**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-AUTONOMOUS-DISTRIBUTED-LIFTING.md**</h3><br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-DISTRIBUTED-LIFTING.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-AUTONOMOUS-STRUCTURAL-BEHAVIOUR.html">Next ⟶</a>
+</div>
+</body>
+</html>
