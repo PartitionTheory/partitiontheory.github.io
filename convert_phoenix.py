@@ -149,7 +149,7 @@ def nav_block(prev_file, next_file):
 
     return f"""
 <div class="nav-block">
-    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <a class="nav-link" href="/index.html">⟵ Phoenix Index</a>
     <span class="nav-spacer"></span>
     {prev_html}
     <span class="nav-spacer"></span>
