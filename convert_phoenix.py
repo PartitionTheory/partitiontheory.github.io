@@ -93,18 +93,6 @@ function toggleTheme() {
 </script>
 """
 
-NAV_BLOCK_TOP = """
-<div class="nav-block">
-    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
-    <span class="nav-spacer"></span>
-    <a class="nav-link" href="PREVIOUS.html">⟵ Previous</a>
-    <span class="nav-spacer"></span>
-    <a class="nav-link" href="NEXT.html">Next ⟶</a>
-</div>
-"""
-
-NAV_BLOCK_BOTTOM = NAV_BLOCK_TOP  # same block at bottom
-
 HTML_FOOTER = """</body>
 </html>
 """
@@ -144,12 +132,26 @@ def rewrite_links(line):
 
     return out
 
-def convert_markdown_to_html(md_text):
+def nav_block(prev_file, next_file):
+    prev_link = f"{prev_file}" if prev_file else "#"
+    next_link = f"{next_file}" if next_file else "#"
+
+    return f"""
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="{prev_link}">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="{next_link}">Next ⟶</a>
+</div>
+"""
+
+def convert_markdown_to_html(md_text, prev_file, next_file):
     lines = md_text.split("\n")
     out = []
 
-    # Insert navigation at top
-    out.append(NAV_BLOCK_TOP)
+    # Navigation at top
+    out.append(nav_block(prev_file, next_file))
 
     for line in lines:
         if line.startswith("# "):
@@ -168,8 +170,8 @@ def convert_markdown_to_html(md_text):
         line = rewrite_links(line)
         out.append(line)
 
-    # Insert navigation at bottom
-    out.append(NAV_BLOCK_BOTTOM)
+    # Navigation at bottom
+    out.append(nav_block(prev_file, next_file))
 
     return HTML_HEADER + "<br>\n".join(out) + HTML_FOOTER
 
@@ -185,20 +187,24 @@ def process():
         out_dir = TARGET_DIR / rel
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        for f in files:
-            if f.endswith(".md"):
-                src = Path(root) / f
-                dst = out_dir / f.replace(".md", ".html")
+        md_files = sorted([f for f in files if f.endswith(".md")])
 
-                with open(src, "r", encoding="utf-8") as md:
-                    text = md.read()
+        for i, f in enumerate(md_files):
+            src = Path(root) / f
+            dst = out_dir / f.replace(".md", ".html")
 
-                html = convert_markdown_to_html(text)
+            prev_file = md_files[i - 1].replace(".md", ".html") if i > 0 else None
+            next_file = md_files[i + 1].replace(".md", ".html") if i < len(md_files) - 1 else None
 
-                with open(dst, "w", encoding="utf-8") as out:
-                    out.write(html)
+            with open(src, "r", encoding="utf-8") as md:
+                text = md.read()
 
-                print("Converted:", src, "→", dst)
+            html = convert_markdown_to_html(text, prev_file, next_file)
+
+            with open(dst, "w", encoding="utf-8") as out:
+                out.write(html)
+
+            print("Converted:", src, "→", dst)
 
     print("\nPhoenix HTML conversion complete.")
 
