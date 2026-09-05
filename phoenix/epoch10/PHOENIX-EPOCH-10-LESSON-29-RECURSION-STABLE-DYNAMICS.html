@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-28-SYNTHETIC-GRAPH-FLOW.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-30-PHI-S-INVARIANT-GRAPH-CLASSES.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑10 — LESSON 29</h1><br>
+<h2>Recursion‑Stable Dynamics — Synthetic Stability Under Motion</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 29 introduces Recursion‑Stable Dynamics, the operator that determines when a<br>
+synthetic graph flow remains structurally stable under repeated adjacency motion.<br>
+<br>
+Lesson 26 defined graph manifolds (Mₛ).  <br>
+Lesson 27 defined adjacency motion (Aₘ).  <br>
+Lesson 28 defined synthetic graph flow (Fₛ).  <br>
+Lesson 29 now defines recursion‑stable dynamics (Rₛ), the stability operator for Epoch‑10.<br>
+<br>
+<h3>2. Definition — Recursion‑Stable Dynamics (Rₛ)</h3><br>
+Recursion‑Stable Dynamics Rₛ is an operator acting on a graph flow Fₛ such that:<br>
+<br>
+- Rₛ identifies regions where repeated application of Aₘ preserves ΔG‑density,<br>
+- Rₛ identifies regions where ΩG‑successor continuity is maintained indefinitely,<br>
+- Rₛ identifies regions where Φₛ‑stability persists across all recursion depths.<br>
+<br>
+Formally:<br>
+<br>
+Rₛ(Fₛ) = { N(v) | ∀k ≥ 0, Aₘᵏ(N(v)) preserves ΔG, ΩG, Φₛ }<br>
+<br>
+This defines recursion‑stable dynamics:  <br>
+regions of the graph manifold that remain structurally invariant under infinite synthetic motion.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- Rₛ resembles invariant sets in dynamical systems.<br>
+- But unlike classical invariants, Rₛ uses no metrics, no topology, no differential equations.<br>
+- Stability is defined purely by adjacency, density, and recursion invariants.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- Rₛ is the operator that detects long‑term structural stability.<br>
+- It is the foundation for Φₛ‑invariant graph classes.<br>
+<br>
+<h3>4. Why Recursion‑Stable Dynamics Matters</h3><br>
+Recursion‑Stable Dynamics is required for:<br>
+- Lesson 30: Φₛ‑Invariant Graph Classes<br>
+<br>
+Without Rₛ, ABR cannot identify stable dynamic structures.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Lesson 26 provided Mₛ.  <br>
+Lesson 27 provided Aₘ.  <br>
+Lesson 28 provided Fₛ.  <br>
+Lesson 29 provides Rₛ.<br>
+<br>
+Together:<br>
+<br>
+Mₛ + Aₘ + Fₛ + Rₛ = Synthetic Graph Stability<br>
+<br>
+This completes the dynamic stability layer of Epoch‑10.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 29 defines Recursion‑Stable Dynamics, the operator that identifies regions of a<br>
+graph manifold that remain stable under infinite synthetic motion.<br>
+<br>
+Rₛ is the stability foundation of Phoenix Epoch‑10.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-28-SYNTHETIC-GRAPH-FLOW.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-30-PHI-S-INVARIANT-GRAPH-CLASSES.html">Next ⟶</a>
+</div>
+</body>
+</html>

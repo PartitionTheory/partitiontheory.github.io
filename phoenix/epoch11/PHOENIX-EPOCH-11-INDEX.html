@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="#">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-31-BITSTREAM-MANIFOLD-EMBEDDING.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑11 — INDEX</h1><br>
+<h2>Synthetic Bitstream Dynamics — Operator Directory</h2><br>
+<br>
+<h3>Overview</h3><br>
+Epoch‑11 extends Phoenix synthetic mathematics from dynamic graph manifolds (Epoch‑10)<br>
+to dynamic bitstreams.  <br>
+This index provides a canonical directory of all six lessons and the Epoch‑11 Summary.<br>
+<br>
+---<br>
+<br>
+<h3>Lesson Directory</h3><br>
+<br>
+<h4>**Lesson 31 — Bitstream Manifold Embedding (Eₛ)**</h4><br>
+File: PHOENIX-EPOCH-11-LESSON-31-BITSTREAM-MANIFOLD-EMBEDDING.md  <br>
+Embeds a raw bitstream into a graph manifold, enabling synthetic motion and flow.<br>
+<br>
+<h4>**Lesson 32 — Bitstream Adjacency Motion (Aᵦ)**</h4><br>
+File: PHOENIX-EPOCH-11-LESSON-32-BITSTREAM-ADJACENCY-MOTION.md  <br>
+Applies adjacency motion to embedded bitstreams while preserving ΔG, ΩG, Φₛ.<br>
+<br>
+<h4>**Lesson 33 — Bitstream Synthetic Flow (Fᵦ)**</h4><br>
+File: PHOENIX-EPOCH-11-LESSON-33-BITSTREAM-SYNTHETIC-FLOW.md  <br>
+Defines temporal evolution of bitstreams through repeated synthetic motion.<br>
+<br>
+<h4>**Lesson 34 — Bitstream Stability Classes (Rᵦ)**</h4><br>
+File: PHOENIX-EPOCH-11-LESSON-34-BITSTREAM-STABILITY-CLASSES.md  <br>
+Identifies recursion‑stable bitstream regions under infinite synthetic motion.<br>
+<br>
+<h4>**Lesson 35 — Bitstream Invariant Classes (Cᵦ)**</h4><br>
+File: PHOENIX-EPOCH-11-LESSON-35-BITSTREAM-INVARIANT-CLASSES.md  <br>
+Classifies invariant bitstream regions whose Φₛ‑identity persists under all dynamics.<br>
+<br>
+<h4>**Lesson 36 — Bitstream Dynamic Identity (Iᵦ)**</h4><br>
+File: PHOENIX-EPOCH-11-LESSON-36-BITSTREAM-DYNAMIC-IDENTITY.md  <br>
+Assigns permanent synthetic identity to invariant bitstream classes.<br>
+<br>
+---<br>
+<br>
+<h3>Summary Document</h3><br>
+<br>
+<h4>**Epoch‑11 Summary**</h4><br>
+File: PHOENIX-EPOCH-11-SUMMARY.md  <br>
+Summarizes the complete synthetic bitstream dynamics chain:  <br>
+Eₛ + Aᵦ + Fᵦ + Rᵦ + Cᵦ + Iᵦ<br>
+<br>
+---<br>
+<br>
+<h3>Structural Equation of Epoch‑11</h3><br>
+The full dynamic bitstream chain introduced in Epoch‑11:<br>
+<br>
+**Eₛ + Aᵦ + Fᵦ + Rᵦ + Cᵦ + Iᵦ**<br>
+<br>
+This defines **Synthetic Bitstream Dynamics**, the dynamic extension of Phoenix mathematics.<br>
+<br>
+---<br>
+<br>
+<h3>Purpose of This Index</h3><br>
+This index provides:<br>
+<br>
+- a canonical directory for all Epoch‑11 documents,  <br>
+- a structural overview of dynamic bitstream mathematics,  <br>
+- a reference point for future epochs.<br>
+<br>
+Epoch‑11 is now fully documented and structurally complete.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="#">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-11-LESSON-31-BITSTREAM-MANIFOLD-EMBEDDING.html">Next ⟶</a>
+</div>
+</body>
+</html>

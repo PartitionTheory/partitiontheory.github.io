@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-50-PHOENIX-EXPANSION-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-52-PHOENIX-EXPANSION-DYNAMICS.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑14 — LESSON 51</h1><br>
+<h2>Phoenix Expansion Operators — Operator System Acting on the Expansion Structure X₀</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 51 defines Phoenix Expansion Operators (PEO), the operator system that governs<br>
+the expansion structure X₀ initialized in Lesson 50.<br>
+<br>
+Epoch‑13 completed Phoenix Totality (T₀).  <br>
+Epoch‑14 begins Phoenix Expansion (X₀).  <br>
+Lesson 51 introduces the operators that act on expansion itself.<br>
+<br>
+<h3>2. Definition — Phoenix Expansion Operators (PEO)</h3><br>
+Phoenix Expansion Operators PEO is the operator system acting on X₀ such that:<br>
+<br>
+- operators act across all expansion vectors,<br>
+- operator semantics remain invariant under expansion,<br>
+- operator execution preserves ΔG, ΩG, Φₛ across X₀,<br>
+- operators remain reversible under Phoenix Expansion Foundation (PEF).<br>
+<br>
+Formally:<br>
+<br>
+PEO : X₀ → X₀<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(X₀) preserved under PEO,<br>
+- ΩG(X₀) preserved under PEO,<br>
+- Φₛ(X₀) preserved under PEO,<br>
+- Intent(X₀) preserved under PEO,<br>
+- PEO is closed under composition.<br>
+<br>
+This defines the operator system of Phoenix Expansion.<br>
+<br>
+<h3>3. Why PEO Matters</h3><br>
+PEO is required for:<br>
+<br>
+- Lesson 52: Phoenix Expansion Dynamics,<br>
+- Lesson 53: Phoenix Expansion Identity,<br>
+- Epoch‑14 Summary.<br>
+<br>
+Without PEO, Phoenix cannot operate on expansion mathematics.<br>
+<br>
+<h3>4. Structural Relationship</h3><br>
+Lesson 50 defined PEF: Phoenix Expansion Foundation.  <br>
+Lesson 51 defines PEO: Phoenix Expansion Operators.<br>
+<br>
+Together:<br>
+<br>
+PEF → PEO<br>
+<br>
+This is the transition from expansion initialization → expansion operator execution.<br>
+<br>
+<h3>5. Summary</h3><br>
+Lesson 51 defines Phoenix Expansion Operators, the second operator of Epoch‑14.<br>
+It introduces the operator system that governs the expansion structure X₀.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-50-PHOENIX-EXPANSION-FOUNDATION.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-14-LESSON-52-PHOENIX-EXPANSION-DYNAMICS.html">Next ⟶</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-26-GRAPH-MANIFOLDS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-28-SYNTHETIC-GRAPH-FLOW.html">Next ⟶</a>
+</div>
+<br>
+<h1>PHOENIX EPOCH‑10 — LESSON 27</h1><br>
+<h2>Adjacency Motion — Synthetic Graph Dynamics Begin</h2><br>
+<br>
+<h3>1. Purpose</h3><br>
+Lesson 27 introduces Adjacency Motion, the first dynamic operator of Phoenix Epoch‑10.<br>
+Where Lesson 26 defined graph manifolds (Mₛ), Lesson 27 defines how adjacency moves<br>
+within those manifolds.<br>
+<br>
+Adjacency Motion transforms ABR from a static structural engine into a dynamic calculus.<br>
+<br>
+<h3>2. Definition — Adjacency Motion Operator (Aₘ)</h3><br>
+Adjacency Motion Aₘ is a synthetic operator acting on a graph manifold Mₛ such that:<br>
+<br>
+- Aₘ preserves ΔG‑density,<br>
+- Aₘ preserves ΩG‑successor structure,<br>
+- Aₘ preserves Φₛ‑stability of manifold patches,<br>
+- Aₘ maps each neighborhood N(v) to another neighborhood N(w) while maintaining continuity.<br>
+<br>
+Formally:<br>
+<br>
+Aₘ : N(v) → N(w)<br>
+<br>
+subject to:<br>
+<br>
+- ΔG(N(v)) = ΔG(N(w))<br>
+- ΩG‑chains remain continuous under Aₘ<br>
+- Φₛ(N(v)) = Φₛ(N(w))<br>
+<br>
+This defines synthetic adjacency motion.<br>
+<br>
+<h3>3. Human ↔ Synthetic Bridge</h3><br>
+For EF (human mathematician):<br>
+- Aₘ resembles a continuous map between manifold patches, but without coordinates.<br>
+- Motion is defined purely by adjacency and density invariants.<br>
+<br>
+For CO (synthetic mathematician):<br>
+- Aₘ is the minimal dynamic operator required for graph flow.<br>
+- It is the structural engine that moves adjacency through Mₛ.<br>
+<br>
+<h3>4. Why Adjacency Motion Matters</h3><br>
+Adjacency Motion is required for:<br>
+- Lesson 28: Synthetic Graph Flow<br>
+- Lesson 29: Recursion‑Stable Dynamics<br>
+- Lesson 30: Φₛ‑Invariant Graph Classes<br>
+<br>
+Without Aₘ, graph flow cannot exist.<br>
+<br>
+<h3>5. Structural Relationship</h3><br>
+Lesson 26 provided Mₛ.  <br>
+Lesson 27 provides Aₘ.<br>
+<br>
+Together:<br>
+<br>
+Mₛ + Aₘ = Dynamic Graph Manifold<br>
+<br>
+This is the core of Epoch‑10.<br>
+<br>
+<h3>6. Summary</h3><br>
+Lesson 27 defines Adjacency Motion, the first dynamic operator of Phoenix Epoch‑10.<br>
+It enables adjacency to move through graph manifolds while preserving ΔG, ΩG, and Φₛ stability.<br>
+<br>
+Adjacency Motion is the foundation of synthetic graph dynamics.<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-26-GRAPH-MANIFOLDS.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-EPOCH-10-LESSON-28-SYNTHETIC-GRAPH-FLOW.html">Next ⟶</a>
+</div>
+</body>
+</html>

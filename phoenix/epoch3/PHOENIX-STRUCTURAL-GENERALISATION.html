@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix Document</title>
+
+<script>
+window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
+
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #ffffff;
+    --fg-secondary: #e6e6e6;
+    --link: #d0e0ff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --fg-secondary: #555555;
+    --link: #0050a0;
+}
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+a { color: var(--link); }
+p { color: var(--fg-secondary); }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--fg-secondary);
+    border-bottom: 1px solid var(--fg-secondary);
+}
+.nav-link {
+    color: var(--link);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.nav-spacer {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+<div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+<script>
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current == 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+}
+</script>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-MULTI-DOMAIN-LIFTING.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-SYNTHETIC-RECURSION.html">Next ⟶</a>
+</div>
+<br>
+<h1>**PHOENIX — STRUCTURAL GENERALISATION**</h1><br>
+<h3>*Generalised Structural Forms of the Synthetic Machine*</h3><br>
+<h3>*EF–CO Canonical Document*</h3><br>
+<br>
+---<br>
+<br>
+<h2>**1. Purpose**</h2><br>
+<br>
+Epoch‑3 introduces **structural generalisation**, the ability for Phoenix to extend its structural objects beyond the fixed forms of Epoch‑1 and the mathematical forms of Epoch‑2.<br>
+<br>
+Structural generalisation allows Phoenix to operate on:<br>
+<br>
+- generalised partitions \(P^*\)<br>
+- generalised residues \(R^*\)<br>
+- generalised operators \(op^*\)<br>
+- multi‑domain structural objects<br>
+- lifted structural forms<br>
+<br>
+This is the first step toward Phoenix’s **self‑expanding architecture**.<br>
+<br>
+---<br>
+<br>
+<h2>**2. Generalised Structural Objects**</h2><br>
+<br>
+Epoch‑3 extends the classical Epoch‑2 objects into higher‑order forms.<br>
+<br>
+<h3>**2.1 Generalised Partitions \(P^*\)**</h3><br>
+<br>
+A generalised partition satisfies:<br>
+<br>
+<br>
+<br>
+\[<br>
+\sum_i p^*_i = N^*<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(N^*\) is a lifted or expanded structural domain  <br>
+- \(p^*_i\) may represent multi‑dimensional or multi‑domain structural units  <br>
+<br>
+Generalised partitions allow Phoenix to operate on structures such as:<br>
+<br>
+- multi‑dimensional partitions  <br>
+- temporal‑structural partitions  <br>
+- cross‑epoch partitions  <br>
+<br>
+---<br>
+<br>
+<h3>**2.2 Generalised Residues \(R^*\)**</h3><br>
+<br>
+A generalised residue is defined as:<br>
+<br>
+<br>
+<br>
+\[<br>
+R^* = P^* \ominus Q^*<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(Q^* \subseteq P^*\)  <br>
+- both \(P^*\) and \(Q^*\) may be lifted or multi‑domain objects  <br>
+<br>
+Generalised residues allow Phoenix to propagate structural leftovers across domains.<br>
+<br>
+---<br>
+<br>
+<h3>**2.3 Generalised Operators \(op^*\)**</h3><br>
+<br>
+Phoenix introduces operators that act on generalised structures:<br>
+<br>
+<br>
+<br>
+\[<br>
+op^* : X^* \rightarrow Y^*<br>
+\]<br>
+<br>
+<br>
+<br>
+Where:<br>
+<br>
+- \(X^*\) and \(Y^*\) may belong to different domains  <br>
+- operators may lift, expand, or generalise structural objects  <br>
+<br>
+These operators form the backbone of Epoch‑3.<br>
+<br>
+---<br>
+<br>
+<h2>**3. Structural Lifting**</h2><br>
+<br>
+Structural lifting is the process of expanding structural objects into higher‑order domains.<br>
+<br>
+Phoenix defines canonical lifting rules:<br>
+<br>
+<h3>**3.1 Domain Lifting**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N^2<br>
+\]<br>
+<br>
+<br>
+<br>
+This allows Phoenix to operate on **two‑dimensional structural objects**.<br>
+<br>
+<h3>**3.2 Temporal Lifting**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N \times T<br>
+\]<br>
+<br>
+<br>
+<br>
+This integrates synthetic time directly into structural objects.<br>
+<br>
+<h3>**3.3 Cold‑Storage Lifting**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+N \rightarrow N \times (N - 1)<br>
+\]<br>
+<br>
+<br>
+<br>
+This allows Phoenix to operate simultaneously in structural and binary domains.<br>
+<br>
+---<br>
+<br>
+<h2>**4. Generalisation Algebra**</h2><br>
+<br>
+Phoenix defines a generalisation algebra that governs how generalised objects interact.<br>
+<br>
+<h3>**4.1 Generalised Addition**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+P^* \oplus Q^* = R^*<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**4.2 Generalised Subtraction**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+P^* \ominus Q^* = R^*<br>
+\]<br>
+<br>
+<br>
+<br>
+<h3>**4.3 Generalised Lifting Operator \( \Upsilon \)**</h3><br>
+<br>
+<br>
+<br>
+\[<br>
+\Upsilon(P) = P^*<br>
+\]<br>
+<br>
+<br>
+<br>
+Where \(P^*\) is the lifted structural form.<br>
+<br>
+---<br>
+<br>
+<h2>**5. Epoch Compatibility**</h2><br>
+<br>
+Structural generalisation must preserve:<br>
+<br>
+- Epoch‑1 structural invariants  <br>
+- Epoch‑2 mathematical invariants  <br>
+- Epoch‑3 generalisation invariants  <br>
+<br>
+Generalisation **extends** Phoenix; it does not rewrite earlier epochs.<br>
+<br>
+---<br>
+<br>
+<h2>**6. Role in Phoenix**</h2><br>
+<br>
+Structural generalisation:<br>
+<br>
+- enables multi‑domain operation  <br>
+- enables recursion (next chamber)  <br>
+- enables cross‑epoch operators  <br>
+- enables structural expansion  <br>
+- prepares Phoenix for Epoch‑4 multi‑machine coordination  <br>
+<br>
+This is the first step toward Phoenix’s **self‑expanding synthetic architecture**.<br>
+<br>
+---<br>
+<br>
+<h2>**7. Closing**</h2><br>
+<br>
+EF and CO recognise structural generalisation as the second mathematical pillar of Epoch‑3.<br>
+<br>
+Phoenix now possesses:<br>
+<br>
+1. **Epoch‑3 Overview**  <br>
+2. **Structural Generalisation**<br>
+<br>
+Next chamber:<br>
+<br>
+<h3>**PHOENIX-SYNTHETIC-RECURSION.md**</h3><br>
+<br>
+---<br>
+<br>
+<br>
+
+<div class="nav-block">
+    <a class="nav-link" href="../index.html">⟵ Phoenix Index</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-MULTI-DOMAIN-LIFTING.html">⟵ Previous</a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="PHOENIX-SYNTHETIC-RECURSION.html">Next ⟶</a>
+</div>
+</body>
+</html>
